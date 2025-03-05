@@ -53,4 +53,36 @@
 
 
 </body>
-</html> 
+</html>
+
+
+
+<!-- Sidebar -->
+    <div style="width:15%" class="main-page-sidebar">
+      <h3 class="main-page-heading">Menu</h3>
+
+      <!-- Matematika -->
+      <button style="width:100%" class="accordion main-page-item main-page-first">Matematika</button>
+      <div class="panel">
+        <a class="main-page-item main-page-otazky" href="/pages/matematika/matematika_9.html">
+          Otázka 9. - Logaritmická funkce, Logaritmické rovnice
+        </a>
+      </div>
+
+      <!-- Informatika -->
+      <button style="width:100%" class="accordion main-page-item main-page-second">Informatika</button>
+      <div class="panel">
+        <a class="main-page-item main-page-otazky" href="#">
+          Zatím nedostupné
+        </a>
+      </div>
+
+      <!-- Čeština -->
+      <button style="width:100%" class="accordion main-page-item main-page-third">Čeština</button>
+      <div class="panel">
+        <a class="main-page-item main-page-otazky" href="#">
+        Zatím nedostupné
+        </a>
+      </div>
+    </div>
+

@@ -3,65 +3,52 @@
   <head>
     <title>Maturita-Formalita</title>
     <!-- <link rel="stylesheet" href="/styles/stylesheet.css"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@400..900&display=swap');
+      @media (min-width:993px){.burger-menu{display:none!important}.main-page-sidebar{display:block!important}.main-page{margin-left:300!important}}
+      @media (max-width:992px){.main-page-sidebar{display:none!important}.main-page{margin-left:0!important}}
       :root {
         --bg0: #FDF6E3;
         --bg3: #E6E2CC;
         --bg5: #BDC3AF;
         --bg-dim: #EFEBD4;
+        --bg_blue: #E9F0E9;
         --fg: #5C6A72;
         --red: #F85552;
         --orange: #F57D26;
+        --yellow: #DFA000;
         font-family: "Fira Sans", sans-serif;
         color: var(--fg);
       }
-      .accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.4s;
-}
-.active, .accordion:hover {
-  background-color: #ccc;
-}
-.panel {
-  padding: 0 18px;
-  background-color: white;
-  display: none;
-  overflow: hidden;
-}
-      .w3-white {
-        color: #000!important;
-        background-color:#fff!important;
-      }
-      .w3-show {
-        display: block!important
-      }
-      .w3-hide{display:none!important}
-      .w3-green {
-        color:#fff!important;
-        background-color:#4CAF50!important;
+      .w3-animate-left{position:relative;animation:animateleft 0.4s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
+      h1 {
+        font-size: 40;
       }
       h3 {
         margin: 0px;
       }
       body {
-        background-color: var(--bg0); 
+        background-color: var(--bg0);
+        margin: 0px;
+      }
+      .main-header {
+        background-color: var(--bg_blue);
+        padding-top: 3%;
+        padding-bottom: 3%;
       }
       .main-page {
-        display: table;
         vertical-align: middle;
+        position: fixed;
       }
       .main-page-sidebar {
         background-color: var(--bg-dim);
         height: 100%;
+        width: 300px;
+        position: fixed;
+        z-index: 1;
+        overflow: auto;
       }
       .main-page-heading {
         text-align: center;
@@ -83,11 +70,41 @@
           color: var(--bg0);
         }
       }
+      .main-page-otazky {
+        font-size: 14;
+      }
       .main-page-first {
         background-color: var(--red);
       }
       .main-page-second {
         background-color: var(--orange);
+      }
+      .main-page-third {
+        background-color: var(--yellow);
+      }
+      .accordion {
+        cursor: pointer;
+        border: none;
+        outline: none;
+      }
+      .active {
+        background-color: var(--bg5);
+      }
+      .panel {
+        background-color: var(--bg-dim);
+        color: var(--fg);
+        text-decoration: none;
+        display: none;
+        overflow: hidden;
+      }
+      .accordion:after {
+        content: '\02795'; /* Unicode character for "plus" sign (+) */
+        font-size: 10px;
+        float: right;
+        margin-left: 5px;
+      }
+      .active:after {
+        content: "\2796"; /* Unicode character for "minus" sign (-) */
       }
       footer {
         position: fixed;
@@ -98,73 +115,119 @@
         background-color: var(--bg5);
         color: var(--fg);
         display: block;
+        z-index: 2;
       }
       .footer-block {
         display: inline-block;
         width: 30%;
       }
+      .footer-item {
+        display: inline-block;
+      }
     </style>
   </head>
   <body>
 
+
+
     <!-- Sidebar -->
-    <div style="width:10%" class="main-page-sidebar" id="Sidebar">
+    <div class="main-page-sidebar w3-animate-left" id="mySidebar">
       <h3 class="main-page-heading">Menu</h3>
-      <a class="main-page-item main-page-first" href="#">Matematika</a>
-      <a class="main-page-item main-page-second" href="#">Informatika</a>
-      <button class="accordion">accordion</button>
-      <div class="show">
-        <p>aslkdfjhaslkfjhdaslf</p>
+
+      <!-- Matematika -->
+      <button style="width:100%" class="accordion main-page-item main-page-first">Matematika</button>
+      <div class="panel">
+        <a class="main-page-item main-page-otazky" href="/pages/matematika/matematika_9.html">
+          Otázka 9. - Logaritmická funkce, Logaritmické rovnice
+        </a>
+      </div>
+
+      <!-- Informatika -->
+      <button style="width:100%" class="accordion main-page-item main-page-second">Informatika</button>
+      <div class="panel">
+        <a class="main-page-item main-page-otazky" href="#">
+          Zatím nedostupné
+        </a>
+      </div>
+
+      <!-- Čeština -->
+      <button style="width:100%" class="accordion main-page-item main-page-third">Čeština</button>
+      <div class="panel">
+        <a class="main-page-item main-page-otazky" href="#">
+        Zatím nedostupné
+        </a>
       </div>
     </div>
 
-    <div class="main-page" style="margin-left:10%">
-      <h1 style="text-align:center;">Maturita-Formalita</h1>
+   
+
+    <!-- Main page content -->
+    <div class="main-page" style="width:100%">
+      <div class="main-header">
+        <button class="burger-menu" >
+          <i class="material-icons" style="font-size:20;margin-top:10px" >menu</i>
+        </button>
+        <h1 id="testid" style="text-align:left;" onclick="test()">Maturita-Formalita</h1>
+      </div>
       <p>Kolekce materiálů k maturitám pro studenty GJO. Momentální verze stránky je 0.1</p>
-      <a href="23_vyroky_a_mnoziny.html">Otázka 23. Výroky a množiny</a>
-      <br>
-      <a href="/pages/matematika/matematika_9.html">Otázka 9. Logaritmická funkce, Logaritmické rovnice</a>
     </div>
+
+
+
+    <!-- Footer -->
     <footer>
       <div class="footer-block">
         <div class="footer-block">
-          <a href="https://github.com/iwuvuu/iwuvuu.github.io">
-            <p><p style="font-size:30;"></p>Náš GitHub</p>
+          <i class="material-icons" style="font-size:20;margin-top:10px">language</i>
+          <a class="footer-item" href="https://github.com/iwuvuu/iwuvuu.github.io">
+            <p class="footer-item">Náš GitHub</p>
           </a>
         </div>
         <div class="footer-block">
-          <p>laksdfhsdlkjfhsa</p>
+          <i class="material-icons" style="font-size:20;margin-top:10px">school</i>
+          <a class="footer-item" href="https://www.gjo.cz/">
+            <p class="footer-item">Stránky školy</p>
+          </a>
         </div>
       </div>
       <div>
         <p style="font-size:10;">Obsah této stránky je pod <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL-3.0</a> licencí.</p>
       </div>
     </footer>
+
+
+
+    <!-- Scripts -->
     <script>
       var acc = document.getElementsByClassName("accordion");
-var i;
+      var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    /* Toggle between adding and removing the "active" class,
-    to highlight the button that controls the panel */
-    this.classList.toggle("active");
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+          this.classList.toggle("active");
 
-    /* Toggle between hiding and showing the active panel */
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
+        /* Toggle between hiding and showing the active panel */
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+          panel.style.display = "block";
+          }
+        });
+      }
+
       function w3_open() {
-        document.getElementById("Sidebar").style.display = "block";
+        document.getElementById("mySidebar").style.display = "block";
       }
 
       function w3_close() {
-        document.getElementById("Sidebar").style.display = "none";
+        document.getElementById("mySidebar").style.display = "none";
+      }
+
+      function test() {
+        document.getElementById("testid").style.background-color = "black";
       }
     </script>
   </body>
