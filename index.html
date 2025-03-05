@@ -5,23 +5,167 @@
     <!-- <link rel="stylesheet" href="/styles/stylesheet.css"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-       html {
-        display: table;
-        margin: auto;
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@400..900&display=swap');
+      :root {
+        --bg0: #FDF6E3;
+        --bg3: #E6E2CC;
+        --bg5: #BDC3AF;
+        --bg-dim: #EFEBD4;
+        --fg: #5C6A72;
+        --red: #F85552;
+        --orange: #F57D26;
+        font-family: "Fira Sans", sans-serif;
+        color: var(--fg);
+      }
+      .accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+      .w3-white {
+        color: #000!important;
+        background-color:#fff!important;
+      }
+      .w3-show {
+        display: block!important
+      }
+      .w3-hide{display:none!important}
+      .w3-green {
+        color:#fff!important;
+        background-color:#4CAF50!important;
+      }
+      h3 {
+        margin: 0px;
       }
       body {
-        display: table-cell;
+        background-color: var(--bg0); 
+      }
+      .main-page {
+        display: table;
         vertical-align: middle;
+      }
+      .main-page-sidebar {
+        background-color: var(--bg-dim);
+        height: 100%;
+      }
+      .main-page-heading {
+        text-align: center;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        background-color: var(--bg3);
+        font-size: 30;
+      }
+      .main-page-item {
+        font-size: 20;
+        padding: 5%;
+        width: auto;
+        display: block;
+        text-align: center;
+        color: var(--fg);
+        text-decoration: none;
+        &:hover {
+          background-color: var(--bg5);
+          color: var(--bg0);
+        }
+      }
+      .main-page-first {
+        background-color: var(--red);
+      }
+      .main-page-second {
+        background-color: var(--orange);
+      }
+      footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color: var(--bg5);
+        color: var(--fg);
+        display: block;
+      }
+      .footer-block {
+        display: inline-block;
+        width: 30%;
       }
     </style>
   </head>
   <body>
-    <div class="main-page">
+
+    <!-- Sidebar -->
+    <div style="width:10%" class="main-page-sidebar" id="Sidebar">
+      <h3 class="main-page-heading">Menu</h3>
+      <a class="main-page-item main-page-first" href="#">Matematika</a>
+      <a class="main-page-item main-page-second" href="#">Informatika</a>
+      <button class="accordion">accordion</button>
+      <div class="show">
+        <p>aslkdfjhaslkfjhdaslf</p>
+      </div>
+    </div>
+
+    <div class="main-page" style="margin-left:10%">
       <h1 style="text-align:center;">Maturita-Formalita</h1>
       <p>Kolekce materiálů k maturitám pro studenty GJO. Momentální verze stránky je 0.1</p>
       <a href="23_vyroky_a_mnoziny.html">Otázka 23. Výroky a množiny</a>
       <br>
       <a href="/pages/matematika/matematika_9.html">Otázka 9. Logaritmická funkce, Logaritmické rovnice</a>
     </div>
+    <footer>
+      <div class="footer-block">
+        <div class="footer-block">
+          <a href="https://github.com/iwuvuu/iwuvuu.github.io">
+            <p><p style="font-size:30;"></p>Náš GitHub</p>
+          </a>
+        </div>
+        <div class="footer-block">
+          <p>laksdfhsdlkjfhsa</p>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:10;">Obsah této stránky je pod <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL-3.0</a> licencí.</p>
+      </div>
+    </footer>
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+      function w3_open() {
+        document.getElementById("Sidebar").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("Sidebar").style.display = "none";
+      }
+    </script>
   </body>
 </html>
