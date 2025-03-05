@@ -86,3 +86,19 @@
       </div>
     </div>
 
+@media (min-width:993px){.burger-menu{display:none!important}.main-page-sidebar{display:block!important}.main-page{margin-left:300!important}}
+      @media (max-width:992px){.main-page-sidebar{display:none!important}.main-page{margin-left:0!important}}
+
+            function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+
+      function test() {
+        document.getElementById("testid").style.background-color = "black";
+      }
+
+
