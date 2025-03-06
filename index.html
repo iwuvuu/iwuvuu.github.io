@@ -7,8 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@400..900&display=swap');
-      @media (min-width:993px){.burger-menu{display:none!important}.main-page-sidebar{display:block!important}.main-page{margin-left:300!important}}
-      @media (max-width:992px){.main-page-sidebar{display:none!important}.main-page{margin-left:0!important}}
+      @media (max-width:992px){
+        .main-page-sidebar {
+          transform: translateX(-100%);
+          position: fixed; 
+          z-index: 1000;
+        }
+        .main-page-sidebar.show {
+          transform: translateX(0)
+        }
+        .main-page-sidebar:after {
+        content: '\02795'; /* Unicode character for "plus" sign (+) */
+        font-size: 10px;
+        float: right;
+        margin-left: 5px;
+      }
+        .main-page {
+          margin-left:0!important
+        }
+        .burger-menu {
+          display: block;
+        }
+      }
+      @media (min-width:993px){.burger-menu{display:none!important}.sidebar-button{display:none!important}}
             :root {
         --bg0: #FDF6E3;
         --bg3: #E6E2CC;
@@ -41,6 +62,7 @@
       .main-page {
         vertical-align: middle;
         position: fixed;
+        margin-left: 300px;
       }
       .main-page-sidebar {
         background-color: var(--bg-dim);
@@ -56,6 +78,7 @@
         padding-bottom: 5%;
         background-color: var(--bg3);
         font-size: 30;
+        z-index: 2
       }
       .main-page-item {
         font-size: 20;
@@ -124,6 +147,12 @@
       .footer-item {
         display: inline-block;
       }
+      .sidebar-button {
+        position: absolute;
+        left: 250;
+        top: 22;
+        z-index: 3; 
+      }
     </style>
   </head>
   <body>
@@ -131,8 +160,11 @@
 
 
     <!-- Sidebar -->
-    <div class="main-page-sidebar w3-animate-left">
-      <h3 class="main-page-heading">Menu</h3>
+    <div class="main-page-sidebar w3-animate-left" id="mySidebar">
+      <div>
+        <h3 class="main-page-heading">Menu</h3>
+        <button class="sidebar-button" onclick="test()">X</button>
+      </div>
 
       <!-- Matematika -->
       <button style="width:100%" class="accordion main-page-item main-page-first">Matematika</button>
@@ -173,10 +205,10 @@
     <!-- Main page content -->
     <div class="main-page" style="width:100%">
       <div class="main-header">
-        <button class="burger-menu" >
+        <button class="burger-menu" onclick="test()">
           <i class="material-icons" style="font-size:20;margin-top:10px" >menu</i>
         </button>
-        <h1 id="testid" style="text-align:left;" onclick="test()">Maturita-Formalita</h1>
+        <h1 id="testid" style="text-align:left;">Maturita-Formalita</h1>
       </div>
       <p>Kolekce materiálů k maturitám pro studenty GJO. Momentální verze stránky je 0.1</p>
     </div>
@@ -208,6 +240,11 @@
 
     <!-- Scripts -->
     <script>
+
+      function test() {
+        document.getElementById("mySidebar").classList.toggle("show");
+      }
+
       var acc = document.getElementsByClassName("accordion");
       var i;
 
@@ -226,8 +263,6 @@
           }
         });
       }
-
-
     </script>
   </body>
 </html>
