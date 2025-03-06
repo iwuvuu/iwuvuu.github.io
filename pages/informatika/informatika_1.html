@@ -5,10 +5,10 @@
 						<meta charset="UTF-8">
 						<meta name="viewport" content="width=device-width, initial-scale=1" />
 						<link rel="stylesheet" href="pluginAssets/jsdraw__markdownIt_editDrawingButton/markdownIt.css"><link rel="stylesheet" href="pluginAssets/highlight.js/atom-one-light.css">
-						<title>Otázka 23. - Verzování</title>
+						<title>Otázka 1. - Informatika</title>
 					</head>
 					<body>
-						<div class="exported-note"><div class="exported-note-title">Otázka 23. - Verzování</div>
+						<div class="exported-note"><div class="exported-note-title">Otázka 1. - Informatika</div>
 
 <style>
 		/* https://necolas.github.io/normalize.css/ */
@@ -477,52 +477,76 @@ pre.mermaid[data-processed=true] { white-space: unset; }
 					background-color: #CBDAF1 !important;
 				}</style><div id="rendered-md"><h1 id="obsah">Obsah</h1>
 <ol>
-<li><a data-from-md title='#verz' href='#verz'>Verzování</a></li>
-<li><a data-from-md title='#druhy' href='#druhy'>Druhy verzovacích systémů</a>
+<li><a data-from-md title='#informatika' href='#informatika'>Informatika</a></li>
+<li><a data-from-md title='#info_gramotnost' href='#info_gramotnost'>Informační gramotnost</a>
 <ol>
-<li><a data-from-md title='#lvcs' href='#lvcs'>Lokální verzovací systém (LVCS)</a></li>
-<li><a data-from-md title='#cvcs' href='#cvcs'>Centralizovaný verzovací systém (CVCS)</a></li>
-<li><a data-from-md title='#dvcs' href='#dvcs'>Distribuovaný verzovací systém (DVCS)</a><br>
-<a data-from-md title='#git' href='#git'>1. Git</a></li>
+<li><a data-from-md title='#priklad' href='#priklad'>Příklad</a></li>
 </ol>
 </li>
+<li><a data-from-md title='#info_spol' href='#info_spol'>Informační společnost</a></li>
 </ol>
-<h1 id="verzování">Verzování <a id="verz" class="jop-noMdConv" href="#"></a></h1>
-<p>Verzování je proces uchovávání všech změn, provedených na datech. Může sloužit k vytvářením záloh a možnosti kolaborace s ostatními vývojáři. Verzovat lze jakýkoliv typ dat ovšem nejčastěji se verzuje zdrojový kód.</p>
-<h1 id="druhy-verzovacích-systémů">Druhy verzovacích systémů <a id="druhy" class="jop-noMdConv" href="#"></a></h1>
-<p>= Version Control System (VCS)</p>
-<h2 id="1-lokální-verzovací-systém-lvcs">1. Lokální verzovací systém (LVCS) <a id="lvcs" class="jop-noMdConv" href="#"></a></h2>
-<p>Nejjednoduší metoda verzování je pomocí lokálních verzovacích systémů. Vytváří databázy, která zaznnamenává změny určených dat.</p>
-<p>Nejznámější lokální verzovací software je RCS. RCS uchovává kolekce patchů (změny provedené na datech) ve speciálním formátu na disku. Když aplikujeme určité patche, tak můžeme zjistit jak vypadal soubor v jakýkoliv daný moment.</p>
-<p>Lokální verzovací systémy jsou více náchylné na chyby, zvlášť díky uživatelské neobezřetnosti. Velmi složitá spolupráce s ostatními.</p>
-<h2 id="2-centralizovaný-verzovací-systém-cvcs">2. Centralizovaný verzovací systém (CVCS) <a id="cvcs" class="jop-noMdConv" href="#"></a></h2>
-<p>Centrální verzovací systémy obsahují jeden referenční soubor na centrálním serveru (repozitář). Každý uživatel může upravovat soubory na repozitáři, a aby mohli ostatní úpravy vidět taky, tak je vývojář musí &quot;commitnout&quot; na hlavní repozitář.</p>
-<p><img src="../../_resources/ec05710f046e4ab7ae7309994906f52c.png" alt="cvcs.png"></p>
-<p>CVCS sice poskytují daleko lepší možnost spolupráce, mají ale jeden velký problém. A tím je &quot;single point of failure&quot;, v informatice víme, že není nikdy vhodné, aby celá infrastruktura závisela na jednom prvku. U CVCS je tímto slabým článkem onen repozitář a server, kde je uchován. Pokud ztratíme signál během nahrávání nebo se disk na serveru bez řádné kopie poškodí, ztratíme tak celou práci.</p>
-<p>Známý CVCS je příkladně Subversion</p>
-<h2 id="3-distribuovaný-verzovací-systém-dvcs">3. Distribuovaný verzovací systém (DVCS) <a id="dvcs" class="jop-noMdConv" href="#"></a></h2>
-<p>Na rozdíl od CVCS nemá jednu referenční kopii, ale každý vývojář vlastní vlastí repozitář a pracovní kopii. Pokaždé, když vývojář &quot;commitne&quot; změnu, tak se zobrazí v jeho lokálním repozitáři. Pro globální změnu do vzorového repozitáře je vývojář musí &quot;pushnout&quot; a pokud ostatní vývojáři chtějí převzít změnu, tak si je musí &quot;pullnout&quot;</p>
-<p><img src="../../_resources/e1ebcab103fd49fcbc2893f9fe7f3b26.png" alt="dvcs.png"></p>
-<p>V dnešní době nepoužívanější DVCS jsou Git a Mercurial.</p>
-<h3 id="git">Git <a id="git" class="jop-noMdConv" href="#"></a></h3>
-<p>Dnes jeden z nejpoužívanějších VCS. Byl vytvořen Linusem Torvaldsem pro vývoj linuxového jádra</p>
-<p>Základní funkce:</p>
+<hr>
+<h1 id="1-informatika">1. Informatika <a id="informatika" class="jop-noMdConv" href="#"></a></h1>
+<p>Co informatika není?<br>
+Informatik není člověk, který</p>
+<p>Co je informatika?<br>
+Informatika se zabývá studiem procesů zpracovávajících informace a jejich:</p>
+<ul>
+<li>teoretickými základy</li>
+<li>analýzou</li>
+<li>efektivitou</li>
+<li>implementaci</li>
+</ul>
+<p>Nemusí se jednat o informace v počítači, v dokumentech na internetu, ale jedná se i o přikladně informace zapsané v genech živých organismů.</p>
+<h1 id="2-informační-gramotnost">2. Informační gramotnost <a id="info_gramotnost" class="jop-noMdConv" href="#"></a></h1>
+<p>Je schopnost člověka využívat moderní informační technologie a prostředky v běžném životě.<br>
+Zahrnuje schopnost:</p>
+<ul>
+<li>rozpoznat, kdy jsou informace potřebné</li>
+<li>najít zdroje a kriticky je zhodnotit</li>
+<li>použít získané informace na řešení problémů</li>
+<li>efektivně zprostředkovat informace jiným lidem v různých podobách</li>
+</ul>
+<h2 id="příklad">Příklad <a id="priklad" class="jop-noMdConv" href="#"></a></h2>
 <ol>
-<li>Větvení (&quot;Branching&quot;) a &quot;Merging&quot;. Git nabízí možnost rozvětvit projekt do lokáních větvím, které pracují a mohou být upravovány nezávisle na sobě. Tyto větve mohou být dále &quot;mergnuty&quot; do hlavní větve atd.</li>
+<li>Problém a s ním spojené nutné informace:<br>
+Hledám nový mobilní telefon. Mé požadavky jsou:
+<ul>
+<li>Dlouhodobá podpora aktualizací</li>
+<li>Kvalitnější fotoaparát</li>
+<li>Dobrý poměr cena/výkon</li>
+</ul>
+</li>
 </ol>
-<p><img src="../../_resources/f30f18d6998b49e293115df8ce625c71.png" alt="branch.png"></p>
+<p>Informace, které si potřebuji zjistit:</p>
+<ul>
+<li>Jaké jsou aktuální mobilní trendy a jaké jsou očekávané hardwarové požadavky?</li>
+<li>Kdy se už nevyplácí investovat více peněz do telefonu?</li>
+<li>Spolehlivé a důvěryhodné značky.</li>
+</ul>
 <ol start="2">
-<li>&quot;Staging area&quot; nebo také &quot;index&quot; je prostor, kde se ukládají změny před commitnutím do repozitáře. Čekají na kontrolu a příkladné formátování a po dokončení všech plánovaných úprav, můžeme vybrané finální změny commitnout do repozitáře.</li>
+<li>
+<p>Kde a jak hledat informace:<br>
+Podívam se na recenze a srovnání na youtube, podívám se na nabídku obchodů s elektronikou, podívám se na cpu a gpu benchmark porovnávací testy a srovnání fotoaparátů v různých podmínkách.</p>
+</li>
+<li>
+<p>Relevantnost a spolehlivost informací:<br>
+Začnu se dívat na recenze od různých recenzentů a zákazníků, nejlépe pokud má na dané stránce produkt větší množství recenzí a obsahuje i negativní. Pokud je telefon na trhu už alespoň pár měsíců, podívám se ne recenze s novějším datumem, které se budou zaobírat dlouhodobým užíváním. Pokud mám možnost zeptám se někoho, kdo daný model/značku vlastní na jeho názor.</p>
+</li>
+<li>
+<p>Zpracování a využití informací:<br>
+Najdu si finanční hranici s nejlepším poměrem cena výkon. A porovnám získané informace k nalezení produktu, který má co nejméně problémů a splňuje mé očekávání nejvíce.</p>
+</li>
 </ol>
-<p><img src="../../_resources/243f677287b04928af56950c4fab4753.png" alt="index.png"></p>
-<ol start="3">
-<li>Git využívá &quot;snapshot verzování&quot;, zde každá verze vytváří kopii nejnovější předešlé změny v souboru a přenáší ji soubou do další verze.</li>
-</ol>
-<p><img src="../../_resources/ab834e5a544842f48af85f02728a4709.png" alt="snapshot_verzovani.png"></p>
-<ol start="4">
-<li>&quot;Forkování&quot;. Vývojář může zkopírovat projekt a pracovat na něm odděleně od hlavního projeku. Zde může provést svou vizi, která se nemusí slučovat s myšlenkami originálního projektu.</li>
-</ol>
-<p>V dnešní době jsou populární git webové frontendy, které zároveň slouží jako cloudové servery hostující data projektů. Nejpopulárnější jsou GitHub a GitLab.</p>
+<h1 id="3-informační-společnost">3. Informační společnost <a id="info_spol" class="jop-noMdConv" href="#"></a></h1>
+<p>Informační společnost je společnost ve které je práce s informacemi klíčová. A jejich zpracování se odrazuje ve ekonomice, vzděláním i kraždodenním životě.</p>
+<p>V dnešní společnosti se nacházíme v bodě, ve kterém platí tyto rysy:</p>
+<ul>
+<li>rychlý rozvoj a využití technologií (mobilní telefony, internet, cloud)</li>
+<li>Automatizace a využití umělé inteligence</li>
+<li>Globalizované propojení lidí jejich komunikací a služeb</li>
+</ul>
+<p>V takové společnosti je rostoucí důležitost pro Kybernetickou bezpečnost</p>
 </div></div>
 					</body>
 				</html>

@@ -530,7 +530,7 @@ Jedná se o nejpoužívanější a nejznámější způsob prevence proti ztrát
 <h4 id="1-raid-0">1. RAID 0<a id="raid0" class="jop-noMdConv" href="#"><a class="jop-noMdConv" href="#"></h4>
 <p>Využívá pouze data striping. Na discích dochází k tomu, že rozdělíme data do menších částí na více disků. K provozu stačí 2 disky.</p>
 <p>Pokud máme soubor A, který chceme uložit, tak bude soubor rozdělen na různé menší části (A1, A2, A3...) a ty budou zároveň nahrávány na různé disky:<br>
-<img src="../../_resources/f3c6ec6f8b774ba9a63099f2d67a1949.png" alt="RAID_0.png" width="173" height="266" class="jop-noMdConv"/></p>
+<img src="../_resources/f3c6ec6f8b774ba9a63099f2d67a1949.png" alt="RAID_0.png" width="173" height="266" class="jop-noMdConv"/></p>
 <p>Výhody:</p>
 <ul>
 <li>Disky si zachovají veškerou kapacitu</li>
@@ -544,7 +544,7 @@ Jedná se o nejpoužívanější a nejznámější způsob prevence proti ztrát
 <h4 id="2-raid-1">2. RAID 1<a id="raid1" class="jop-noMdConv" href="#"><a class="jop-noMdConv" href="#"></h4>
 <p>Využívá pouze disk mirroring. Jedná se o jednoduché zrcadlení dat z jednoho disku na druhý. K provozu stačí také pouze dva disky.</p>
 <p>Jednoduše při nahrávání souboru A do uložiště, se automaticky vytvoří kopie na další disk.<br>
-<img src="../../_resources/798ca60ae53549be8a12dd4a4653a922.png" alt="RAID_1.png" width="188" height="289" class="jop-noMdConv"/></p>
+<img src="../_resources/798ca60ae53549be8a12dd4a4653a922.png" alt="RAID_1.png" width="188" height="289" class="jop-noMdConv"/></p>
 <p>Výhody:</p>
 <ul>
 <li>ochrana dat při ztrátě jednoho disku + můžeme data využívat i když je jeden disk nefunkční</li>
@@ -558,7 +558,7 @@ Jedná se o nejpoužívanější a nejznámější způsob prevence proti ztrát
 <p>Toto řešení je asi nejlepší pro jednotlivce, který má menší množství disků, ale potřebuje mít spolehlivý systém.</p>
 <h4 id="3-raid-5">3. RAID 5<a id="raid5" class="jop-noMdConv" href="#"><a class="jop-noMdConv" href="#"></h4>
 <p>První masivně využívaný složitější RAID systém je RAID 5. Ten kombinuje data striping (konkrétně block-level striping, který rozdělí soubor rovnoměrně mezi disky do tzv. bloku) a parity data. RAID 5 už využívá minimálně 3 disky.</p>
-<img src="../../_resources/49772d9873874c3ea2c61f44b138ec4e.png" alt="RAID_5.png" width="326" height="242" class="jop-noMdConv"/>
+<img src="../_resources/49772d9873874c3ea2c61f44b138ec4e.png" alt="RAID_5.png" width="326" height="242" class="jop-noMdConv"/>
 <h5 id="co-jsou-a-jak-fungují-paritní-data">Co jsou a jak fungují paritní data?<a id="parita" class="jop-noMdConv" href="#"><a class="jop-noMdConv" href="#"></h5>
 <p>Zjednodušeně paritní data jsou data, která se ukládají zároveň se souborem, díky kterým v případě ztráty části souboru lze dopočítat chybějící data.</p>
 <p>V RAID systémech fungují tak, že se data rozloží stejně jako u RAID 0 a k nim se vytvoří data paritní pomocí funkce XOR (exkluzivní disjunkce). Ta říká, že hodnota bude pravda (1), pokud počet výstupů s hodnotou pravda (1) je lichý. U RAID systémů je lepší si to představit jako sčítání bitů.</p>
@@ -616,7 +616,7 @@ Jedná se o nejpoužívanější a nejznámější způsob prevence proti ztrát
 <p>Tento typ je nejpoužívanější v středně velkých serverech.</p>
 <h4 id="4-raid-6">4. RAID 6<a id="raid6" class="jop-noMdConv" href="#"><a class="jop-noMdConv" href="#"></h4>
 <p>Velmi podobný RAID 5, ale navíc přidává jeden paritní blok navíc. První paritní blok je obvykle značen P a vypočítá se stejně jako u RAID 5 (XOR), ale druhý paritní block, označen Q, využívá jiných metod výpočtu. Je potřeba minimálně 4 disků</p>
-<img src="../../_resources/0020a3c4e1614a1eacbda8bab04310a7.png" alt="RAID_6.png" width="362" height="213" class="jop-noMdConv"/>
+<img src="../_resources/0020a3c4e1614a1eacbda8bab04310a7.png" alt="RAID_6.png" width="362" height="213" class="jop-noMdConv"/>
 <p>Výhody:</p>
 <ul>
 <li>zachování dat i při ztrátě 2 disků</li>
@@ -628,7 +628,7 @@ Jedná se o nejpoužívanější a nejznámější způsob prevence proti ztrát
 </ul>
 <h4 id="5-raid-10">5. RAID 10<a id="raid10" class="jop-noMdConv" href="#"><a class="jop-noMdConv" href="#"></h4>
 <p>Stejně tak jak je kombinace RAID 5 data stripingu a paritních dat, je RAID 10 kombinace systémů RAID 1 a RAID 0, tudíž disk mirroringu a data stripingu. Je potřeba minimálně 4 disků.</p>
-<img src="../../_resources/c78e060d719445ffad34456a8eaba7a5.png" alt="RAID_10.png" width="315" height="315" class="jop-noMdConv"/>
+<img src="../_resources/c78e060d719445ffad34456a8eaba7a5.png" alt="RAID_10.png" width="315" height="315" class="jop-noMdConv"/>
 <p>Výhody:</p>
 <ul>
 <li>velká rychlost odpovídající RAID0</li>
@@ -664,7 +664,7 @@ Jedná se o nejpoužívanější a nejznámější způsob prevence proti ztrát
 <h3 id="zapamatovatelné-heslo">Zapamatovatelné heslo<a id="zapamatovatelne" class="jop-noMdConv" href="#"><a class="jop-noMdConv" href="#"></h3>
 <p>Příkladem špatného heslo je příkladně &quot;D0egc01n#&quot;. A proč je to špatné heslo? Člověk si ho jednoduše nezapamatuje, ale počítač ho má uhodnuté za chvilku.</p>
 <p>Daleko lepší je využít metodu &quot;Correct Horse Battery Staple&quot; vysvětlenou tímto komiksem:</p>
-<p><img src="../../_resources/12ec775aff0145cdae10173a5d46da09.png" alt="CHBS.png"></p>
+<p><img src="../_resources/12ec775aff0145cdae10173a5d46da09.png" alt="CHBS.png"></p>
 <p>Ve zkratce jde o to, že využijete slov, která potom vložíte do jednoho hesla. Tyto slova jsou jednoduše zapamatovatelná pro vás, ale počítači bude trvat, než je prolomí.</p>
 <h3 id="osobní-úprava">Osobní úprava<a id="osobni" class="jop-noMdConv" href="#"><a class="jop-noMdConv" href="#"></h3>
 <p>Pro maximálně silné heslo je k dřív zmíněné metodě vhodné přidat něco osobního. Některé úpravy, které jsou vhodné muhou být následovně:</p>
