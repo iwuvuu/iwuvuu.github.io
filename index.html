@@ -2,162 +2,17 @@
 <html>
   <head>
     <title>Maturita-Formalita</title>
-    <!-- <link rel="stylesheet" href="/styles/stylesheet.css"> -->
+    <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@400..900&display=swap');
-      @media (max-width:992px){
-        .main-page-sidebar {
-          transform: translateX(-100%);
-          position: fixed; 
-          z-index: 1000;
-        }
-        .main-page-sidebar.show {
-          transform: translateX(0)
-        }
-        .main-page-sidebar:after {
-        content: '\02795'; /* Unicode character for "plus" sign (+) */
-        font-size: 10px;
-        float: right;
-        margin-left: 5px;
-      }
-        .main-page {
-          margin-left:0!important
-        }
-        .burger-menu {
-          display: block;
-        }
-      }
-      @media (min-width:993px){.burger-menu{display:none!important}.sidebar-button{display:none!important}}
-            :root {
-        --bg0: #FDF6E3;
-        --bg3: #E6E2CC;
-        --bg5: #BDC3AF;
-        --bg-dim: #EFEBD4;
-        --bg_blue: #E9F0E9;
-        --fg: #5C6A72;
-        --red: #F85552;
-        --orange: #F57D26;
-        --yellow: #DFA000;
-        font-family: "Fira Sans", sans-serif;
-        color: var(--fg);
-      }
-      .w3-animate-left{position:relative;animation:animateleft 0.4s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
-      h1 {
-        font-size: 40;
-      }
-      h3 {
-        margin: 0px;
-      }
-      body {
-        background-color: var(--bg0);
-        margin: 0px;
-      }
-      .main-header {
-        background-color: var(--bg_blue);
-        padding-top: 3%;
-        padding-bottom: 3%;
-      }
-      .main-page {
-        vertical-align: middle;
-        position: fixed;
-        margin-left: 300px;
-      }
-      .main-page-sidebar {
-        background-color: var(--bg-dim);
-        height: 100%;
-        width: 300px;
-        position: fixed;
-        z-index: 1;
-        overflow: auto;
-      }
-      .main-page-heading {
-        text-align: center;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        background-color: var(--bg3);
-        font-size: 30;
-        z-index: 2
-      }
-      .main-page-item {
-        font-size: 20;
-        padding: 5%;
-        width: auto;
-        display: block;
-        text-align: center;
-        color: var(--fg);
-        text-decoration: none;
-        &:hover {
-          background-color: var(--bg5);
-          color: var(--bg0);
-        }
-      }
-      .main-page-otazky {
-        font-size: 14;
-      }
-      .main-page-first {
-        background-color: var(--red);
-      }
-      .main-page-second {
-        background-color: var(--orange);
-      }
-      .main-page-third {
-        background-color: var(--yellow);
-      }
-      .accordion {
-        cursor: pointer;
-        border: none;
-        outline: none;
-      }
-      .active {
-        background-color: var(--bg5);
-      }
-      .panel {
-        background-color: var(--bg-dim);
-        color: var(--fg);
-        text-decoration: none;
-        display: none;
-        overflow: hidden;
-      }
-      .accordion:after {
-        content: '\02795'; /* Unicode character for "plus" sign (+) */
-        font-size: 10px;
-        float: right;
-        margin-left: 5px;
-      }
-      .active:after {
-        content: "\2796"; /* Unicode character for "minus" sign (-) */
-      }
-      footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
-        background-color: var(--bg5);
-        color: var(--fg);
-        display: block;
-        z-index: 2;
-      }
-      .footer-block {
-        display: inline-block;
-        width: 30%;
-      }
-      .footer-item {
-        display: inline-block;
-      }
-      .sidebar-button {
-        position: absolute;
-        left: 250;
-        top: 22;
-        z-index: 3; 
-      }
     </style>
+
   </head>
+
   <body>
-
-
+    <div>
 
     <!-- Sidebar -->
     <div class="main-page-sidebar w3-animate-left" id="mySidebar">
@@ -210,13 +65,32 @@
 
     <!-- Main page content -->
     <div class="main-page" style="width:100%">
+      <!-- Header -->
       <div class="main-header">
-        <button class="burger-menu" onclick="test()">
-          <i class="material-icons" style="font-size:20;margin-top:10px" >menu</i>
-        </button>
-        <h1 id="testid" style="text-align:left;">Maturita-Formalita</h1>
+        <div class="content-title content-title-big">
+          <h1 style="text-align:center">MATURITA FORMALITA</h1>
+        </div>
       </div>
-      <p>Kolekce materiálů k maturitám pro studenty GJO. Momentální verze stránky je 0.1</p>
+      <!-- Tabs -->
+      <div class="burger-bar">
+        <div class="burger-div">
+          <button class="burger-menu burger-button burger-button-dark" onclick="test()">
+            <i class="material-icons" style="font-size:20" >menu</i>
+          </button>  
+        </div>
+        <div class="burger-div">
+          <button class="burger-button burger-button-light" onclick="test()">
+            HOME
+          </button>
+        </div> 
+      </div>
+      <!-- Content -->
+      <div class="content content-switch">
+      <p style="clear:both"></p>
+        <div class="container">
+          <p>Tento web slouží jako zdroj vypracovaných maturitních otázek pro maturitní ročník 2024/25 na GJO. BLABLABLA</p> 
+        </div>
+      </div>
     </div>
 
 
@@ -243,7 +117,7 @@
     </footer>
 
 
-
+    </div>
     <!-- Scripts -->
     <script>
 
