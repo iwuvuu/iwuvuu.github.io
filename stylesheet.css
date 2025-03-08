@@ -30,7 +30,7 @@
     display:none!important
   }
   .sidebar-button {
-    display:none!important
+    display:none!important;
   }
   .content-title-big {
     padding-right: 300px;
@@ -38,7 +38,6 @@
   .content-switch {
     padding-right: 300px;
   }
-
 }
 :root {
   --bg0: #FDF6E3;
@@ -88,8 +87,9 @@ body {
   height: 1500px;
   width: 300px;
   position: fixed;
-  z-index: 1;
+  z-index: 1000;
   overflow: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .main-page-heading {
   text-align: center;
@@ -107,9 +107,11 @@ body {
   text-align: center;
   color: var(--fg);
   text-decoration: none;
+
   &:hover {
   background-color: var(--bg5);
   color: var(--bg0);
+
   }
 }
 .main-page-otazky {
@@ -117,12 +119,15 @@ body {
 }
 .main-page-first {
   background-color: var(--red);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .main-page-second {
   background-color: var(--orange);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .main-page-third {
   background-color: var(--yellow);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .accordion {
   cursor: pointer;
@@ -182,6 +187,7 @@ footer {
   overflow: hidden;
   top: 0;
   position: sticky;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .burger-button {
   text-decoration: none;
@@ -224,6 +230,7 @@ footer {
   text-align: justify;
   font-size: 18;
   margin-top: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .h2 {
@@ -269,4 +276,11 @@ ul li.checked::before {
   transform: rotate(45deg);
   height: 15px;
   width: 7px;
+}
+.close-click {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.40);
+  z-index: 5;
+  height: 100%;
+  width: 100%;
 }

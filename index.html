@@ -18,7 +18,6 @@
     <div class="main-page-sidebar w3-animate-left" id="mySidebar">
       <div>
         <h3 class="main-page-heading">Menu</h3>
-        <button class="sidebar-button" onclick="test()">X</button>
       </div>
 
       <!-- Matematika -->
@@ -64,7 +63,9 @@
    
 
     <!-- Main page content -->
-    <div class="main-page" style="width:100%">
+    <div class="main-page main-page-click" style="width:100%">
+      <div id="closeClick" onclick="test()">
+      </div>
       <!-- Header -->
       <div class="main-header">
         <div class="content-title content-title-big">
@@ -214,6 +215,7 @@
 
       function test() {
         document.getElementById("mySidebar").classList.toggle("show");
+        document.getElementById("closeClick").classList.toggle("close-click")
       }
 
       var acc = document.getElementsByClassName("accordion");
