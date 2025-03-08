@@ -89,103 +89,35 @@
         <div style="clear:both" class="container">
           <p>Tento web slouží jako zdroj vypracovaných maturitních otázek pro maturitní ročník 2024/25 na GJO. BLABLABLA</p> 
         </div>
-        <div style="clear:both" class="container">
-          <p>Pokud chcete přispět, přečtěte si informace na naší <a href="https://github.com/iwuvuu/iwuvuu.github.io">GitHub stránce</a>.</p> 
-        </div>
         <div class="container">
           <p>Zde je aktuální stav vypracovaných otázek k jednotlivým předmětům:</p>
-          <h2 class="state-title">INFORMATIKA</h2>
+          <h2 class="state-title">INFORAMTIKA</h2>
           <ul>
-            <li>Otázka 1. - Informatika</li>
-            <li>Otázka 2. - Historie a druhy počítačů</li>
-            <li>Otázka 3. - Záznam, kódování a přenos informací</li>
-            <li>Otázka 4. - Hardware počítače</li>
-            <li>Otázka 5. - Software počítače</li>
-            <li>Otázka 6. - Počítačové sítě</li>
-            <li>Otázka 7. - Malware</li>
-            <li>Otázka 8. - Internet</li>
-            <li class="checked">Otázka 9. - Bezpečnost a ochrana dat</li>
-            <li>Otázka 10. - Vektorová počítačová grafika</li>
-            <li>Otázka 11. - Rastrová počítačová grafika</li>
-            <li>Otázka 12. - Algoritmizace 1</li>
-            <li>Otázka 13. - Algoritmizace 2</li>
-            <li>Otázka 14. - Programovací jazyky</li>
-            <li class="checked">Otázka 15. - Tvorba webových stránek</li>
-            <li>Otázka 16. - Tvorba prezentací</li>
-            <li>Otázka 17. - Tabulkový kalkulátor</li>
-            <li>Otázka 18. - Digitální fotografie</li>
-            <li>Otázka 19. - Tiskárny</li>
-            <li>Otázka 20. - Historie videoher</li>
-            <li>Otázka 21. - Umělá inteligence</li>
-            <li>Otázka 22. - Logické obvody</li>
-            <li class="checked">Otázka 23. - Verzování</li>
-            <li>Otázka 24. - Virtualizační technologie</li>
-            <li>Otázka 25. - Virtuální realita</li>
-          </ul>
-          <h2 class="state-title">MATEMATIKA</h2>
-          <ul>
-            <li>Otázka 1. - Informatika</li>
-            <li>Otázka 2.</li>
-            <li>Otázka 3.</li>
-            <li>Otázka 4.</li>
-            <li>Otázka 5.</li>
-            <li>Otázka 6.</li>
-            <li>Otázka 7.</li>
-            <li>Otázka 8.</li>
-            <li>Otázka 9.</li>
-            <li>Otázka 10.</li>
-            <li>Otázka 11.</li>
-            <li>Otázka 12.</li>
-            <li>Otázka 13.</li>
-            <li>Otázka 14.</li>
-            <li>Otázka 15.</li>
-            <li>Otázka 16.</li>
-            <li>Otázka 17.</li>
-            <li>Otázka 18.</li>
-            <li>Otázka 19.</li>
-            <li>Otázka 20.</li>
-            <li>Otázka 21.</li>
-            <li>Otázka 22.</li>
-            <li>Otázka 23.</li>
-            <li>Otázka 24.</li>
-            <li>Otázka 25.</li>
+            <li class="checked">neco</li>
+            <li>neco</li>
+            <li>neco</li>
           </ul>
           <h2 class="state-title">INFORAMTIKA</h2>
           <ul>
-            <li>Otázka 1. - Informatika</li>
-            <li>Otázka 2.</li>
-            <li>Otázka 3.</li>
-            <li>Otázka 4.</li>
-            <li>Otázka 5.</li>
-            <li>Otázka 6.</li>
-            <li>Otázka 7.</li>
-            <li>Otázka 8.</li>
-            <li>Otázka 9.</li>
-            <li>Otázka 10.</li>
-            <li>Otázka 11.</li>
-            <li>Otázka 12.</li>
-            <li>Otázka 13.</li>
-            <li>Otázka 14.</li>
-            <li>Otázka 15.</li>
-            <li>Otázka 16.</li>
-            <li>Otázka 17.</li>
-            <li>Otázka 18.</li>
-            <li>Otázka 19.</li>
-            <li>Otázka 20.</li>
-            <li>Otázka 21.</li>
-            <li>Otázka 22.</li>
-            <li>Otázka 23.</li>
-            <li>Otázka 24.</li>
-            <li>Otázka 25.</li>
+            <li class="checked">neco</li>
+            <li>neco</li>
+            <li>neco</li>
           </ul>
+          <h2 class="state-title">INFORAMTIKA</h2>
+          <ul>
+            <li class="checked">neco</li>
+            <li>neco</li>
+            <li>neco</li>
+          </ul>
+          <p>afkjlshaflkjshadfl</p>
         </div>
-
       </div>
+    </div>
 
 
 
     <!-- Footer -->
-    <footer style="clear:both">
+    <footer>
       <div class="footer-block">
         <div class="footer-block">
           <i class="material-icons" style="font-size:20;margin-top:10px">language</i>
@@ -204,8 +136,6 @@
         <p style="font-size:10;">Obsah této stránky je pod <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL-3.0</a> licencí.</p>
       </div>
     </footer>
-        </div>
-
 
 
     </div>
