@@ -1,9 +1,12 @@
 :root {
   --bg0: #FDF6E3;
+  --bg5: #BDC3AF;
   --bg-dim: #EFEBD4;
   --fg: #5C6A72;
   --blue: #3A94C5;
   --purple: #DF69BA;
+  --gray1: #A6B0A0;
+  --gray3: #829181;
 }
 
 html {
@@ -59,7 +62,7 @@ a {
   color: var(--blue);
 }
 a:visited {
-  color: var(--purple);
+  color: var(--blue);
 }
 img {
       max-width: 100%;
@@ -169,4 +172,21 @@ img {
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+.home-top-bar {
+  width: 100%;
+  background-color: var(--bg-dim);
+  padding: none;
+  margin: none;
+}
+.home-button {
+  border: none;
+  font-size: 22px;
+  color: var(--fg);
+  background-color: var(--gray1);
+  &:hover {
+    background-color: var(--gray3);
+    color: var(--bg0);
+    cursor: pointer;
+  }
+}
 
