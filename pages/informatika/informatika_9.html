@@ -518,7 +518,7 @@ Jedná se o nejpoužívanější a nejznámější způsob prevence proti ztrát
 <h4 id="3-raid-5">3. RAID 5</h4>
 <p>První masivně využívaný složitější RAID systém je RAID 5. Ten kombinuje data striping (konkrétně block-level striping, který rozdělí soubor rovnoměrně mezi disky do tzv. bloku) a parity data. RAID 5 už využívá minimálně 3 disky.</p>
 <img src="../_resources/49772d9873874c3ea2c61f44b138ec4e.png" alt="RAID_5.png" width="326" height="242" class="jop-noMdConv"/>
-<h5 id="co-jsou-a-jak-fungují-paritní-data">Co jsou a jak fungují paritní data?<a id="parita" class="jop-noMdConv" href="#"><a class="jop-noMdConv" href="#"></h5>
+<h5 id="co-jsou-a-jak-fungují-paritní-data">Co jsou a jak fungují paritní data?</h5>
 <p>Zjednodušeně paritní data jsou data, která se ukládají zároveň se souborem, díky kterým v případě ztráty části souboru lze dopočítat chybějící data.</p>
 <p>V RAID systémech fungují tak, že se data rozloží stejně jako u RAID 0 a k nim se vytvoří data paritní pomocí funkce XOR (exkluzivní disjunkce). Ta říká, že hodnota bude pravda (1), pokud počet výstupů s hodnotou pravda (1) je lichý. U RAID systémů je lepší si to představit jako sčítání bitů.</p>
 <p>Ukažme si to na příkladu, chceme uložit jeden byte (příkladně 10101001) na tři disky. Na první dva se uloží vždy polovina bytu a na třetím se vytvoří paritní data.</p>
