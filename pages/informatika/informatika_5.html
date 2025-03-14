@@ -5,10 +5,10 @@
 						<meta charset="UTF-8">
 						<meta name="viewport" content="width=device-width, initial-scale=1" />
 						<link rel="stylesheet" href="pluginAssets/jsdraw__markdownIt_editDrawingButton/markdownIt.css"><link rel="stylesheet" href="pluginAssets/highlight.js/atom-one-light.css">
-						<title>Otázka 23. - Verzování</title>
+						<title>Otázka 5.</title>
 					</head>
 					<body>
-						<div class="exported-note"><div class="exported-note-title">Otázka 23. - Verzování</div>
+						<div class="exported-note"><div class="exported-note-title">Otázka 5.</div>
 
 <style>
 		/* https://necolas.github.io/normalize.css/ */
@@ -475,54 +475,53 @@ pre.mermaid[data-processed=true] { white-space: unset; }
 				}
 				.mermaid-export-graph > button:hover {
 					background-color: #CBDAF1 !important;
-				}</style><div id="rendered-md"><h1 id="obsah">Obsah</h1>
-<ol>
-<li><a data-from-md title='#verz' href='#verz'>Verzování</a></li>
-<li><a data-from-md title='#druhy' href='#druhy'>Druhy verzovacích systémů</a>
-<ol>
-<li><a data-from-md title='#lvcs' href='#lvcs'>Lokální verzovací systém (LVCS)</a></li>
-<li><a data-from-md title='#cvcs' href='#cvcs'>Centralizovaný verzovací systém (CVCS)</a></li>
-<li><a data-from-md title='#dvcs' href='#dvcs'>Distribuovaný verzovací systém (DVCS)</a><br>
-<a data-from-md title='#git' href='#git'>1. Git</a></li>
-</ol>
-</li>
-</ol>
-<h1 id="verzování">Verzování <a id="verz" class="jop-noMdConv" href="#"></a></h1>
-<p>Verzování je proces uchovávání všech změn, provedených na datech. Může sloužit k vytvářením záloh a možnosti kolaborace s ostatními vývojáři. Verzovat lze jakýkoliv typ dat ovšem nejčastěji se verzuje zdrojový kód.</p>
-<h1 id="druhy-verzovacích-systémů">Druhy verzovacích systémů <a id="druhy" class="jop-noMdConv" href="#"></a></h1>
-<p>= Version Control System (VCS)</p>
-<h2 id="1-lokální-verzovací-systém-lvcs">1. Lokální verzovací systém (LVCS) <a id="lvcs" class="jop-noMdConv" href="#"></a></h2>
-<p>Nejjednoduší metoda verzování je pomocí lokálních verzovacích systémů. Vytváří databázy, která zaznnamenává změny určených dat.</p>
-<p>Nejznámější lokální verzovací software je RCS. RCS uchovává kolekce patchů (změny provedené na datech) ve speciálním formátu na disku. Když aplikujeme určité patche, tak můžeme zjistit jak vypadal soubor v jakýkoliv daný moment.</p>
-<p>Lokální verzovací systémy jsou více náchylné na chyby, zvlášť díky uživatelské neobezřetnosti. Velmi složitá spolupráce s ostatními.</p>
-<h2 id="2-centralizovaný-verzovací-systém-cvcs">2. Centralizovaný verzovací systém (CVCS) <a id="cvcs" class="jop-noMdConv" href="#"></a></h2>
-<p>Centrální verzovací systémy obsahují jeden referenční soubor na centrálním serveru (repozitář). Každý uživatel může upravovat soubory na repozitáři, a aby mohli ostatní úpravy vidět taky, tak je vývojář musí &quot;commitnout&quot; na hlavní repozitář.</p>
-<img src="../_resources/ec05710f046e4ab7ae7309994906f52c.png" alt="cvcs.png">
-<p>CVCS sice poskytují daleko lepší možnost spolupráce, mají ale jeden velký problém. A tím je &quot;single point of failure&quot;, v informatice víme, že není nikdy vhodné, aby celá infrastruktura závisela na jednom prvku. U CVCS je tímto slabým článkem onen repozitář a server, kde je uchován. Pokud ztratíme signál během nahrávání nebo se disk na serveru bez řádné kopie poškodí, ztratíme tak celou práci.</p>
-<p>Známý CVCS je příkladně Subversion</p>
-<h2 id="3-distribuovaný-verzovací-systém-dvcs">3. Distribuovaný verzovací systém (DVCS) <a id="dvcs" class="jop-noMdConv" href="#"></a></h2>
-<p>Na rozdíl od CVCS nemá jednu referenční kopii, ale každý vývojář vlastní vlastí repozitář a pracovní kopii. Pokaždé, když vývojář &quot;commitne&quot; změnu, tak se zobrazí v jeho lokálním repozitáři. Pro globální změnu do vzorového repozitáře je vývojář musí &quot;pushnout&quot; a pokud ostatní vývojáři chtějí převzít změnu, tak si je musí &quot;pullnout&quot;</p>
-<p><img src="../_resources/e1ebcab103fd49fcbc2893f9fe7f3b26.png" alt="dvcs.png"></p>
-<p>V dnešní době nepoužívanější DVCS jsou Git a Mercurial.</p>
-<h3 id="git">Git <a id="git" class="jop-noMdConv" href="#"></a></h3>
-<p>Dnes jeden z nejpoužívanějších VCS. Byl vytvořen Linusem Torvaldsem pro vývoj linuxového jádra</p>
-<p>Základní funkce:</p>
-<ol>
-<li>Větvení (&quot;Branching&quot;) a &quot;Merging&quot;. Git nabízí možnost rozvětvit projekt do lokáních větvím, které pracují a mohou být upravovány nezávisle na sobě. Tyto větve mohou být dále &quot;mergnuty&quot; do hlavní větve atd.</li>
-</ol>
-<p><img src="../_resources/f30f18d6998b49e293115df8ce625c71.png" alt="branch.png"></p>
-<ol start="2">
-<li>&quot;Staging area&quot; nebo také &quot;index&quot; je prostor, kde se ukládají změny před commitnutím do repozitáře. Čekají na kontrolu a příkladné formátování a po dokončení všech plánovaných úprav, můžeme vybrané finální změny commitnout do repozitáře.</li>
-</ol>
-<p><img src="../_resources/243f677287b04928af56950c4fab4753.png" alt="index.png"></p>
-<ol start="3">
-<li>Git využívá &quot;snapshot verzování&quot;, zde každá verze vytváří kopii nejnovější předešlé změny v souboru a přenáší ji soubou do další verze.</li>
-</ol>
-<p><img src="../_resources/ab834e5a544842f48af85f02728a4709.png" alt="snapshot_verzovani.png"></p>
-<ol start="4">
-<li>&quot;Forkování&quot;. Vývojář může zkopírovat projekt a pracovat na něm odděleně od hlavního projeku. Zde může provést svou vizi, která se nemusí slučovat s myšlenkami originálního projektu.</li>
-</ol>
-<p>V dnešní době jsou populární git webové frontendy, které zároveň slouží jako cloudové servery hostující data projektů. Nejpopulárnější jsou GitHub a GitLab.</p>
+				}</style><div id="rendered-md"><h1 id="software">Software</h1>
+<p>Software je kolekce instrukcí a programů, které umožňují uživateli komunikovat s počítačem. Dělí se podle využití a úrovně na jaké pracuje s hardwarem počítače.</p>
+<h2 id="systémový-software">Systémový software</h2>
+<p>Systémový software umožňuje uživateli pracovat s počítačem, ovládat ho, nebo třeba spouštět aplikace. Je přímo závislý na hardwaru a počítači.</p>
+<h3 id="1-operační-systém">1. Operační systém</h3>
+<p>Operační systém je základní nástroj, který umožňuje běh programů a ovlivňuje komunikaci mezi uživatelem a počítačem. Poskytuje funkce pro ovládání hardwaru, poskytuje jedodušší vývoj uživatelských programům, spravuje prostředky počítačového systému (CPU, RAM, přístup k uložišti...) a poskytuje uživatelské rozhraní (UI).</p>
+<p>Operační systém je vhodné využívat jen tam, kde je potřeba (v kávovaru bude jen na obtíž). Hojně se využívá v:</p>
+<p><strong>Desktop</strong> - stolní počítače, laptopy - slouží uživateli k práci s počítačem a měl by nabízet vhodné prostředí k plnění uživatelských potřeb. Příklady: Microsoft Windows, MacOS, Linuxové distribuce, BSD distribuce.</p>
+<p><strong>Mobilní zařízení</strong> - vyžaduje schopnost plnit požadavky uživatele za chodu - velká efektivnost, jednoduchá obsluha. Příklady: Android, iOS, Linux na mobil (zatím docela mid).</p>
+<p><strong>Severy</strong> - cílem je nabídnout vysokou výpočetní techniku, snadnou údržbu a zabezpečení. Příklady: Linux, Windows NT</p>
+<h3 id="2-firmware">2. Firmware</h3>
+<p>Firmware je obecně termín užívaný k označení nízkoúrovňového softwaru, který je spjat s určitým hardwarem - Wi-Fi čipy, GPS čipy, semafory, pevné disky... Využívá se právě tam, kde velký operáční systém je nevhodný.</p>
+<h3 id="3-pomocné-nástroje-utility-software">3. Pomocné nástroje (Utility software)</h3>
+<p>Jsou počítačové programy, které slouží k usnandění užívání počítače a zlepšení quality of life. Příkladem mohou být: správa uživatelů, clipboard managery, cryptografické programy, data recovery, kompresní programy...</p>
+<h2 id="aplikační-software">Aplikační software</h2>
+<p>Aplikační software je určený pro uživatelské úkoly, které nesouvisí se správou systému. Poskytují tak práci, která není závislá na počítači.</p>
+<p>Mezi kategorie aplikačního softwaru patří například:</p>
+<p><strong>Kancelářské aplikace</strong> - textové editory (MS Word, LibreOffce Writer), tabulkové procesory (MS Excel, LibreOffice Calc), prezentační programy (MS Powerpoint, LibreOffice Impress)</p>
+<p><strong>Multimediální software</strong> - slouží k přehrávání a úpravě médií. VLC, MPV... k úpravám lze využít Adobe Premiere, Kden Live, Audacity...</p>
+<p><strong>Grafický software</strong> - využití k vytváření grafických prací - 3D modelování (zahrnul bych sem i CAD software př. AutoCAD, FreeCAD), Rastrová/Vektorová grafika - GIMP, Inkscape, Photoshop, Krita</p>
+<p><strong>Internetový software</strong> - prohlížeče (Google Chrome, Firefox, Librewolf, Ladybug, MS Edge), e-mail klienty (Thunderbird)...</p>
+<p>A další.</p>
+<h1 id="licenční-politika">Licenční politika</h1>
+<p>Softwarová licence je pravní nástroj, který umožňuje používat, upravovat nebo redistribuovat software za stanovených podmínek.</p>
+<h2 id="druhy-licencí">Druhy licencí</h2>
+<p>Základní dělení licencí může být podle způsobu distribuce daného softwaru.</p>
+<h3 id="1-proprietární-software-copyright">1. Proprietární software (Copyright)</h3>
+<p>Proprietární nebo-li uzavřený software omezuje uživatelské pravomoce nad správou daného softwaru. Zamezuje uživateli možnost volně šířit a upravovat software. Poskytuje tak nejvyšší možnou ochranu autorských práv pro vývojáře.</p>
+<p>Mezi proprietární software patří například: Microsoft Windows, MacOS, Microsoft Office, Adobe Photoshop, WinRAR...</p>
+<h3 id="2-free-and-open-source-software-foss">2. Free and Open Source software FOSS</h3>
+<p>FOSS software má ve směs otevřený zdrojový kód a lze jej upravovat a redistribuovat. Avšak některé FOSS licence udávají různé podmínky a uživatelská práva.</p>
+<h4 id="gnu-general-public-license-copyleft">GNU General Public License (Copyleft)</h4>
+<p>GPL (a jeji podverze -&gt; GPL-V3; GPL-V2; LGPL...) je copyleftová licence, což znamená, že jakýkoliv software s touto licencí musí být redistribuován pod stejnou licencí a stejnými podmínkami, stejně tak všechny knihovny a programy využívány tímto programem. Umožňuje uživateli využívat a modifikovat software jakkoliv je mu libo (samozřejmě krom licence).</p>
+<p>GPL využívá například: Linux, Git, GIMP...</p>
+<hr>
+<h4 id="mit-license">MIT license</h4>
+<p>Narozdíl od GPL licence MIT není striktně copyleftová a neomezuje jaké licence musí být programem využity, to znamená, že program pod MIT licencí může být využit později v jiném proprietárním programu. Podobně jako GPL umožňuje uživateli modifikovat a využívat software bez omezení.</p>
+<p>MIT využívá velké množství knihoven a programů: x-org, node.js, react...</p>
+<hr>
+<p>Mezi další FOSS licence patří například Apache license (Android...), BSD license...</p>
+<h3 id="3-podle-způsobu-distribuce">3. Podle způsobu distribuce</h3>
+<p><strong>Freeware</strong> - užívání je naprosto zdarma, ale zamezuje úpravu a redistribuci</p>
+<p><strong>Shareware</strong> - lze volně distribuovat a zdarma vyzkoušet, pro další používání je nutné zaplatit</p>
+<p><strong>Commercial software</strong> - software určený pro zisk, který je nutný si koupit</p>
+<p>Způsob distribuce nemusí ovlivnit využitou licenci, například GPL software může být commercial software a Proprietární software může být Freeware. Obvykle je však proprietární software distribuován komerčně a FOSS software distribuován bez omezení.</p>
+<h2 id="eula-end-user-agreement-license">EULA (End User Agreement License)</h2>
+<p>EULA je koncová uživatelská licenční smlouva, která určuje podmínky (co smí nebo nesmí dělat) pro uživatele, které k využívání softwaru musí přijmout.</p>
 </div></div>
 					</body>
 				</html>
