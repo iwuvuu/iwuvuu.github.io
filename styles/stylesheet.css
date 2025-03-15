@@ -116,6 +116,7 @@ body {
 }
 .main-page-otazky {
   font-size: 14;
+  text-align: left;
 }
 .main-page-first {
   background-color: var(--red);
