@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Hardware počítače</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../stylesheet.css" />
+</head>
+<body>
+<div class="home-top-bar">
+  <a class="home-button" href="https://iwuvuu.github.io">HOME</a>
+</div>
+
+<header id="title-block-header">
+<h1 class="title">Hardware počítače</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#interní-komponenty" id="toc-interní-komponenty">Interní
+komponenty</a>
+<ul>
+<li><a href="#základová-deska" id="toc-základová-deska">Základová
+deska</a></li>
+<li><a href="#procesor-cpu---central-processing-unit"
+id="toc-procesor-cpu---central-processing-unit">Procesor (CPU - Central
+Processing Unit)</a></li>
+<li><a href="#paměť-ram" id="toc-paměť-ram">Paměť RAM</a></li>
+<li><a href="#grafická-karta-gpu---graphics-processing-unit"
+id="toc-grafická-karta-gpu---graphics-processing-unit">Grafická karta
+(GPU - Graphics processing unit)</a></li>
+<li><a href="#uložiště" id="toc-uložiště">Uložiště</a></li>
+<li><a href="#zdroj-psu---power-supply-unit"
+id="toc-zdroj-psu---power-supply-unit">Zdroj (PSU - Power Supply
+Unit)</a></li>
+</ul></li>
+</ul>
+</nav>
+<p>Hardware počítače představuje veškerou fyzickou (interní i externí)
+složku počítače, na kterou si můžeme šáhnout, a která se podílí na chodu
+počítače.</p>
+<p>Hardware můžeme rozdělit na externí a interní:</p>
+<ul>
+<li><strong>Externí</strong> - všechny komponenty, které připojujeme k
+počítači. Monitor, myš, klávesnice, tiskárna…
+<ul>
+<li>Ten ještě můžeme rozdělit na vstupní (input) a výstupní (output) -
+I/O zařízení:
+<ul>
+<li><strong>Input</strong> - jsou všechna zařízení, která posílají data
+<strong>do</strong> počítače - myš, klávesnice…</li>
+<li><strong>Output</strong> - jsou všechna zařízení, která přijímají
+data <strong>z</strong> počítače - monitor, tiskárna…</li>
+</ul></li>
+</ul></li>
+<li><strong>Interní</strong> - všechny komponenty uvnitř počítačové
+skříně. Základová deska, procesor, SSD…</li>
+</ul>
+<h1 id="interní-komponenty">Interní komponenty</h1>
+<h2 id="základová-deska">Základová deska</h2>
+<p>Základová deska je hlavní obvodová deska, která propojuje všechny
+ostatní komponenty a umožňuje jejich komunikaci.</p>
+<p><img class="image-center" src="../resources/motherboard.jpg" alt="motherboard" width="300"/></p>
+<p>Při výběru základové desky je důležité vybrat správný model tak, aby
+procesorová patice seděla s procesorem. Jednotlivé desky se mimo typ
+patice liší počtem jednotlivých prvků a nad velikostí spotřeby
+energie.</p>
+<p>Motherboardy se také dělí velikostí. Standartní velikost je ATX,
+která má všechny potřebné konektory a sběrnice se standartním 24 pinovým
+konektorem pro zdroj. M-ATX je menší s méně konektory, ale specifikace
+jsou jinak stejné. ITX je ze všech nejmenší.</p>
+<p>Důležité jednotlivé prvky:</p>
+<ol type="1">
+<li><strong>Procesorová patice (CPU socket)</strong> Místo, kde je
+upevněn procesor (piny cpu se zasunou do jednotlivých zdířek).</li>
+</ol>
+<p><img class="image-center" src="../resources/cpu_socket.jpg" alt="cpu_socket" width="300"/></p>
+<ol start="2" type="1">
+<li><strong>RAM sběrnice (RAM sloty)</strong> Konektory pro upevnění
+destiček paměti RAM.</li>
+</ol>
+<p><img class="image-center" src="../resources/ram_slot.jpg" alt="ram_slot" width="300"/></p>
+<ol start="3" type="1">
+<li><strong>PCI sběrnice</strong> PCI (Peripheral Component
+Interconnect) je druh sběrnice, která umožňuje připojení rozšiřujících
+karet (grafická karta, síťová…)</li>
+</ol>
+<p>Existují dva druhy PCI sběrnic. Klasické PCI - starší, dnes už
+nepoužívané a PCI Express (PCIe) - modernější a univerzálnější. PCIe se
+ještě dělí podle počtu linek, to určuje jak velké a náročné karty mohou
+být do daného slotu připojeny (PCIe 16 je třeba určena pro GPU).</p>
+<p>PCI:
+<img class="image-center" src="../resources/pci.jpg" alt="pci" width="300"/>
+PCIe:
+<img class="image-center" src="../resources/pcie.jpg" alt="pcie" width="300"/></p>
+<ol start="4" type="1">
+<li><strong>Konektory disků</strong> Místa kde se připojují HDD a SSD
+disky.</li>
+</ol>
+<p>SATA disky se připojejí do těchto konektorů:
+<img class="image-center" src="../resources/sata.jpg" alt="sata" width="300"/></p>
+<p>A M.2/NVMe (a jiné destičkové SSD) se připojují do podobných
+konektorů:
+<img class="image-center" src="../resources/m2.jpg" alt="m.2" width="300"/></p>
+<ol start="5" type="1">
+<li><strong>Napájecí konektory</strong> Zajišťují přívod energie ze
+zdroje a možnost napájení ostatních komponentů. Hlavní 24 pinový
+konektor pro základovou desku (ATX motherboard):</li>
+</ol>
+<p><img class="image-center" src="../resources/atx.jpg" alt="atx" width="300"/></p>
+<ol start="6" type="1">
+<li><strong>CMOS baterie (BIOS baterie)</strong> Menší lithiové baterie,
+které udržují obvod systémových hodin a systémová nastavení i když je
+počítač odpojen od napájení.</li>
+</ol>
+<p><img class="image-center" src="../resources/cmos.jpg" alt="cmos" width="300"/></p>
+<h2 id="procesor-cpu---central-processing-unit">Procesor (CPU - Central
+Processing Unit)</h2>
+<p>Procesor zpracovává všechny výpočty a instrukce počítače.</p>
+<p>Důležité parametry procesoru jsou: 1. <strong>Počet a typ
+jader/vláken</strong> - jádra “rozkouskovávají” procesor do více (podle
+počtu jader) menších sekcí, které všechny fungují jako samostatné jádro.
+Díky tomu může procesor vykonávat více úkonů najednou. Vlákna fungují na
+podobném principu a virtuálně rozdělují jednotlivá jádra až na dvě
+části. Takže 4-jádrový procesor bude mít maximálně 8 vláken.</p>
+<ol start="2" type="1">
+<li><p><strong>Frekvence</strong> - udává kolik miliard cyklů (u GHz)
+dokáže CPU vykonat za jednu sekundu.</p></li>
+<li><p><strong>Cache paměť</strong> - je velmi rychlá paměť (SRAM -
+statická), která se nachází v blízkosti procesoru a ukládají se v ní
+často používané data z paměti RAM.</p></li>
+<li><p><strong>TDP</strong> - Thermal Design Power - je parametr
+ukazující kolik tepla procesor vydá za náročného fungování (ve
+wattech).</p></li>
+</ol>
+<p>Při výběru CPU musíme brát samozřejmě ohled na výkon, ale i na
+kompatibilitu se základní deskou. V dnešní době jsou dva hlavní výrobci
+desktopových procesorů a to Intel a AMD. Ty jsou prominentní také v
+laptopových procesorech, kde se však v dnešní době stávají populárními
+ARM (CPU např v mobilech) jako je Snapdragon. Apple má své vlastní
+procesory řady M.</p>
+<p>Procesor může také obsahovat integrovanou grafickou kartu, což bývá
+časté právě u laptopových čipech.</p>
+<p><img class="image-center" src="../resources/cpu_bot.jpg" alt="cpu_bot" width="300"/>
+<img class="image-center" src="../resources/cpu_top.png" alt="cpu_top" width="300"/></p>
+<h2 id="paměť-ram">Paměť RAM</h2>
+<p>RAM - Random Acces Memory - je dočasné uložiště pro běžící programy a
+data, které se resetuje po vypnutí počítače.</p>
+<p>Dělení:</p>
+<p>RAM můžeme dělit podle její kapacity. Jako obvykle se jedná o řadu
+dvojnásobků, standartně se vyskytují paměti o velikostech 2 GB, 4 GB, 8
+GB, 16 GB, 32 GB…</p>
+<p>Důležitější je typ paměti: 1. DIMM - klasická velká paměť ve stolních
+počítačích.</p>
+<p><img class="image-center" src="../resources/dimm.jpg" alt="dimm" width="300"/></p>
+<ol start="2" type="1">
+<li>SO-DIMM - menší paměť v laptopech.</li>
+</ol>
+<p><img class="image-center" src="../resources/sodimm.jpg" alt="sodimm" width="300"/></p>
+<p>Pro celopočítačové paměti RAM se využívá DRAM - dynamická, která
+potřebuje být obnovována. Ta využívá technologie DDR - Double Data Rate
+- která dokáže posílat data dvakrát tak rychle, než SDR RAM. Dělí se na
+generace (DDR3, DDR4, DDR5…).</p>
+<h2 id="grafická-karta-gpu---graphics-processing-unit">Grafická karta
+(GPU - Graphics processing unit)</h2>
+<p>Zajišťuje výpočty pro zobrazení obrazu, náročné grafické operace, hry
+a práci s videem.</p>
+<p><img class="image-center" src="../resources/gpu.jpg" alt="gpu" width="300"/></p>
+<h2 id="uložiště">Uložiště</h2>
+<p>Trvalé uložení dat a operačního systému.</p>
+<p>Dělí se na HDD a SSD: 1. <strong>HDD</strong> - hard disk drive - je
+mechanický disk s čtecí hlavou a pohybujícím se diskem. HDD jsou levné s
+velkou kapacitou, ale náchylnější na fyzické poškození a pomalejší.</p>
+<p><img class="image-center" src="../resources/hdd.png" alt="hdd" width="300"/></p>
+<ol start="2" type="1">
+<li><strong>SDD</strong> - solid state drive - je polovodičový disk bez
+jakýchkoliv mechanických částí. SSD jsou rychlejší, ale mají nižší
+kapacitu (v poměru s cenou). SSD jsou buď stejně jako HDD připojeny přes
+SATA konektor nebo přes speciální M.2 (popřípade jiná velikost), které
+obvykle poskytují uložiště přes PCIe.</li>
+</ol>
+<p><img class="image-center" src="../resources/satassd.jpg" alt="satassd" width="300"/></p>
+<p><img class="image-center" src="../resources/m2ssd.jpg" alt="m2ssd" width="300"/></p>
+<h2 id="zdroj-psu---power-supply-unit">Zdroj (PSU - Power Supply
+Unit)</h2>
+<p>Převádí elektrickou energii na napětí potřebné pro komponenty.
+Důležitým parametrem je výkon zdroje, která udává maximální množstvi
+energie (ve wattech), které zvládne zdroj dodat (500 W, 750 W…)</p>
+<p>Dostatečná energie je velmi důležitá, protože bez ní by byl systém
+velmi nestabilní.</p>
+<p>Zdroje mají certifikaci (Gold, 80 PLUS Bronze), která udává účinnost
+daného zdroje.</p>
+<p><img class="image-center" src="../resources/psu.jpg" alt="psu" width="300"/></p>
+</body>
+</html>
