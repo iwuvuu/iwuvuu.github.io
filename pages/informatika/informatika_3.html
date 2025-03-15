@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Záznam, kódování a přenost informací</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../stylesheet.css" />
+</head>
+<body>
+<div class="home-top-bar">
+  <a class="home-button" href="https://iwuvuu.github.io">HOME</a>
+</div>
+
+<header id="title-block-header">
+<h1 class="title">Záznam, kódování a přenost informací</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#záznam-informací" id="toc-záznam-informací">Záznam
+informací</a>
+<ul>
+<li><a href="#kódování-informací" id="toc-kódování-informací">Kódování
+informací</a></li>
+<li><a href="#jednotky-informace" id="toc-jednotky-informace">Jednotky
+Informace</a></li>
+</ul></li>
+<li><a href="#komprese-dat" id="toc-komprese-dat">Komprese dat</a>
+<ul>
+<li><a href="#ztrátová-komprese-lossy"
+id="toc-ztrátová-komprese-lossy">Ztrátová Komprese (lossy)</a></li>
+<li><a href="#bezztrátová-komprese-lossless"
+id="toc-bezztrátová-komprese-lossless">Bezztrátová Komprese
+(lossless)</a></li>
+</ul></li>
+<li><a href="#přenos-dat" id="toc-přenos-dat">Přenos dat</a>
+<ul>
+<li><a href="#přenosové-protokoly"
+id="toc-přenosové-protokoly">Přenosové protokoly</a>
+<ul>
+<li><a href="#tcp-transmission-control-protocol"
+id="toc-tcp-transmission-control-protocol">TCP (Transmission Control
+Protocol)</a></li>
+<li><a href="#ip-internet-protocol" id="toc-ip-internet-protocol">IP
+(Internet Protocol)</a></li>
+<li><a href="#http-https-hypertext-transfer-protocol-secure"
+id="toc-http-https-hypertext-transfer-protocol-secure">HTTP / HTTPS
+(HyperText Transfer Protocol / Secure)</a></li>
+<li><a href="#ftp-file-transfer-protocol"
+id="toc-ftp-file-transfer-protocol">FTP (File Transfer
+Protocol)</a></li>
+<li><a href="#bluetooth" id="toc-bluetooth">Bluetooth</a></li>
+</ul></li>
+<li><a href="#přenosová-rychlost" id="toc-přenosová-rychlost">Přenosová
+rychlost</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="záznam-informací">Záznam informací</h1>
+<p>Záznam informací je klíčovým procesem k uchovávání informací pro
+budoucí použití. Informace se uchovávali již od pradávné minulosti.
+Tehdy se uchovávali pouze analogicky - ruční psaní, malby. Později také
+knihtisk a nástup fotografií pro rychlý záznam obrazu a na konci
+analogického vývoje následovaly gramofonové a magnetofonové pásky a
+děrné štítky.</p>
+<p>V dnešní době se už používá ve velkém množství záznam digitální.</p>
+<h2 id="kódování-informací">Kódování informací</h2>
+<p>Abychom informace uchovali digitálně musíme je přenést z původního
+zdroje (zvuk, text, obraz…) do formy, která je pro počítač vhodná. K
+tomu slouží kódování informací. Počítač dokáže pracovat pouze v binární
+soustavě (tedy jen v 0 a 1), ale existuje kódování i mimo základní
+binární soustavu. Například text můžeme kódovat pomocí ASCII nebo
+UNICODE. ASCII kódování nahrazuje každý znak anglické abecedy má svůj
+dvojciferný kód…</p>
+<h2 id="jednotky-informace">Jednotky Informace</h2>
+<p>Digitální informace (data) se mají vlastní jednotku. Základní
+jednotkou je 1 Bit, ten může nabývat dvou hodnot a to 0 nebo 1. Bit sám
+o sobě, ale nejde dobře využívat, a proto nejmenší objem dat, který
+dokáže počítač zpracovat je 1 Byte = 8 Bitů. V praxi se pak využívají
+jeho násobky.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Značka</th>
+<th>Název</th>
+<th>Velikost</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>B</td>
+<td>byte</td>
+<td>1 B</td>
+</tr>
+<tr class="even">
+<td>kB</td>
+<td>kilobyte</td>
+<td>1024 kB</td>
+</tr>
+<tr class="odd">
+<td>MB</td>
+<td>megabyte</td>
+<td>1024 MB</td>
+</tr>
+<tr class="even">
+<td>GB</td>
+<td>gigabyte</td>
+<td>1024 GB</td>
+</tr>
+<tr class="odd">
+<td>TB</td>
+<td>terabyte</td>
+<td>1024 TB</td>
+</tr>
+<tr class="even">
+<td>PB</td>
+<td>petabyte</td>
+<td>1024 PB</td>
+</tr>
+</tbody>
+</table>
+<p>Velikost souborů dat může sahat od kilobytů (Word dokument) až po
+stovky gigabytů (Počítačové hry; 4k videa).</p>
+<hr />
+<p>Digitální data se mohou zapisovat na různá média:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Typ</th>
+<th>Velikost</th>
+<th>Rychlost</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CD</td>
+<td>700 MB</td>
+<td>600 kB/s</td>
+</tr>
+<tr class="even">
+<td>DVD</td>
+<td>6 GB</td>
+<td>21 MB/s</td>
+</tr>
+<tr class="odd">
+<td>Blu-ray</td>
+<td>70 GB</td>
+<td>123 MB/s</td>
+</tr>
+</tbody>
+</table>
+<p>V dnešní době se k záznamu hlavně využívají HDD disky, SSD a cloudová
+uložiště. Všechny možnosti nesou výhody i nevýhody, ale SSD disky jsou
+asi nejméně náchylné na degradaci časem a jejich kapacita/cena již taky
+není nejhorší, minimálně co se týče lokálních možností bez nutnosti
+měsíčních plateb.</p>
+<p>Digitální záznam dat se očividně posunul velmi daleko, první pevný
+disk IBM v roce 1956 měl kapacitu jen 5 MB a vážil 100 kg.</p>
+<h1 id="komprese-dat">Komprese dat</h1>
+<p>Komprese dat je proces zmenšování objemu dat nebo datového toku.
+Komprese je vhodná pro archivaci nebo přenosu přes síť, kde menší
+velikost dat je vhodná.</p>
+<h2 id="ztrátová-komprese-lossy">Ztrátová Komprese (lossy)</h2>
+<p>Při ztrátové kompresi jsou určité informace zjednodušeny nebo
+odstraněny. Nezachová se tak zcela původní obsah dat a dochází k poklesu
+kvality. Výhodou je však daleko menší velikost souboru. Algoritmus při
+ztrátové kompresi se snaží oddělit důležité informace od
+nedůležitýních</p>
+<p>Typy ztrátových formátů jsou např.: MP3, MP4, JPEG, JPG, MPEG</p>
+<p>Ztrátové formáty je vhodné využít tam, kde nám stačí přenést hlavní
+obsah dat a zároveň požadujeme jejich nízkou velikost. Příkadem může být
+obrázek na webové stránce, stačí nám horší kvalita JPEG za cenu daleko
+menšího zabraného uložiště.</p>
+<h2 id="bezztrátová-komprese-lossless">Bezztrátová Komprese
+(lossless)</h2>
+<p>Narozdíl od ztrátové komprese, bezztrátová komprese zachovává
+originální data, ale na úkor menší úspory místa. Pro tuto kompresi
+existuje několik algoritmů, ale všechny oběcně fungují na principu
+uchování stejných dat pohromadě, které se potom zkrátí.</p>
+<p>Typy bezztrátových formátů jsou např.: Txt, Zip, PNG, GIF, FLAC</p>
+<p>Bezztrátová komprese se využívá právě tehdy, kdy potřebujeme zachovat
+maximální kvalitu a shodu s originálním vstupem.</p>
+<h1 id="přenos-dat">Přenos dat</h1>
+<p>Uložená data potřebujeme ve většině případů nějakým způsobem přenést,
+ať už na jiný disk, pokud si chceme nahrát staženou skladbu do mobilu
+nebo přesunout data na úplně jinou síť…</p>
+<p>Přenášet data můžeme uď bezdrátově nebo kabelově popřípadě i
+opticky.</p>
+<p><strong>Kabelový přenos</strong> - je stabilní a často velmi rychlý,
+také nepodléhá rušivosti tak moc. Jsou to např.: USB, Ethernet,
+HDMI.</p>
+<p><strong>Bezdrátový přenos</strong> - je flexibilnější a
+přenositelnější, ale dochází k rušení. Jsou to např.: Wi-Fi, bluetooth,
+NFC a mobilní sítě.</p>
+<p><strong>Optický přenos</strong> - je přenos pomocí optických vláken,
+kde data putují formou světelných impulsů. Přenos je estrémně rychlý a
+spolehlivý i při přenosu na velké vzdálenosti.</p>
+<h2 id="přenosové-protokoly">Přenosové protokoly</h2>
+<h3 id="tcp-transmission-control-protocol">TCP (Transmission Control
+Protocol)</h3>
+<p>Je protokol pro spolehlivý přenost dat mezi dvěma zařízeními. Funguje
+tak, že rozdělí data na menší části (pakety) a pošle je postupně do
+cíle. Přitom kontroluje zda dorazily.</p>
+<p>Využívají ho webové prohlížeče, e-maily i my při stahování
+souborů.</p>
+<h3 id="ip-internet-protocol">IP (Internet Protocol)</h3>
+<p>Je protokol, který se stařa o adresování a směrování paketů přes
+internet. Přiřazuje každému zařízení svoji IP adresu, podle které se
+pozná, kam mají být data doručena.</p>
+<p>Využívá se ve všech přenosech přes internet.</p>
+<h3 id="http-https-hypertext-transfer-protocol-secure">HTTP / HTTPS
+(HyperText Transfer Protocol / Secure)</h3>
+<p>Jedná se o protokoly pro načítání webových stránek. Zajišťuje přenos
+dat mezi webovým serverem a prohlížečem.</p>
+<p>HTTPS je modernější verze HTTP, která přidává šifrovanou
+zabezpečující složku. Tím zabraňuje před některými útoky a je vhodný pro
+citlivé informace. Nenastane tak situace, že na veřejné wi-fi síti někdo
+může sledovat naši aktivitu na stránce a číst například naše zadávané
+heslo. V dnešní době se už klasické HTTP prakticky nevyskytuje a pokud
+ano, jedná se o staré primitivní stránky, které jsou rizikové.</p>
+<h3 id="ftp-file-transfer-protocol">FTP (File Transfer Protocol)</h3>
+<p>Umožňuje přenos souborů mezi zařízeními nebo servery. Díky FTP se
+můžeme připojit na server a stahovat/nahrávat data.</p>
+<p>Existuje i šifrovaná (SFTP) verze pro větší bezpečnost.</p>
+<h3 id="bluetooth">Bluetooth</h3>
+<p>Je bezdrátový protokol pro krátké vzdálenosti (většinou do 10 metrů).
+Slouží k připojení zařízení mezi seboud (sluchátka, klávesnice…) nebo k
+přenosu souborů. Pracuje na principu nízkofrekvenčního radiového
+signálu.</p>
+<h2 id="přenosová-rychlost">Přenosová rychlost</h2>
+<p>Udává kolik dat se přenese za jednu sekundu. Nejčastěji se udává v
+bit/s (jeden bit za sekundu - bps) a jeho násobcích: kbps, Mbps,
+Gbps…</p>
+<p>Rychlost může být ovlivněna fyzickými překážkami (hlavně u
+bezdrátových sítí) nebo vytížeností sítě nebo typ kabelového
+připojení.</p>
+<p>Typické přenosové rychlosti:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Technologie</th>
+<th>Typická rychlost</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>USB 2.0</td>
+<td>480 Mbps</td>
+</tr>
+<tr class="even">
+<td>USB 3.0</td>
+<td>5 Gbps</td>
+</tr>
+<tr class="odd">
+<td>Ethernet (1G Lan)</td>
+<td>1000 Mbps</td>
+</tr>
+<tr class="even">
+<td>Mobilní síť 4G LTE</td>
+<td>100-300 Mbps</td>
+</tr>
+<tr class="odd">
+<td>Mobilní síť 5G</td>
+<td>několik Gbps</td>
+</tr>
+<tr class="even">
+<td>Optická síť</td>
+<td>až 10 Gbps</td>
+</tr>
+</tbody>
+</table>
+<p>Rozlišuje se také rychlost při stahování (download) a odesílaní
+(upload). V běžném životě bývá download rychlejší, než upload.</p>
+</body>
+</html>
