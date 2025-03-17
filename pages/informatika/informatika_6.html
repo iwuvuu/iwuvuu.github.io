@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Počítačové sítě</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../stylesheet.css" />
+</head>
+<body>
+<div class="home-top-bar">
+  <a class="home-button" href="https://iwuvuu.github.io">HOME</a>
+</div>
+
+<header id="title-block-header">
+<h1 class="title">Počítačové sítě</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#historie-internetu" id="toc-historie-internetu">Historie
+internetu</a>
+<ul>
+<li><a href="#arpa-darpa---1958" id="toc-arpa-darpa---1958">ARPA (DARPA)
+- 1958</a></li>
+<li><a href="#arpanet-advanced-research-projects-agency-network---1969"
+id="toc-arpanet-advanced-research-projects-agency-network---1969">ARPANET
+(Advanced Research Projects Agency NETwork) - 1969</a></li>
+<li><a href="#protokoly-tcpip---1973-1983"
+id="toc-protokoly-tcpip---1973-1983">Protokoly TCP/IP - 1973-1983</a>
+<ul>
+<li><a href="#tcp-transmission-control-protocol"
+id="toc-tcp-transmission-control-protocol">TCP (Transmission Control
+Protocol)</a></li>
+<li><a href="#ip-internet-protocol" id="toc-ip-internet-protocol">IP
+(Internet Protocol)</a></li>
+</ul></li>
+<li><a href="#milnet-internet-a-dns---1983"
+id="toc-milnet-internet-a-dns---1983">MILNET, internet a DNS -
+1983</a></li>
+<li><a href="#www-world-wide-web---1989"
+id="toc-www-world-wide-web---1989">WWW (World Wide Web) - 1989</a></li>
+</ul></li>
+<li><a href="#dělení-sítí-podle-rozlehlosti"
+id="toc-dělení-sítí-podle-rozlehlosti">Dělení sítí podle rozlehlosti</a>
+<ul>
+<li><a href="#pan-personal-area-network"
+id="toc-pan-personal-area-network">PAN (Personal Area Network)</a></li>
+<li><a href="#lan-local-area-network"
+id="toc-lan-local-area-network">LAN (Local Area Network)</a></li>
+<li><a href="#man-metropolitan-area-network"
+id="toc-man-metropolitan-area-network">MAN (Metropolitan Area
+Network)</a></li>
+<li><a href="#wan-wide-area-network" id="toc-wan-wide-area-network">WAN
+(Wide Area Network)</a></li>
+</ul></li>
+<li><a href="#síťová-architektura" id="toc-síťová-architektura">Síťová
+architektura</a>
+<ul>
+<li><a href="#klient-server"
+id="toc-klient-server">Klient-server</a></li>
+<li><a href="#peer-to-peer" id="toc-peer-to-peer">Peer-to-peer</a></li>
+</ul></li>
+<li><a href="#přenosová-média" id="toc-přenosová-média">Přenosová
+média</a>
+<ul>
+<li><a href="#drátová-média" id="toc-drátová-média">Drátová
+média</a></li>
+<li><a href="#bezdrátová-média" id="toc-bezdrátová-média">Bezdrátová
+média</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="historie-internetu">Historie internetu</h1>
+<h2 id="arpa-darpa---1958">ARPA (DARPA) - 1958</h2>
+<p>Počátky internetu sahají až do 60. let 20. století v období studené
+války. Jako výsledek expandujícího raketového průmyslu a nekonečné
+konkurence se Sovětským svazem (hlavně vypuštění družice Sputnik 1)
+vynalezli Američané organizaci DARPA (Defense Advanced Research Project
+Agancy) v češtině ARPA (to bylo dokonce původní anglické jméno projektu,
+než bylo přejmenováno). Ta měla za úkol financovat a spravovat nové
+inovativní technologie.</p>
+<h2
+id="arpanet-advanced-research-projects-agency-network---1969">ARPANET
+(Advanced Research Projects Agency NETwork) - 1969</h2>
+<p>Výzkumná střediska a jejich počítače potřebovali mezi sebou
+komunikovat, pokud chtěli porazit SSSR v rakotovém vývoji.
+Nejdůležitějším projektem oraganizace ARPA byl tedy ARPANET (Carl
+Robnett Licklider). Jednalo se o síť (network), ke které mohli být
+všechny počítače připojeny a mohli spolu komunikovat bleskovou
+rychlostí.</p>
+<p>Důležitou vlastností ARPANETU bylo, aby byl schopen přežít jadernou
+válku, musel tedy být decentralizovaný, aby nebylo možnost zaměřit útok
+na určité centrum. ARPANET už tehdy pracoval na principu pakeotých sítí
+a pracuje tak i dodnes.</p>
+<p>ARPANET se později rozšiřoval po univerzitách a výzkumných centrech v
+USA a v roce 1973 pronikl i do Evropy.</p>
+<h2 id="protokoly-tcpip---1973-1983">Protokoly TCP/IP - 1973-1983</h2>
+<p>Další důležitým bodem ve vývoji internetu byl vynález protokolů TCPa
+IP.</p>
+<h3 id="tcp-transmission-control-protocol">TCP (Transmission Control
+Protocol)</h3>
+<p>Je protokol pro spolehlivý přenost dat mezi dvěma zařízeními. Funguje
+tak, že rozdělí data na menší části (pakety) a pošle je postupně do
+cíle. Přitom kontroluje zda dorazily.</p>
+<p>Využívají ho webové prohlížeče, e-maily i my při stahování
+souborů.</p>
+<h3 id="ip-internet-protocol">IP (Internet Protocol)</h3>
+<p>Je protokol, který se stařa o adresování a směrování paketů přes
+internet. Přiřazuje každému zařízení svoji IP adresu, podle které se
+pozná, kam mají být data doručena.</p>
+<p>Využívá se ve všech přenosech přes internet.</p>
+<h2 id="milnet-internet-a-dns---1983">MILNET, internet a DNS - 1983</h2>
+<p>Později se od ARPANETU oddělila vojenská část armády USA a vytvořila
+vlastní síť MILNET (Military Network). Využitím nových komunikačních
+protokolů začíná pronikat také nová myšlenka globální sítě a roku 1982
+vzniká Internet.</p>
+<p>V té době byl také vyvinut protokol DNS.</p>
+<h2 id="www-world-wide-web---1989">WWW (World Wide Web) - 1989</h2>
+<p>Dalším velkým krokem k modernímu internetu byl vynález WWW, ten
+umožňuje prohlížení, ukládání a odkazování dokumentů nacházející se na
+internetu. K tomu byl vynalezen jazyk HTML a protokol HTTP.</p>
+<p>Touto dobou také končí ARPANET a do popředí se dostává dnešní
+Internet.</p>
+<h1 id="dělení-sítí-podle-rozlehlosti">Dělení sítí podle
+rozlehlosti</h1>
+<h2 id="pan-personal-area-network">PAN (Personal Area Network)</h2>
+<p>Jedná se o osobní síť, která je velice malá. Slouží k propojení
+osobních elektronických zařízení - mobilní telefon, tiskárna, bluetooth,
+USB…</p>
+<h2 id="lan-local-area-network">LAN (Local Area Network)</h2>
+<p>Lokální počítačová síť je síť spojená uzly v rámci jedné budovy nebo
+několika budov. Do této rozlehlejší sítě se často zapojují soustavy
+počítačů, které spolu potřebují sdílet data (třeba školní serverová
+síť). Nejčastěji se zapojuje přes Ethernet nebo Wi-Fi.</p>
+<h2 id="man-metropolitan-area-network">MAN (Metropolitan Area
+Network)</h2>
+<p>Metropolitní síť propojuje lokální sítě v měststké zástavbě. Slouží k
+přenosu dat, zvuku a obrazu a dokáže propojit síťe vzdálené až desítky
+kilometrů.</p>
+<h2 id="wan-wide-area-network">WAN (Wide Area Network)</h2>
+<p>Tato rozlehlá síť spojuje LAN a MAN sítě a má největší působnost
+(třeba po celém státě, kontinentu nebo komel celé zeměkoule).</p>
+<h1 id="síťová-architektura">Síťová architektura</h1>
+<p>Počítačová síť je označení pro prostředky, které realizují spojení a
+výměnu inforamcí mezi počítači. Umožňuje tak komunikaci uživatelů meži
+sebou.</p>
+<h2 id="klient-server">Klient-server</h2>
+<p>Jedná se o typ sítě, ve které jeden nebo více počítačů (server) je
+nadřazen jiným počítačům (client). Data jsou uloženy na serveru a
+komunikace mezi server a klientem nastává v případě, že klient o data
+zažádá nebo nahrává jiná data.</p>
+<p>Na tomto principu funguje většina dnešních služeb: SMTP (e-mail),
+internetové protokoly (HTTP). Nejčastějším případem jsou právě webové
+prohlížeče, které jako klient žádají o data (webové stránky) hostitelský
+webový server.</p>
+<p>Výhody:</p>
+<ul>
+<li>rozdělí jednotlivé úkoly mezi server a klient (klient žádá, sever
+poslouchá…)</li>
+<li>snadnější údržba, server se může přesunout a opravit… ale to nijak
+neovlivní samotného klienta</li>
+<li>data na serverech bývají bezpečnější, jelikož servery často mívají
+větší míru zabezpečení, než klienty. Třeba tím, že spravují přístup
+jednotlivých klientů k různým datům</li>
+<li>aktualizace dat probíhá pouze na serveru a není závislá na počtu
+klientů</li>
+</ul>
+<p>Nevýhody:</p>
+<ul>
+<li>one-point of failiure - server ja jedinný prostředek k datům
+<ul>
+<li>přetěžování sítě - často dochází u neoptimalizovaných serverů k
+přetížení sítě, pokud se počet souběžných požadavků na daný server
+zvýší</li>
+<li>když dojde k výpadku serveru, tak vypadne jakýkoliv přístup k datům
+a žádný z klientů se k nim nedostane</li>
+</ul></li>
+</ul>
+<h2 id="peer-to-peer">Peer-to-peer</h2>
+<p>Jedná se o typ sítě, ve které jsou si všechny počítače (uživatelé)
+rovni a komunikují přímo mezi sebou. U P2P je každý uživatel zároveň
+serverem i klientem. Data může tak šířit jakýkoliv uživatel s kýmkoliv
+jiným na síti.</p>
+<p>Na P2P je založen torrentová distribuce souborů nebo platební síť
+Bitcoin. Často se s ním lze setkat na domácích sítí při sdílení souborů
+mezi počítači.</p>
+<p>Výhody:</p>
+<ul>
+<li>decentralizace
+<ul>
+<li>přístup k datům není podmíněn přístupem k serveru, stačí pokud
+alespoň jeden uživatel sítě daná data má</li>
+</ul></li>
+<li>větší rychlost (v určitých případech) - na tomto faktu fungují právě
+již zmíněné torrentové sdílení. U tradičních server-klient
+architekturách má přístup k souboru pouze server a pokud je chceme
+získat (stáhnout), budeme stahovat pouze z něj. U P2P, pokud má data
+více uživatelů, kteří je poskytují, můžeme je stahovat od všech
+najednou.</li>
+</ul>
+<p>Nevýhody:</p>
+<ul>
+<li>Nízká kontrola nad sdílenými daty
+<ul>
+<li>je obtížné kontrolovat jaký obsah se sdílí přes P2P sítě nebo
+dokonce i jaký obsah přesně stahujeme (samozřejmě pokud se vyznáme, tak
+to není obtížné zjistit, ale trvá to čas a práci). Díky tomu se přes P2P
+velmi často nelegální obsah, buď kradené soubory nebo smut atd… A také
+se často přes P2P sítě mohou šířit viry.</li>
+</ul></li>
+<li>Náročná údržba - pokud chceme aktualizovat data, budou si je muset
+aktualizovat zdlouhavě všichni uživatelé zvlášť nebo budou
+nekompatibilní</li>
+</ul>
+<p>ADD TORRENT RANT</p>
+<h1 id="přenosová-média">Přenosová média</h1>
+<p>Přenosová média slouží k přenosu dat mezi zařízeními.</p>
+<h2 id="drátová-média">Drátová média</h2>
+<ul>
+<li>Metalické kabely (kroucená dvojlinka), Koaxiální kabely, Optické
+kabely</li>
+</ul>
+<h2 id="bezdrátová-média">Bezdrátová média</h2>
+<ul>
+<li>Wi-Fi (WLAN) - lokální bezdrátová síť běžně užívaná v
+domácnostech</li>
+<li>Mobilní sítě (3G, 4G, 5G) - umožňují přístup k interntu
+prostřednicvím mobilního signálu</li>
+<li>Bluetooth - přenos dat na krátké vzdálenosti</li>
+<li>Satelitní připojení - využití tam, kde není dostupná běžná
+infrastruktura</li>
+</ul>
+</body>
+</html>
