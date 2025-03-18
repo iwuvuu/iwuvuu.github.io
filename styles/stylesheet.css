@@ -51,6 +51,8 @@
   --orange: #F57D26;
   --yellow: #DFA000;
   --green: #8DA101;
+  --blue: #3A94C5;
+  --aqua: #35A77C;
   --gray1: #A6B0A0;
   --gray3: #829181;
   font-family: "Fira Sans", sans-serif;
@@ -134,6 +136,15 @@ body {
   background-color: var(--green);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.main-page-fifth {
+  background-color: var(--blue);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.main-page-sixth {
+  background-color: var(--aqua);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .accordion {
   cursor: pointer;
   border: none;
