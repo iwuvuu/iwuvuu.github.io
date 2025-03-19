@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Bezpečnost a ochrana dat</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../stylesheet.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<div class="home-top-bar">
+  <a class="home-button" href="https://iwuvuu.github.io">HOME</a>
+</div>
+
+<header id="title-block-header">
+<h1 class="title">Bezpečnost a ochrana dat</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#proč-chránit-data" id="toc-proč-chránit-data">Proč chránit
+data?</a></li>
+<li><a href="#uchování-dat-na-discích"
+id="toc-uchování-dat-na-discích">Uchování dat na discích</a>
+<ul>
+<li><a href="#raid" id="toc-raid">RAID</a>
+<ul>
+<li><a href="#co-raid-nedělá" id="toc-co-raid-nedělá">Co RAID
+nedělá</a></li>
+<li><a href="#rozdělení-raid-systémů-a-jak-vůbec-fungují"
+id="toc-rozdělení-raid-systémů-a-jak-vůbec-fungují">Rozdělení RAID
+systémů a jak vůbec fungují</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#problematika-hesel"
+id="toc-problematika-hesel">Problematika hesel</a>
+<ul>
+<li><a href="#tvorba-silného-hesla" id="toc-tvorba-silného-hesla">Tvorba
+silného hesla</a>
+<ul>
+<li><a href="#základní-metody-crackování-hesel"
+id="toc-základní-metody-crackování-hesel">Základní metody crackování
+hesel</a></li>
+<li><a href="#čeho-se-vyvarovat" id="toc-čeho-se-vyvarovat">Čeho se
+vyvarovat</a></li>
+<li><a href="#zapamatovatelné-heslo"
+id="toc-zapamatovatelné-heslo">Zapamatovatelné heslo</a></li>
+<li><a href="#osobní-úprava" id="toc-osobní-úprava">Osobní
+úprava</a></li>
+</ul></li>
+<li><a href="#password-managery" id="toc-password-managery">Password
+managery</a></li>
+<li><a href="#two-factor-authentification-dvoufázové-ověření"
+id="toc-two-factor-authentification-dvoufázové-ověření">Two factor
+authentification (dvoufázové ověření)</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="proč-chránit-data">Proč chránit data?</h1>
+<p>V dnešní době jsou naše data jednou z nejdůležitějších věcí, které
+vlastníme. S rostoucí digitalizací a přesunem online je těžší a těžší
+uchovat si soukromí a bezpečnost. Proto je důležité být schopný chránit
+svá data před hardwarovými problémy i problémy způsobené lidskou
+činností. Jelikož je tohle téma velmi obsáhlé, tak je zde pouze ukázkové
+množství informací.</p>
+<h1 id="uchování-dat-na-discích">Uchování dat na discích</h1>
+<p>Každý znás má dnes hromadu dat a souborů, které musí někde uložit.
+Přestože valné většině z nás stačí jeden disk v našem počítači, občas
+musíme uchovat větší objem dat. Nejčastěji k tomuto účelu využíváme
+<strong>cloudových serverů</strong>, ale pokud chceme větší uložiště
+popřípadě lepší kontrolu nad našimi daty je vhodné mít <strong>domácí
+servery a jiné soustavy disků</strong>. To ale přináší problém s
+uchováním těchto dat dlouhodobě a bezpečně. Ať už jsme jednotlivec,
+který si chce uložit fotky své babičky v plavkách nebo firma, která
+potřebuje uchovat celou účetní historii a všechny důležité dokumenty,
+nikdo nechce přijít o svá data. Z toho důvodu si představíme
+<strong>základní systémy ochrany našich dat</strong>.</p>
+<h2 id="raid">RAID</h2>
+<p>= Redundant Array of Inexpensive Disks<br />
+Jedná se o nejpoužívanější a nejznámější způsob prevence proti ztrátě
+dat. Jedná se o metodu využití více disků jako jedné úložné platformy s
+různými stupni zabezpečení.</p>
+<h3 id="co-raid-nedělá">Co RAID nedělá</h3>
+<p>RAID chrání data pouze před hardwarovou poruchou (jeden z disků se
+porouchá… ), ale ne před uživatelskou chybou nebo softwarovým smazáním
+dat. Pro tyto účely je stále důležité mít zálohu. Raid jedoduše není
+neprůstřelná zeď, takže je důležité udržovat bezpečné chování na
+internetu a zdravý rozum.</p>
+<h3 id="rozdělení-raid-systémů-a-jak-vůbec-fungují">Rozdělení RAID
+systémů a jak vůbec fungují</h3>
+<p>Nejlepší je si ukázat jak RAID systémy fungují přímo na jednotlivých
+typech, ale ve zkratce existují tři základní funkce: data striping, disk
+mirroring a parity data.</p>
+<h4 id="raid-0">1. RAID 0</h4>
+<p>Využívá pouze data striping. Na discích dochází k tomu, že rozdělíme
+data do menších částí na více disků. K provozu stačí 2 disky.</p>
+<p>Pokud máme soubor A, který chceme uložit, tak bude soubor rozdělen na
+různé menší části (A1, A2, A3…) a ty budou zároveň nahrávány na různé
+disky:</p>
+<p><img src="../_resources/RAID_0.png" alt="RAID_0.png" width="173" height="266" class="jop-noMdConv"></p>
+<p>Výhody:</p>
+<ul>
+<li>Disky si zachovají veškerou kapacitu</li>
+<li>data se budou ukládat rychleji, než na jeden disk (ukládá se více
+dat zároveň)</li>
+</ul>
+<p>Nevýhody:</p>
+<ul>
+<li>Pokud přestane fungovat jakýkoliv z disků, ztratíme veškerá uložená
+data</li>
+</ul>
+<p>Proto se toto řešení využívá hlavně u aplikací, které vyžadují vysoký
+výkon a spolehlivost není zas tak důležitým faktorem.</p>
+<h4 id="raid-1">2. RAID 1</h4>
+<p>Využívá pouze disk mirroring. Jedná se o jednoduché zrcadlení dat z
+jednoho disku na druhý. K provozu stačí také pouze dva disky.</p>
+<p>Jednoduše při nahrávání souboru A do uložiště, se automaticky vytvoří
+kopie na další disk.<br />
+<img src="../_resources/RAID_1.png" alt="RAID_1.png" width="188" height="289" class="jop-noMdConv"></p>
+<p>Výhody:</p>
+<ul>
+<li>ochrana dat při ztrátě jednoho disku + můžeme data využívat i když
+je jeden disk nefunkční</li>
+<li>rychlost čtení z disků je rychlejší (čte data ze dvou zdrojů)</li>
+</ul>
+<p>Nevýhody:</p>
+<ul>
+<li>využíváme pouze polovinu veškeré kapacity našich disků</li>
+<li>zápis je vždy maximálně o rychlosti nejpomalejšího z disků</li>
+</ul>
+<p>Toto řešení je asi nejlepší pro jednotlivce, který má menší množství
+disků, ale potřebuje mít spolehlivý systém.</p>
+<h4 id="raid-5">3. RAID 5</h4>
+<p>První masivně využívaný složitější RAID systém je RAID 5. Ten
+kombinuje data striping (konkrétně block-level striping, který rozdělí
+soubor rovnoměrně mezi disky do tzv. bloku) a parity data. RAID 5 už
+využívá minimálně 3 disky.</p>
+<p><img src="../_resources/RAID_5.png" alt="RAID_5.png" width="326" height="242" class="jop-noMdConv"></p>
+<h5 id="co-jsou-a-jak-fungují-paritní-data">Co jsou a jak fungují
+paritní data?</h5>
+<p>Zjednodušeně paritní data jsou data, která se ukládají zároveň se
+souborem, díky kterým v případě ztráty části souboru lze dopočítat
+chybějící data.</p>
+<p>V RAID systémech fungují tak, že se data rozloží stejně jako u RAID 0
+a k nim se vytvoří data paritní pomocí funkce XOR (exkluzivní
+disjunkce). Ta říká, že hodnota bude pravda (1), pokud počet výstupů s
+hodnotou pravda (1) je lichý. U RAID systémů je lepší si to představit
+jako sčítání bitů.</p>
+<p>Ukažme si to na příkladu, chceme uložit jeden byte (příkladně
+10101001) na tři disky. Na první dva se uloží vždy polovina bytu a na
+třetím se vytvoří paritní data.</p>
+<table>
+<thead>
+<tr class="header">
+<th>DISK0</th>
+<th>DISK1</th>
+<th>DISK2 (paritní)</th>
+<th>Komentář</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1</td>
+<td><strong>0</strong></td>
+<td>součet bitů je sudý = 0</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>0</td>
+<td><strong>0</strong></td>
+<td>součet bitů je sudý = 0</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td><strong>1</strong></td>
+<td>součět bitů je lichý = 1</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>1</td>
+<td><strong>1</strong></td>
+<td>součet bitž je lichý = 1</td>
+</tr>
+</tbody>
+</table>
+<p>Samozřejmě lze takto vypočítat paritní data pro více, než tři
+disky.</p>
+<hr />
+<p>Výhody:</p>
+<ul>
+<li>Předejdeme ztrátě selhání jednoho disku</li>
+<li>zvýšená rychlost zápisu</li>
+<li>na paritní data potřebujeme “pouze” 1/3 (1/n; n = počet disků)
+kapacity všech disků</li>
+</ul>
+<p>Nevýhody:</p>
+<ul>
+<li>nelze využívat data v případě poruchy disku</li>
+</ul>
+<p>Tento typ je nejpoužívanější v středně velkých serverech.</p>
+<h4 id="raid-6">4. RAID 6</h4>
+<p>Velmi podobný RAID 5, ale navíc přidává jeden paritní blok navíc.
+První paritní blok je obvykle značen P a vypočítá se stejně jako u RAID
+5 (XOR), ale druhý paritní block, označen Q, využívá jiných metod
+výpočtu. Je potřeba minimálně 4 disků</p>
+<p><img src="../_resources/RAID_6.png" alt="RAID_6.png" width="362" height="213" class="jop-noMdConv"></p>
+<p>Výhody:</p>
+<ul>
+<li>zachování dat i při ztrátě 2 disků</li>
+</ul>
+<p>Nevýhody:</p>
+<ul>
+<li>rychlost zápisu je snížena z důvodu náročnosti výpočtu paritních
+dat</li>
+<li>narozdíl od RAID 5 potřebujeme 2/4 (2/n; n = počet disků) kapacity
+všech disků)</li>
+</ul>
+<h4 id="raid-10">5. RAID 10</h4>
+<p>Stejně tak jak je kombinace RAID 5 data stripingu a paritních dat, je
+RAID 10 kombinace systémů RAID 1 a RAID 0, tudíž disk mirroringu a data
+stripingu. Je potřeba minimálně 4 disků.</p>
+<p><img src="../_resources/RAID_10.png" alt="RAID_10.png" width="315" height="315"></p>
+<p>Výhody:</p>
+<ul>
+<li>velká rychlost odpovídající RAID0</li>
+<li>prevence ztráty dat jako u RAID1</li>
+</ul>
+<p>Nevýhody:</p>
+<ul>
+<li>využívá 50% kapacity disků na zálohu</li>
+</ul>
+<h1 id="problematika-hesel">Problematika hesel</h1>
+<p>Dnes málo kdo nemá velké množství dat v cloudu a na jiných online
+platformách. Většinou nás však chrání jen slabé heslo, které jsme si
+vytvořili X let zpátky a kdyby někdo doopravdy chtěl, nedělalo by mu
+problém takové heslo prolomit. Proto je důležité znát způsoby jak tuto
+ochranou metodu posílit.</p>
+<h2 id="tvorba-silného-hesla">Tvorba silného hesla</h2>
+<p>Pokud chceme vytvořit silné heslo musíme vědět, jak vůbec takové
+heslo prolomit lze.</p>
+<h3 id="základní-metody-crackování-hesel">Základní metody crackování
+hesel</h3>
+<ol type="1">
+<li>Brute force attack -&gt; systematické generování všech možných
+kombinací znaků v hesle podle metody pokus omyl</li>
+<li>Dictionary attack -&gt; využití slovníku (souboru se slovy), které
+by mohly být použity v hesle</li>
+<li>Social engineering -&gt; snaha získat heslo z vás jako osoby pomocí
+různých metod (scam, prostě si s vámi pokecaj lol…)</li>
+</ol>
+<h3 id="čeho-se-vyvarovat">Čeho se vyvarovat</h3>
+<ul>
+<li>nic osobního (datum narození, telefonní číslo, jméno a
+příjmení…)</li>
+<li>jednoduché kombinace (1234, password1234, 123456789…)</li>
+<li>krátká hesla</li>
+<li>hesla obsahující slovníkové slovo (a nic moc víc)</li>
+<li>moc obtížné heslo, které si nezapamatujeme *** ### Dostatečná
+nahodilost Silné heslo by mělo mít dostatečnou nahodilost. Tím se myslí
+jednotka nahodilosti, která počítá se v nahodilostních bitech (bites of
+entropy). Je ovlivněna délkou a obecnou uhodnotelností.</li>
+</ul>
+<p>Počet nahodilostních bitů (n) odpovídá <span
+class="math inline">\(2^n\)</span> pokusů na rozšifrování při brute
+force útoku, takže 2 n-bity odpovídá 4 pokusům, 16 n-bitů je 65 536
+pokusů a 40 n-bitů je celých 1 099 511 627 776 pokusů.</p>
+<p>Pro ideální heslo je doporučeno alespoň 100 nahodilostních bitů.</p>
+<h3 id="zapamatovatelné-heslo">Zapamatovatelné heslo</h3>
+<p>Příkladem špatného heslo je příkladně “D0egc01n#”. A proč je to
+špatné heslo? Člověk si ho jednoduše nezapamatuje, ale počítač ho má
+uhodnuté za chvilku.</p>
+<p>Daleko lepší je využít metodu “Correct Horse Battery Staple”
+vysvětlenou tímto komiksem:</p>
+<figure>
+<img src="../_resources/CHBS.png" alt="CHBS.png" />
+<figcaption aria-hidden="true">CHBS.png</figcaption>
+</figure>
+<p>Ve zkratce jde o to, že využijete slov, která potom vložíte do
+jednoho hesla. Tyto slova jsou jednoduše zapamatovatelná pro vás, ale
+počítači bude trvat, než je prolomí.</p>
+<h3 id="osobní-úprava">Osobní úprava</h3>
+<p>Pro maximálně silné heslo je k dřív zmíněné metodě vhodné přidat něco
+osobního. Některé úpravy, které jsou vhodné muhou být následovně: -
+použijte netradiční slova (která si pamatujete, ale nejsou naprosto
+běžná) - použijte jméno postavy z médií (samozřejmě není vhodné použít
+slovo Shrek, pokud vaše celá osobnost se točí kolem tohoto zeleného
+Chada) - vymyslete si vlastní slovo, které znáte jen vy (ale nesmíte ho
+zapomenou samozřejmě) - nepoužívejte slova, která jsou jednoduše
+přiřaditelná k vám - použijte speciální znak (stíží to crackování z
+důvodu nutnosti využití všech čísel a speciálních znaků)</p>
+<h2 id="password-managery">Password managery</h2>
+<p>Jedna z nejlepších cest jak uchovávat složitá hesla, která se budou
+lišit pro každý z vašich účtů je využít password manager (správce
+hesel). Je dobré si předem zjisit dostatek informací, než začnete nějaký
+používat a rozhodně je vhodnější využívat offline password manager.
+Online služby jsou až moc zranitelné.</p>
+<p>Já osobně používám KeePassXC. Je offline, ale má spoustu rozšíření a
+dokonce i mobilní aplikaci. Všechna hesla uchovává v zašifrovaném
+souboru na vašem disku, který se dá otevřít jen za pomocí vámi zvoleného
+hesla (master password). Můžete přidat také speciální ochranu jako je
+soubor s daty, který slouží jako klíč k otevření nebo můžete mít fyzický
+klíč (YubiKey), který otevře databázy pouze pokud je fyzciky připojen k
+zařízení.</p>
+<p>S password managerem se ale můžete dostat do jiného problému. A tím
+je one point of failure, proto je důležité svoje master password
+vytvořit velmi silné. Dodržujte také bezpečné chování na internetu a
+uchovávejte své soubory s databázemi v bezpečí.</p>
+<h2 id="two-factor-authentification-dvoufázové-ověření">Two factor
+authentification (dvoufázové ověření)</h2>
+<p>Samozřejmě ideální je nemít heslo jako jedinnou ochranu před útokem.
+V dnešní době se často používá ověření přes mobil atd. Jedná se tak o
+docela jednoduchou a bezpečnější metodu ochrany hesla.</p>
+</body>
+</html>
