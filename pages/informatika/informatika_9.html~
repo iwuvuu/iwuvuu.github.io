@@ -116,7 +116,7 @@ data do menších částí na více disků. K provozu stačí 2 disky.</p>
 <p>Pokud máme soubor A, který chceme uložit, tak bude soubor rozdělen na
 různé menší části (A1, A2, A3…) a ty budou zároveň nahrávány na různé
 disky:</p>
-<p><img src="../_resources/RAID_0.png" alt="RAID_0.png" width="173" height="266" class="jop-noMdConv"></p>
+<p><img src="../resources/RAID_0.png" alt="RAID_0.png" width="173" height="266" class="jop-noMdConv"></p>
 <p>Výhody:</p>
 <ul>
 <li>Disky si zachovají veškerou kapacitu</li>
@@ -135,7 +135,7 @@ výkon a spolehlivost není zas tak důležitým faktorem.</p>
 jednoho disku na druhý. K provozu stačí také pouze dva disky.</p>
 <p>Jednoduše při nahrávání souboru A do uložiště, se automaticky vytvoří
 kopie na další disk.<br />
-<img src="../_resources/RAID_1.png" alt="RAID_1.png" width="188" height="289" class="jop-noMdConv"></p>
+<img src="../resources/RAID_1.png" alt="RAID_1.png" width="188" height="289" class="jop-noMdConv"></p>
 <p>Výhody:</p>
 <ul>
 <li>ochrana dat při ztrátě jednoho disku + můžeme data využívat i když
@@ -154,7 +154,7 @@ disků, ale potřebuje mít spolehlivý systém.</p>
 kombinuje data striping (konkrétně block-level striping, který rozdělí
 soubor rovnoměrně mezi disky do tzv. bloku) a parity data. RAID 5 už
 využívá minimálně 3 disky.</p>
-<p><img src="../_resources/RAID_5.png" alt="RAID_5.png" width="326" height="242" class="jop-noMdConv"></p>
+<p><img src="../resources/RAID_5.png" alt="RAID_5.png" width="326" height="242" class="jop-noMdConv"></p>
 <h5 id="co-jsou-a-jak-fungují-paritní-data">Co jsou a jak fungují
 paritní data?</h5>
 <p>Zjednodušeně paritní data jsou data, která se ukládají zároveň se
@@ -224,7 +224,7 @@ kapacity všech disků</li>
 První paritní blok je obvykle značen P a vypočítá se stejně jako u RAID
 5 (XOR), ale druhý paritní block, označen Q, využívá jiných metod
 výpočtu. Je potřeba minimálně 4 disků</p>
-<p><img src="../_resources/RAID_6.png" alt="RAID_6.png" width="362" height="213" class="jop-noMdConv"></p>
+<p><img src="../resources/RAID_6.png" alt="RAID_6.png" width="362" height="213" class="jop-noMdConv"></p>
 <p>Výhody:</p>
 <ul>
 <li>zachování dat i při ztrátě 2 disků</li>
@@ -240,7 +240,7 @@ všech disků)</li>
 <p>Stejně tak jak je kombinace RAID 5 data stripingu a paritních dat, je
 RAID 10 kombinace systémů RAID 1 a RAID 0, tudíž disk mirroringu a data
 stripingu. Je potřeba minimálně 4 disků.</p>
-<p><img src="../_resources/RAID_10.png" alt="RAID_10.png" width="315" height="315"></p>
+<p><img src="../resources/RAID_10.png" alt="RAID_10.png" width="315" height="315"></p>
 <p>Výhody:</p>
 <ul>
 <li>velká rychlost odpovídající RAID0</li>
@@ -293,7 +293,7 @@ uhodnuté za chvilku.</p>
 <p>Daleko lepší je využít metodu “Correct Horse Battery Staple”
 vysvětlenou tímto komiksem:</p>
 <figure>
-<img src="../_resources/CHBS.png" alt="CHBS.png" />
+<img src="../resources/CHBS.png" alt="CHBS.png" />
 <figcaption aria-hidden="true">CHBS.png</figcaption>
 </figure>
 <p>Ve zkratce jde o to, že využijete slov, která potom vložíte do
