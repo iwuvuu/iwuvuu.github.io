@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Rastrová grafika počítače</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../stylesheet.css" />
+</head>
+<body>
+<div class="home-top-bar">
+  <a class="home-button" href="https://iwuvuu.github.io">HOME</a>
+</div>
+
+<header id="title-block-header">
+<h1 class="title">Rastrová grafika počítače</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#výhody-rastrové-grafiky"
+id="toc-výhody-rastrové-grafiky">Výhody rastrové grafiky</a></li>
+<li><a href="#nevýhody-vektorové-grafiky"
+id="toc-nevýhody-vektorové-grafiky">Nevýhody vektorové grafiky</a></li>
+<li><a href="#využití-rastrové-grafiky"
+id="toc-využití-rastrové-grafiky">Využití rastrové grafiky</a></li>
+<li><a href="#teoreticky-něco-s-barvami"
+id="toc-teoreticky-něco-s-barvami">Teoreticky něco s barvami</a>
+<ul>
+<li><a href="#barevné-modely" id="toc-barevné-modely">Barevné modely</a>
+<ul>
+<li><a href="#rgb-red-green-blue" id="toc-rgb-red-green-blue">RGB (Red,
+Green, Blue)</a></li>
+<li><a href="#cmyk-cyan-magenta-yellow-keyblack"
+id="toc-cmyk-cyan-magenta-yellow-keyblack">CMYK (Cyan, magenta, Yellow,
+Key/Black)</a></li>
+<li><a href="#hslhsv" id="toc-hslhsv">HSL/HSV</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#formáty" id="toc-formáty">Formáty</a></li>
+<li><a href="#programy" id="toc-programy">Programy</a>
+<ul>
+<li><a href="#adobe-photoshop" id="toc-adobe-photoshop">Adobe
+photoshop</a></li>
+<li><a href="#gimp-gnu-image-manipulation-program"
+id="toc-gimp-gnu-image-manipulation-program">GIMP (GNU Image
+Manipulation Program)</a></li>
+</ul></li>
+</ul>
+</nav>
+<p>základní principy, využití, vhodné programy, formáty grafických
+souborů, váhody, nevýhody, parametry rastrové grafiky</p>
+<p>Důležitou součástí digitálního světa je grafika. Všichni se chceme
+dívat na hezké obrázky, když doomscollujeme hodiny v kuse. Vedle
+vektorové grafiky se využívá také rastrová grafika, kterou můžeme hojně
+nalézt u fotografií nebo digital art.</p>
+<p># Základní princip</p>
+<p>Základní bod rastrové grafiky je jeden pixel, který může mát určitou
+barvu a dohromady všechny pixely dávají celý obrázek. Samotný termín
+rastr znamená mřížka - jednotlivé pixely.</p>
+<p>Problém pak nastává, když chceme obraz zvětšit nebo zmenšit.
+Jednotlivé pixelynejsou škálovatelné a dochází tak k pixelizaci a
+snížení kvality. Soubor rastrového obrazu je uložen jako digitální data,
+kde je záznam barvy, každému pixelu.</p>
+<p>Základní parametry rastrové grafiky: - Rozlišení - určuje počet
+pixelů v ose x a ose y -&gt; příkladně 1920x1080 je obdélníkový obrázek
+o délce 1920 pixelů a výšce 1080 pixelů. Obvykle platí - vyšší rozlišení
+= detailnější obraz, ale větší velikost souborů - DPI (Dots per inch) -
+určuje počet bodů na jeden palec - to znamená jak hustě jsou pixely
+rozmístěny v obraze - Barevná hloubka - určuje rozsah barev, které lze
+zobrazit</p>
+<h2 id="výhody-rastrové-grafiky">Výhody rastrové grafiky</h2>
+<ul>
+<li>detailní obrázky - rastrová grafika je schopná zobrazit velké
+množství detailů a je proto vhodná pro fotorealistické obrázky a fotky
+nebo digitální umění podobné tomu tradičnímu.</li>
+<li>kompatibilita - většina softwaru je kompatibilní s velkým množstvím
+rastrových formátů, což je velmi dobře vidět v porovnání s vektorovou
+kompatibilitou.</li>
+</ul>
+<h2 id="nevýhody-vektorové-grafiky">Nevýhody vektorové grafiky</h2>
+<ul>
+<li>Ztráta kvality - z principu rastrové grafiky dochází k znatelnému
+zhoršení kvality a ztrátě čitelnosti detailů při velké manipulaci s
+obrázkem (př. zvětšování)</li>
+<li>Neflexibilní - vyrenderovaná rastrová grafika se velmi složitě
+upravuje (prakticky jedinný způsob je přemalovat již dané pixely jednou
+barvoué) a jednotlivé části nejsou manipulovatelné</li>
+<li>Nevhodné pro tisk - díky jednoduchému rozostření by musel rastrový
+obrázek být o velmi velkém rozlišení a i tak může ztratit jednoduše
+detail, když s ním budeme chtít tisknout</li>
+<li>Velké soubory - bez optimilizace mohou být rastrové obrázky velice
+velké, protože ukládají velké množství informací, proto nejsou praktické
+k sdílení nebo na webové stránky (bez komprese)</li>
+</ul>
+<h1 id="využití-rastrové-grafiky">Využití rastrové grafiky</h1>
+<p>Největší využití rastrové grafiky jsou digitální fotografie. Ale jako
+další využití můžeme uvést digital art a jiné detailní grafické
+práce.</p>
+<h1 id="teoreticky-něco-s-barvami">Teoreticky něco s barvami</h1>
+<p>Stejně jako barvy v reálném životě, v digitálním prostoru existují
+barvy a barevná teorie.</p>
+<p>Všechny barvy mají základní vlastnosti:</p>
+<ul>
+<li>Odstín (Hue) - samotná barva (červená, zelená…)</li>
+<li>Sytost (Saturation) - intenzita barvy</li>
+<li>Jas (Brightness) - jestli je barva světlá nebo tmavá</li>
+</ul>
+<h2 id="barevné-modely">Barevné modely</h2>
+<p>V digitálním prostředí se využívá dvou barevných modelů</p>
+<h3 id="rgb-red-green-blue">RGB (Red, Green, Blue)</h3>
+<ul>
+<li>Additivní model -&gt; odstíny barev vznikají určitou kombinací
+těchto tří barev, součtem všech dohromady vzniká bílá</li>
+<li>využivá se především na obrazovkách a je tedy nejpoužívanějším
+modelem. Pří práci s webovým designem a čímkoliv, co má být sledováno na
+obrazovce, je nutné pracovat v RGB (jinak budou barvy vypadat
+špatně).</li>
+</ul>
+<h3 id="cmyk-cyan-magenta-yellow-keyblack">CMYK (Cyan, magenta, Yellow,
+Key/Black)</h3>
+<ul>
+<li>Substraktivní model - funguje opačně k additivnímu a to tak, že
+barvy vznikají odečítáním od bílého papíru, kombinací vzniká černá,
+proto se dodává i samostatná černá složka</li>
+<li>využítí hlavně v tisku</li>
+</ul>
+<h3 id="hslhsv">HSL/HSV</h3>
+<p>Alternativní model pro práci s barvami, funguje na principu výběru
+odstínů, sytosti a jasu</p>
+<h1 id="formáty">Formáty</h1>
+<ul>
+<li>JPEG/JPG - ztrátový formát pro rastrovou grafiku s velkým počtem
+barev, využívaný pro fotofrafie</li>
+<li>PNG - bezztrátový formát s podporou alpha hladiny barev
+(průhlednost)</li>
+<li>GIF - formát využívaný pro animace</li>
+</ul>
+<h1 id="programy">Programy</h1>
+<h2 id="adobe-photoshop">Adobe photoshop</h2>
+<ul>
+<li>jeden z nejpopulárnějších grafických editorů</li>
+<li>flexibilní - práce s rastrovou/vektorovou grafikou, vhodný pro
+editaci fotek i digitální malování</li>
+<li>pokročilé profesionální funkce</li>
+<li>nevýhodou může být propretární kód, požadavek výkoného hardwaru,
+nekompatibilita se všemi operacními systémy (linux, bsd), drahé měsíční
+předplatné</li>
+</ul>
+<h2 id="gimp-gnu-image-manipulation-program">GIMP (GNU Image
+Manipulation Program)</h2>
+<ul>
+<li>foss program</li>
+<li>mnoho nástrojů pro práci s rastrovou grafikou a úpravou fotografií,
+méně vhodné pro digital art</li>
+<li>není tak náročný jako Adobe Photoshop</li>
+<li>nekompatibilní s Adobe formáty</li>
+<li><h2
+id="chybějí-pokročilé-funkce-a-některé-základní-funkce-kde-je-fkin-shape-tool-je-tok-2025-už-vydejte-novou-verzi-wtf">chybějí
+pokročilé funkce (a některé základní funkce, kde je fkin shape tool????
+Je tok 2025, už vydejte novou verzi wtf)</h2></li>
+</ul>
+<p>Další foss rastrový editor, který je předně určen pro profesionální
+digital art je krita.</p>
+</body>
+</html>
