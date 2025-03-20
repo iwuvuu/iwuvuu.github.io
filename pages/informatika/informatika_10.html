@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Vektorová počítačová grafika</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../stylesheet.css" />
+</head>
+<body>
+<div class="home-top-bar">
+  <a class="home-button" href="https://iwuvuu.github.io">HOME</a>
+</div>
+
+<header id="title-block-header">
+<h1 class="title">Vektorová počítačová grafika</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#základy-vektorové-grafiky"
+id="toc-základy-vektorové-grafiky">Základy vektorové grafiky</a>
+<ul>
+<li><a href="#výhody" id="toc-výhody">Výhody</a></li>
+<li><a href="#nevýhody" id="toc-nevýhody">Nevýhody</a></li>
+</ul></li>
+<li><a href="#využití-vektorové-grafiky"
+id="toc-využití-vektorové-grafiky">Využití vektorové grafiky</a></li>
+<li><a href="#teoreticky-něco-s-barvami-zkopírovat-i-do-rastru-lol"
+id="toc-teoreticky-něco-s-barvami-zkopírovat-i-do-rastru-lol">Teoreticky
+něco s barvami (zkopírovat i do rastru lol)</a>
+<ul>
+<li><a href="#barevné-modely" id="toc-barevné-modely">Barevné modely</a>
+<ul>
+<li><a href="#rgb-red-green-blue" id="toc-rgb-red-green-blue">RGB (Red,
+Green, Blue)</a></li>
+<li><a href="#cmyk-cyan-magenta-yellow-keyblack"
+id="toc-cmyk-cyan-magenta-yellow-keyblack">CMYK (Cyan, magenta, Yellow,
+Key/Black)</a></li>
+<li><a href="#hslhsv" id="toc-hslhsv">HSL/HSV</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#formáty" id="toc-formáty">Formáty</a></li>
+<li><a href="#vektorové-editory" id="toc-vektorové-editory">Vektorové
+editory</a>
+<ul>
+<li><a href="#adobe-illustrator" id="toc-adobe-illustrator">Adobe
+Illustrator</a></li>
+<li><a href="#inkscape" id="toc-inkscape">Inkscape</a></li>
+</ul></li>
+</ul>
+</nav>
+<p>Důležitou součástí digitálního světa je grafika. Všichni se chceme
+dívat na hezké obrázky, když doomscollujeme hodiny v kuse. Vedle
+rastrové grafiky se využívá také vektorová grafika, kterou můžeme hojně
+nalézt v ilustracích a jako různá loga či technické nákresy.</p>
+<h1 id="základy-vektorové-grafiky">Základy vektorové grafiky</h1>
+<p>Základní princip vektorové grafiky jsou matematické rovnice. Ty tvoří
+body, čáry a křivky, které zobrazují objekty. Což vede k hlavnímu bodu
+využití vektorových obrázků, bezztrátová kvalita při změně velikosti.
+Jelikož narozdíl od rastrové grafiky nejsou obrazy tvořeny jednotlivými
+pixely můžeme je libovolně zvětšovat a zmenšovat při zachování stejné
+ostrosti jako původní zdroj.</p>
+<p>Vektorová grafika se tedy skládá ze základních geometrických útvarů:
+bod, přímka, křivka, které dohromady tvoří složitější tvary. Počátkme
+všeho je bod, spojením dvou bodů vznikne křivka a přidáním více bodů
+můžeme kpřímku zahnout a vytvořit křivku. Například kruh je defionván
+jako geometrický objekt s poloměrem a středem.</p>
+<h2 id="výhody">Výhody</h2>
+<ul>
+<li>Všestrannost, vektorová grafiká najde své využití prakticky v každém
+odvětví digitální práce. Od souborů určených na tisk až po webové
+rozhraní a animace.</li>
+<li>Malá velikost souborů, jelikož soubory nemusí zaznamenávat
+jednotlivé pixely jsou vektorové obrázky obvykle menší, než ty rastrově.
+To umožňuje rychlé a snadné sdílení a ukládání.</li>
+<li>Jednoduchá úprava, při práci s vektorovým obrazcem je velmi snadné
+změnit barvu nějaké části, nebo dokonce bez problémů ohnout křivku,
+změnit polohu a velikost…</li>
+<li>Škálovatelnost, samozřejmě jak už ze vlastností vektorové grafiky
+vyplývá možnost změny velikosti bez ztráty kvality je největší její
+výhodou.</li>
+</ul>
+<h2 id="nevýhody">Nevýhody</h2>
+<ul>
+<li>Maximální rozlišení???</li>
+<li>Složitější pro začátečníky, klasická umělecká práce v nedigitálním
+prostředí (kresby, malby) odpovídají tvorbě s rastrovou grafikou.
+Vektorová grafika, která na druou stranu pracuje na zcela jiném principu
+netí uživatele, aby se ji od základů naučili.</li>
+<li>Nefotorealismus, vektorová grafika má veliké problémy zachytit
+veliké detaily (není proto k tomu ani určena).</li>
+<li>Výkonově náročná, princip matematických rovnic je pro počítač
+složitější rychle zpracovat narozdíl od většího množství pixelů, proto
+při práci s velkými a náročnými vektorovými obrazy je potřeba mít
+dostatečně silný hardware.</li>
+</ul>
+<h1 id="využití-vektorové-grafiky">Využití vektorové grafiky</h1>
+<p>Jak již bylo naznačeno vektorová grafika má velké využití v různých
+oborech.</p>
+<p>Jako nej rozšířenější je tvorba loga. Když vytváříme logo chceme, aby
+bylo jednoduše upraveno do různých velikostí podle potřeby a zároveň
+chceme, aby za jekékoliv velikosti zůstaly ostré. V dnešní době
+simplifikování je menší detailnost vektorových obrazců snad i
+výhodou.</p>
+<p>Velmi důležitým a častým využitím jsou webové stránky, které
+benefitují z flexibility velikosti. Setkáme se s ní v podobě tlačítek a
+všech speciálních ikon. Díky škálovatelnosti budou vypadat ostře na
+jakémkoliv rozměru zařízení a dovolují tak i automatickou upravu
+velikosti.</p>
+<p>Pod pojmem grafika si samozřejmě nejčastěji představíme nějakou malbu
+nebo něco podobného. A vektorová grafika se také používá na tradiční
+obrázky a ilustrace. Nejedná se obvykle o velká a rozsáhlá díla (nemyslí
+se tím množství práce), ale o ilustrace určené k velké čitelnosti a
+snadnému přenosu inforamcí. Například se s ním můžeme setkat v tzv.
+corporate art, která slouží firmám a ostatním k jednoduchému sdělení
+informací v podobě obrázku.</p>
+<p>Další časté využití vektorové grafiky je tvorba letáků, samolepek a
+jiných výtvorů určených k tisku. Protože ty vyžadují velikou kvalitu a
+přesnost, která může být snadno dosažitelná právě vektorovou
+grafikou.</p>
+<h1 id="teoreticky-něco-s-barvami-zkopírovat-i-do-rastru-lol">Teoreticky
+něco s barvami (zkopírovat i do rastru lol)</h1>
+<p>Stejně jako barvy v reálném životě, v digitálním prostoru existují
+barvy a barevná teorie.</p>
+<p>Všechny barvy mají základní vlastnosti:</p>
+<ul>
+<li>Odstín (Hue) - samotná barva (červená, zelená…)</li>
+<li>Sytost (Saturation) - intenzita barvy</li>
+<li>Jas (Brightness) - jestli je barva světlá nebo tmavá</li>
+</ul>
+<h2 id="barevné-modely">Barevné modely</h2>
+<p>V digitálním prostředí se využívá dvou barevných modelů</p>
+<h3 id="rgb-red-green-blue">RGB (Red, Green, Blue)</h3>
+<ul>
+<li>Additivní model -&gt; odstíny barev vznikají určitou kombinací
+těchto tří barev, součtem všech dohromady vzniká bílá</li>
+<li>využivá se především na obrazovkách a je tedy nejpoužívanějším
+modelem. Pří práci s webovým designem a čímkoliv, co má být sledováno na
+obrazovce, je nutné pracovat v RGB (jinak budou barvy vypadat
+špatně).</li>
+</ul>
+<h3 id="cmyk-cyan-magenta-yellow-keyblack">CMYK (Cyan, magenta, Yellow,
+Key/Black)</h3>
+<ul>
+<li>Substraktivní model - funguje opačně k additivnímu a to tak, že
+barvy vznikají odečítáním od bílého papíru, kombinací vzniká černá,
+proto se dodává i samostatná černá složka</li>
+<li>využítí hlavně v tisku</li>
+</ul>
+<h3 id="hslhsv">HSL/HSV</h3>
+<p>Alternativní model pro práci s barvami, funguje na principu výběru
+odstínů, sytosti a jasu</p>
+<h1 id="formáty">Formáty</h1>
+<p>SVG - nejpoužívanější a takový standard pro využívání vektorové
+grafiky. Je to otevřen formát, narozdíl od většiny ostatních
+closed-sourced verzí. Využívá se hlavně jako formát pro web.</p>
+<p>EPS - je starší a využívá se hlavně k tisku.</p>
+<p>AI - je nativní formát pro Adobe Illustrator.</p>
+<p>Přestože SVG je prakticky standard, velké množství programů využívá
+svých vlastních formátů nebo iterací SVG, které nemusí být kompatibilní
+se vším ostatním. Většinou se však jedná jen o formát lépe čitelný pro
+dany program a výsledek lze vždy exprotovat do standardního formátu.</p>
+<h1 id="vektorové-editory">Vektorové editory</h1>
+<h2 id="adobe-illustrator">Adobe Illustrator</h2>
+<ul>
+<li>využití v profesionálním grafickém designu</li>
+<li>spousta specializovanách funkcí pro práci, exportování a tisk</li>
+</ul>
+<h2 id="inkscape">Inkscape</h2>
+<ul>
+<li>open source</li>
+<li>je velmi schopný, ale “chybí” mu jisté funkce</li>
+<li>vhodnější pro začátečníky</li>
+</ul>
+</body>
+</html>
