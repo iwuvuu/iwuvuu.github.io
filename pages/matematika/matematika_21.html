@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Kombinatorika</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../stylesheet.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<div class="home-top-bar">
+  <a class="home-button" href="https://iwuvuu.github.io">HOME</a>
+</div>
+
+<header id="title-block-header">
+<h1 class="title">Kombinatorika</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#základní-kombinatorická-pravidla"
+id="toc-základní-kombinatorická-pravidla">Základní kombinatorická
+pravidla</a></li>
+<li><a href="#variace" id="toc-variace">Variace</a>
+<ul>
+<li><a href="#zápis-variací" id="toc-zápis-variací">Zápis
+variací</a></li>
+<li><a href="#výpočet-variací" id="toc-výpočet-variací">Výpočet
+variací</a>
+<ul>
+<li><a href="#typy-příkladů" id="toc-typy-příkladů">Typy
+příkladů</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#permutace" id="toc-permutace">Permutace</a>
+<ul>
+<li><a href="#zápis-permutací" id="toc-zápis-permutací">Zápis
+permutací</a></li>
+<li><a href="#výpočet-permutací" id="toc-výpočet-permutací">Výpočet
+permutací</a></li>
+</ul></li>
+<li><a href="#kombinace" id="toc-kombinace">Kombinace</a>
+<ul>
+<li><a href="#zápis-kombinací" id="toc-zápis-kombinací">Zápis
+kombinací</a></li>
+<li><a href="#výpočet-kombinací" id="toc-výpočet-kombinací">Výpočet
+kombinací</a></li>
+</ul></li>
+<li><a href="#variace-s-opakováním"
+id="toc-variace-s-opakováním">Variace s opakováním</a>
+<ul>
+<li><a href="#zápis-variací-s-opakováním"
+id="toc-zápis-variací-s-opakováním">Zápis variací s opakováním</a></li>
+<li><a href="#výpočet-variací-s-opakováním"
+id="toc-výpočet-variací-s-opakováním">Výpočet variací s
+opakováním</a></li>
+</ul></li>
+<li><a href="#permutace-s-opakovanim"
+id="toc-permutace-s-opakovanim">Permutace s opakovanim</a>
+<ul>
+<li><a href="#zápis-permutací-s-opakováním"
+id="toc-zápis-permutací-s-opakováním">Zápis permutací s
+opakováním</a></li>
+<li><a href="#výpočet-permutace-s-opakováním"
+id="toc-výpočet-permutace-s-opakováním">Výpočet permutace s
+opakováním</a></li>
+</ul></li>
+<li><a href="#kombinace-s-opakováním"
+id="toc-kombinace-s-opakováním">Kombinace s opakováním</a>
+<ul>
+<li><a href="#zápis-kombinací-s-opakováním"
+id="toc-zápis-kombinací-s-opakováním">Zápis kombinací s
+opakováním</a></li>
+<li><a href="#výpočet-kombinací-s-opakováním"
+id="toc-výpočet-kombinací-s-opakováním">Výpočet kombinací s
+opakováním</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="základní-kombinatorická-pravidla">Základní kombinatorická
+pravidla</h1>
+<p>TO;DO</p>
+<h1 id="variace">Variace</h1>
+<p>D: <span class="math inline">\(k\)</span>-členné variace z <span
+class="math inline">\(n\)</span> prvků je každá uspořádaná <span
+class="math inline">\(k\)</span>-tice vytvořena z daných <span
+class="math inline">\(n\)</span>-prvků tak, že každý se v ní vyskytuje
+nejvýše jednou a záleží na pořadí</p>
+<p>Z definice můžeme vyčíst tato důležitá pravidla pro variace: -
+<strong>záleží na pořadí prvků</strong> - <span
+class="math inline">\({a,b} \neq {b,a}\)</span> - <strong>prvky se
+neopakují</strong> - <span class="math inline">\({a,a}\)</span>
+nelze</p>
+<h2 id="zápis-variací">Zápis variací</h2>
+<p>Zápis variací je následujíci: <span
+class="math inline">\(\mathbf{V(k,n)}\)</span> - čteme jako: “k-členná
+variace z n prvků”.</p>
+<h2 id="výpočet-variací">Výpočet variací</h2>
+<p>Variace vypočítáme takto: <span class="math inline">\(V(k,n) = n\cdot
+(n-1)\cdot (n-2)\cdot ...\cdot (n-k+1)\)</span>. Lépe to lze pochopit na
+reálném příkladu <span class="math inline">\(V(4,7) = 7\cdot 6\cdot
+5\cdot 4\cdot = 840\)</span>.</p>
+<p>Přitom platí, že <span class="math inline">\(k\)</span> musí být
+menší, nebo rovno <span class="math inline">\(n\)</span>.</p>
+<p>Odvozený vzorec:</p>
+<p><span class="math display">\[\mathbf{V(k,n) =
+\frac{n!}{(n-k)!};\space k\le n}\]</span></p>
+<h3 id="typy-příkladů">Typy příkladů</h3>
+<ul>
+<li>Kolik 5-ciferných variací čísel lze seskládat z čísel <span
+class="math inline">\(1, 2, 3,4,5,8,9\)</span>? <span
+class="math display">\[V(5,7)\]</span></li>
+<li>8 týmů, kolika způsoby mohou týmy obsadit medailová místa? <span
+class="math display">\[V(3,8)\]</span></li>
+<li>Vyučuje se 11 předmětů. V určitý den má žák 7 jednohodinových
+předmětů.
+<ul>
+<li>Kolik rozvrhů jde sestavit na 1 den? <span
+class="math display">\[V(6,11)\]</span></li>
+<li>Kolik lze sestavit když první hodina je matematika a třetí hodina je
+čeština? <span class="math display">\[V(4,9)\]</span></li>
+</ul></li>
+</ul>
+<h1 id="permutace">Permutace</h1>
+<p>D: <span class="math inline">\(n\)</span>-členná permutace je
+uspořádaná <span class="math inline">\(n\)</span>-tice vytvořená z
+daných prvků tak, že každý se v ní vyskytuje právě jednou</p>
+<p>Jedná se o speciální typ variace, která má stejný počet členů a
+prvků. To znamená, že má i stejná pravidla: - <strong>záleží na pořadí
+prvků</strong> - <span class="math inline">\({a,b} \neq {b,a}\)</span> -
+<strong>prvky se neopakují</strong> - <span
+class="math inline">\({a,a}\)</span> nelze</p>
+<p>Také se mu někdy říká pořadí.</p>
+<h2 id="zápis-permutací">Zápis permutací</h2>
+<p>Zápis permutací je následujíci: <span
+class="math inline">\(\mathbf{P(n)}\)</span> - čteme jako: “počet
+permutací z <span class="math inline">\(n\)</span> prvků”</p>
+<h2 id="výpočet-permutací">Výpočet permutací</h2>
+<p>Permutace vypočítáme jako:</p>
+<p><span class="math display">\[\mathbf{P(n)=n!}\]</span></p>
+<h1 id="kombinace">Kombinace</h1>
+<p>D: <span class="math inline">\(k\)</span>-členná kombinace z <span
+class="math inline">\(n\)</span>-prvků je neuspořádaná <span
+class="math inline">\(k\)</span>-tice, sestavená z daných prvků tak, že
+každý se v ní vyskytuje nejvýše jednou.</p>
+<p>Z definice můžeme vyčíst tato důležitá pravidla pro variace: -
+<strong>nezáleží na pořadí prvků</strong> - <span
+class="math inline">\({a,b} = {b,a}\)</span> - <strong>prvky se
+neopakují</strong> - <span class="math inline">\({a,a}\)</span>
+nelze</p>
+<h2 id="zápis-kombinací">Zápis kombinací</h2>
+<p>Zápis kombinací je následující: <span
+class="math inline">\(\mathbf{K(k,n)}\)</span> - čteme jako: “počet
+<span class="math inline">\(k\)</span>-člených kombinací z <span
+class="math inline">\(n\)</span> prvků”</p>
+<h2 id="výpočet-kombinací">Výpočet kombinací</h2>
+<p>Pro výpočet permutací kombinací:</p>
+<p><span class="math display">\[\mathbf{K(k,n)=\frac{n!}{k!\cdot
+(n-k)!}=\frac{V(k,n)}{k!}=\binom{n}{k};\space k\le n;\space k,n\in
+\mathbb{N}_0}\]</span></p>
+<p>Vyskytuje se nám zde tzv. <em>kombinační číslo</em> <span
+class="math inline">\(\binom{n}{k} - čteme jako: &quot;\)</span>en nad
+ká”</p>
+<p>Z výpočtu nám také platí vztah:</p>
+<p><span class="math display">\[\binom{n}{k}=\binom{n}{n-k}\]</span></p>
+<p>Což si můžeme dokázat s reálnými čísly:</p>
+<p>!Přidat výpočet!</p>
+<h1 id="variace-s-opakováním">Variace s opakováním</h1>
+<p>D: <span class="math inline">\(k\)</span>-členná variace s opakováním
+z <span class="math inline">\(n\)</span> prvků je neuspořádaná <span
+class="math inline">\(k\)</span>-tice sestavená z daných <span
+class="math inline">\(n\)</span> prvků tak, že každý se v ní vyskytuje
+nejvýše <span class="math inline">\(k\)</span>-krát</p>
+<p>Variace s opakováním jsou stejné jako variace, ale čísla se mohou
+opakovat. Platí tedy tyto pravidla: - <strong>záleží na pořadí
+prvků</strong> - <span class="math inline">\({a,b} \neq {b,a}\)</span> -
+<strong>prvky se mohou opakovat</strong> - <span
+class="math inline">\({a,a}\)</span> lze</p>
+<h2 id="zápis-variací-s-opakováním">Zápis variací s opakováním</h2>
+<p>Zápis variacní s opkováním je následující: <span
+class="math inline">\(\mathbf{V^{′}(k,n)}\)</span></p>
+<h2 id="výpočet-variací-s-opakováním">Výpočet variací s opakováním</h2>
+<p>Variace s opakováním vypočítáme takto:</p>
+<p><span class="math display">\[\mathbf{V^{′}(k,n)=n^{k}}\]</span></p>
+<h1 id="permutace-s-opakovanim">Permutace s opakovanim</h1>
+<p>D: <span class="math inline">\(n\)</span>-členná permutace s
+opakováním je uspořádaná <span class="math inline">\(n\)</span>-tice
+vytvořená z daných prvků tak, že každý se v ní vyskytuje alespoň
+jednou</p>
+<h2 id="zápis-permutací-s-opakováním">Zápis permutací s opakováním</h2>
+<p>Zápis permutací s opakováním je následující: <span
+class="math inline">\(\mathbf{P^{′}(k_{1},k_{2},...,k_{n})}\)</span>.
+Kde máme <span class="math inline">\(n\)</span> prvků a každé <span
+class="math inline">\(k\)</span> odpovídá počtu každého prvku.</p>
+<p>Příkladně máme permutaci o 3 druhů prvků</p>
+<ul>
+<li>Prvek A, který se vyskytuje 2x</li>
+<li>Prvek B, který se vyskytuje 5x</li>
+<li>Prvek C, který se vyskytuje 2x</li>
+</ul>
+<p>Zápis bude tedy vapadat takto: <span
+class="math inline">\(P^{′}(2,5,2)\)</span></p>
+<h2 id="výpočet-permutace-s-opakováním">Výpočet permutace s
+opakováním</h2>
+<p>Permutace s opakováním vypočítáme takto:</p>
+<p><span
+class="math display">\[\mathbf{P^{′}(k_{1},k_{2},...,k_{n})=\frac{(k_{1},k_{2},...,k_{n})!}{k_{1}!\cdot
+k_{2}!\cdot ...\cdot k_{n}!};\space k&gt;n}\]</span></p>
+<h1 id="kombinace-s-opakováním">Kombinace s opakováním</h1>
+<p>D: <span class="math inline">\(k\)</span>-členná kombinace z <span
+class="math inline">\(n\)</span>-prvků je neuspořádaná <span
+class="math inline">\(k\)</span>-tice, sestavená z daných prvků tak, že
+každý se v ní vyskytuje nejvýše k-krát.</p>
+<p>Z definice můžeme vyčíst tato důležitá pravidla pro variace: -
+<strong>nezáleží na pořadí prvků</strong> - <span
+class="math inline">\({a,b} = {b,a}\)</span> - <strong>prvky se mohou
+opakovat</strong> - <span class="math inline">\({a,a}\)</span> lze</p>
+<h2 id="zápis-kombinací-s-opakováním">Zápis kombinací s opakováním</h2>
+<p>Zápis kombinací je následující: <span
+class="math inline">\(\mathbf{K(k,n)^{′}}\)</span> - čteme jako: “počet
+<span class="math inline">\(k\)</span>-člených kombinací z <span
+class="math inline">\(n\)</span> prvků”</p>
+<h2 id="výpočet-kombinací-s-opakováním">Výpočet kombinací s
+opakováním</h2>
+<p>Pro výpočet kombinací platí:</p>
+<p><span
+class="math display">\[\mathbf{K(k,n)^{′}=\binom{n+k-1}{k}=\frac{(n+k-1)!}{k!\cdot
+(n-1)!}}\]</span></p>
+</body>
+</html>
