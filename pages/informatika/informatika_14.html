@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Programovací jazyky</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../stylesheet.css" />
+</head>
+<body>
+<div class="home-top-bar">
+  <a class="home-button" href="https://iwuvuu.github.io">HOME</a>
+</div>
+
+<header id="title-block-header">
+<h1 class="title">Programovací jazyky</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#vznik" id="toc-vznik">Vznik</a></li>
+<li><a href="#dělení" id="toc-dělení">Dělení</a>
+<ul>
+<li><a href="#podle-úrovně-abstrakce"
+id="toc-podle-úrovně-abstrakce">Podle úrovně abstrakce</a>
+<ul>
+<li><a href="#nízkoúrovňové-jazyky"
+id="toc-nízkoúrovňové-jazyky">Nízkoúrovňové jazyky</a></li>
+<li><a href="#vysoceúrovňové-jazyky"
+id="toc-vysoceúrovňové-jazyky">Vysoceúrovňové jazyky</a></li>
+</ul></li>
+<li><a href="#podle-programovacích-paradigmat-princip-jak-funguje"
+id="toc-podle-programovacích-paradigmat-princip-jak-funguje">Podle
+programovacích paradigmat (Princip jak funguje)</a></li>
+</ul></li>
+<li><a href="#programovací-jazyky"
+id="toc-programovací-jazyky">Programovací jazyky</a>
+<ul>
+<li><a href="#jazyk-symbolických-adres-assembler"
+id="toc-jazyk-symbolických-adres-assembler">Jazyk symbolických adres
+(Assembler)</a></li>
+<li><a href="#basic-beginners-all-purpose-symbolic-instruction-code"
+id="toc-basic-beginners-all-purpose-symbolic-instruction-code">Basic
+(Beginner’s All Purpose Symbolic Instruction Code)</a></li>
+<li><a href="#pascal" id="toc-pascal">Pascal</a></li>
+<li><a href="#c" id="toc-c">C</a></li>
+<li><a href="#c-1" id="toc-c-1">C++</a></li>
+<li><a href="#c-2" id="toc-c-2">C</a></li>
+<li><a href="#java" id="toc-java">Java</a></li>
+<li><a href="#python" id="toc-python">Python</a></li>
+<li><a href="#javascript" id="toc-javascript">JavaScript</a></li>
+<li><a href="#php" id="toc-php">PHP</a></li>
+<li><a href="#rust" id="toc-rust">Rust</a></li>
+</ul></li>
+</ul>
+</nav>
+<p>TO;DO - typizace a vysvětlení některých pojmů</p>
+<p>Jedná se o nástroj k vytváření algoritmů a programů, díky nimž říkáme
+počítači, jaké operace má provádět. Slouží k vytváření sofrtwaru,
+aplikací, webů nebo řízení hardwaru. Počítač sám našemu jazyku nerozumí,
+pracuje pouze v nulách a jedničkách, proto programovací jazyky slouží
+jako překladač mezi jazykem počítače a lidským jazykem..</p>
+<h1 id="vznik">Vznik</h1>
+<p>Hlavní důvod vzniku je zjednodušení komunikace lidí a počítače.
+Podpora složitějších projektů a zlepšení vývoje softwaru.</p>
+<h1 id="dělení">Dělení</h1>
+<h2 id="podle-úrovně-abstrakce">Podle úrovně abstrakce</h2>
+<h3 id="nízkoúrovňové-jazyky">Nízkoúrovňové jazyky</h3>
+<ul>
+<li>blízký strojovému kódu -&gt; instrukce přímo určené pro procesor
+zapsané pomocí posloupností číselných kódů.</li>
+<li>např binární zápis</li>
+<li>přímo vyžadují, aby programátor kontroloval prvky ukládání a
+zpracování dat</li>
+<li>jsou rychlejší a efektivnější, jelikož nepotřebují mezikrok překladu
+a využívají maximální výkon hardwaru</li>
+<li>obtížná čitelnost a psaní, což vede k větší náchylnosti k
+chybám</li>
+<li>velmi nízká kompatibilita s jiným druhem hardwaru</li>
+<li>využití:
+<ul>
+<li>operační systémy</li>
+<li>firmware</li>
+<li>ovladače</li>
+</ul></li>
+<li>příklady:
+<ul>
+<li>strojový jazyk (binární kód)</li>
+<li>Assembler</li>
+</ul></li>
+</ul>
+<h3 id="vysoceúrovňové-jazyky">Vysoceúrovňové jazyky</h3>
+<ul>
+<li>pro člověka srozumitelnější -&gt; algoritmy jsou zapsány v jazyce
+blízký lidským jazykům
+<ul>
+<li>výrazy např z angličtiny</li>
+</ul></li>
+<li>umožňují tak lepší čitelnost a srozumitelnost</li>
+<li>k využití programátoři nepotřebují velké hardwarové znalosti a
+nejsou vázané ke specifickému hardwaru</li>
+<li>nejsou tak výkoné a rychlé, ale programátor je v jejich psaní daleko
+více efektivní</li>
+<li>využití:
+<ul>
+<li>vývoj aplikací</li>
+<li>weby</li>
+<li>datová analýza</li>
+</ul></li>
+<li>příklady:
+<ul>
+<li>C</li>
+<li>Python</li>
+<li>Rust</li>
+<li>JavaScript</li>
+</ul></li>
+</ul>
+<h2 id="podle-programovacích-paradigmat-princip-jak-funguje">Podle
+programovacích paradigmat (Princip jak funguje)</h2>
+<ul>
+<li>Procedurální jazyky - kód je rozdělen do funkcí (C, Pascal)</li>
+<li>Objektově orientované jazyky - pracují s objekty a třídami (Java,
+C++, C#)</li>
+<li>Funkcionální jazyky - založené na matematických funkci (Haskell,
+Lisp)</li>
+<li>Skriptovací jazyky - pro automatizaci a práci s webem (JavaScript,
+PHP)</li>
+</ul>
+<h1 id="programovací-jazyky">Programovací jazyky</h1>
+<h2 id="jazyk-symbolických-adres-assembler">Jazyk symbolických adres
+(Assembler)</h2>
+<p>Jedná se o nízkoúrovňový programovací jazyk, který odpovídá
+strojovému kódu procesoru. Programátor místo číselných instrukcí používá
+symbolické názvy (např MOV, ADD, JMP…), které odpovídají konkrétní
+operaci procesoru. Assembler umožňuje přímou kontrolu nad hardwarem
+(firmware, ovladače, vestavěné systémy…).</p>
+<h2 id="basic-beginners-all-purpose-symbolic-instruction-code">Basic
+(Beginner’s All Purpose Symbolic Instruction Code)</h2>
+<p>Cílem k vytvoření programovacího jazyku Basic bylo naučit začátečníky
+programovat. Z toho důvodu jsou instrukce zaspány v běžné angličtině a
+příkazy jednoduše srozumitelné. Čehož se využívá i v dnešních
+programovacích jazycích.</p>
+<h2 id="pascal">Pascal</h2>
+<p>Další programovací jazyk určený k výuce programování. Byl vytvořen
+tak, aby byl snadný a čitelný, a aby ho bylo snadné implementovat na
+většinu tehdejších počítačů. Jedná se o silně typový jazyk, který je
+kompilovaný do trojového kódu. Má čitelný syntax a podporuje různé
+datové typy a struktury.</p>
+<h2 id="c">C</h2>
+<p>Cílem vzniku <em>Cčka</em> bylo vyvinout jazyk vhodný pro tvorbu
+operačních systémů - původně určen pro UNIX. Jedná se o procedurální
+nízkoúrovňový jazyk (s prvky vyšší abstrakce -&gt; <em>středně úrovňový
+jazyk</em>). Poskytuje přímý přístup k paměti a kód je velmi rychlý a
+efektivní.</p>
+<ul>
+<li><p>Využití - hlavně k tvorbě operačních systémů, ovladačů,
+vestavěných systémů a databází.</p></li>
+<li><p>Výhody:</p>
+<ul>
+<li>vysoký výkon</li>
+<li>kompatibilní s různými platformami</li>
+<li>flexibilita a velká kontrola nad hardwarem</li>
+</ul></li>
+<li><p>Nevýhody:</p>
+<ul>
+<li>náročnější psaní a čtení kódu, než moderní jazyky</li>
+<li>menší ochrana před chybami - nutnost správně ošetřit paměť</li>
+</ul></li>
+</ul>
+<h2 id="c-1">C++</h2>
+<p>Jedná se o rozšířenou verzi klasického C, které doplňuje o objektové
+orientované prvky. Jedná se o vysokoúrovňový jazyk, který je zárověň
+rychlý. Hlavní jeho využití je při tvorbě her, systémového softwaru i
+desktopových aplikací - Photoshop, MS Office, prohlížeče.</p>
+<h2 id="c-2">C</h2>
+<p>Vytvořen Microsoftem jako moderní jazyk pro vývoj aplikací v rámci
+platformy .NET. Spojuje prvky C++ a Javy a zároveň se soustředí na
+jednoduchost. Doplňuje C++ o některé funkce, například garbage
+collection, díky čemuž se programátor nemusí starat o alokování paměti.
+V dnešní době se využívá na vývoj her nebo třeba mobilních aplikací.</p>
+<h2 id="java">Java</h2>
+<p>Cílem Javy bylo zajistit programovací jazyk, který bude tvořit
+přenositelné programy, tedy napsat program jednou a spustit ho všude.
+Využívá se k hlavně k vývoji mobilních aplikací.</p>
+<h2 id="python">Python</h2>
+<p>Jedná se o jednoduchý, srozumitelný a univerzální programovací jazyk.
+Má velmi jednoduchou a čitelnou syntaxy. Má jednoduchou typizaci (nemusí
+předem definovat typy proměnných) a podporuje jak procedurální, tak
+objektové a funkcionální programování. Jedná se o velmi populární jazyk
+a díky tomu dnes existují spousty knihoven a modulů.</p>
+<ul>
+<li>využití:
+<ul>
+<li>datová analýza</li>
+<li>strojové učení</li>
+<li>automatizace</li>
+<li>skriptování</li>
+</ul></li>
+<li>výhody:
+<ul>
+<li>jednoduchý</li>
+<li>velká a aktivní komunita</li>
+<li>platformově nezávislý</li>
+</ul></li>
+<li>nevýhody:
+<ul>
+<li>pomalejší, než kompilované jazyky (C, C++) - ale i tak velmi
+rychlý</li>
+<li>není tak vhodný pro tvorbu náročných aplikací s vysokými nároky na
+výkon</li>
+</ul></li>
+</ul>
+<h2 id="javascript">JavaScript</h2>
+<p>Určen pro tvorbu webových stránek, kde umožňuje interaktivní funkce.
+Je to také nejpoužívanější programovací jazyk na světě. Jedná se o
+skriptovací jazyk běžící hlavně v prohlížeči, je dynamicky typovaný a
+neustále vyvíjený.</p>
+<ul>
+<li>využití:
+<ul>
+<li>front-end vývoj -&gt; weby - animace, interaktivita…</li>
+<li>back-end vývoj -&gt; Node.js - stavění aplikací v JS</li>
+<li>Mobilní a desktopové aplikace (React Native, Electron - spotify,
+discord…)</li>
+</ul></li>
+<li>výhody:
+<ul>
+<li>nutný k tvorbě webových stránek</li>
+<li>vývoj napříč platformami</li>
+</ul></li>
+<li>nevýhody:
+<ul>
+<li>volné typování -&gt; občas nepředvídatelný</li>
+<li>běží v prohlížeči - bezpečnostní riziko při špatném zacházení na
+straně klienta - code injection</li>
+</ul></li>
+</ul>
+<h2 id="php">PHP</h2>
+<p>Další skriptovací jazyk využívaný k práci na webu. Slouží k ukládání,
+měnění a úpravě dat na webových stránkách.</p>
+<h2 id="rust">Rust</h2>
+<p>Jedná se o moderní programovací jazyk, který slouží jako alternativa
+k C/C++ a přináší spoustu výhod. Je kompilovaný (stejně jako C) a je
+zaměřený na bezpečnost a výkon. Narozdíl od základní C rodiny má vlastní
+systém správy paměti - neobsahuje garbage collector, ale bez rizika
+úniku paměti. Má striktní typovací systém, přísný překladač, ale s
+velkou jistotou správnosti kódu.</p>
+<ul>
+<li>využití:
+<ul>
+<li>systémové programování</li>
+<li>vývoj herních enginů</li>
+<li>webové servery</li>
+<li>knihovny pro jiné jazyky</li>
+<li>operacní systémy</li>
+<li>embedded systémy</li>
+</ul></li>
+<li>výhody:
+<ul>
+<li>vysoký výkon</li>
+<li>bezpečné zacházení s pamětí</li>
+</ul></li>
+<li>nevýhody:
+<ul>
+<li>strmá křivka učení</li>
+<li>zatím méně rozšíření (but the world will be rusty)</li>
+</ul></li>
+</ul>
+</body>
+</html>
