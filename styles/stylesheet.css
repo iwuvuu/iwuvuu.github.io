@@ -87,7 +87,7 @@ body {
 }
 .main-page-sidebar {
   background-color: var(--bg-dim);
-  height: 1500px;
+  height: 100vh;
   width: 300px;
   position: fixed;
   z-index: 1000;
