@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Tabulkový kalkulátor</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../stylesheet.css" />
+</head>
+<body>
+<div class="home-top-bar">
+  <a class="home-button" href="https://iwuvuu.github.io">HOME</a>
+</div>
+
+<header id="title-block-header">
+<h1 class="title">Tabulkový kalkulátor</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#hlavní-mechaniky-tabulkového-kalkulátoru"
+id="toc-hlavní-mechaniky-tabulkového-kalkulátoru">Hlavní mechaniky
+tabulkového kalkulátoru</a>
+<ul>
+<li><a href="#obsah-buňek" id="toc-obsah-buňek">Obsah buňek</a>
+<ul>
+<li><a href="#základní-využití-vzorců"
+id="toc-základní-využití-vzorců">Základní využití vzorců</a></li>
+</ul></li>
+<li><a href="#atributy-buňky" id="toc-atributy-buňky">Atributy buňky</a>
+<ul>
+<li><a href="#podmíněné-formátování"
+id="toc-podmíněné-formátování">Podmíněné formátování</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#rozšířené-funkce" id="toc-rozšířené-funkce">Rozšířené
+funkce</a></li>
+<li><a href="#druhy-tabulkových-kalkulátorů"
+id="toc-druhy-tabulkových-kalkulátorů">Druhy tabulkových
+kalkulátorů</a></li>
+<li><a href="#zpracování-dat" id="toc-zpracování-dat">Zpracování
+dat</a></li>
+</ul>
+</nav>
+<p>Tabulkový kalkulátor je software určený pro práci s tabulkami.
+Narozdíl od klasických známých tabulek však tabulkové kalkulátory
+umožňují s daty lépe a efektivněji pracovat.</p>
+<h1 id="hlavní-mechaniky-tabulkového-kalkulátoru">Hlavní mechaniky
+tabulkového kalkulátoru</h1>
+<p>Základem všeho je pochopitelně tabulka. Každá tabulka má x-souřadnici
+(sloupce) a y-souřadnici (řádky). Každý sloupec je označen písmenem (A -
+ZZ…) a každý řádek je označen číslem (1 - n…), z toho vyplývá, že
+jednotlivé políčko tabulky (buňka) je označena číslem a písmenem
+odpovídající souřadnice (A1, Q25…).</p>
+<figure>
+<img src="../resources/tabulka.png" alt="tabulka" />
+<figcaption aria-hidden="true">tabulka</figcaption>
+</figure>
+<p>Každá buňka má obsah a atributy, které mění vlastnosti dané
+buňky.</p>
+<h2 id="obsah-buňek">Obsah buňek</h2>
+<p>Obsah je jednoduše údaj, který je zapsaný v buňce. Může se jednat o
+jednoduchý text nebo číslo nebo nějaký speciánlní vzorec.</p>
+<h3 id="základní-využití-vzorců">Základní využití vzorců</h3>
+<p>Vzorce jsou hlavní funkce kalkulátorů, které dokáží kalkulovat s
+obsahem buňek a automatizovat analýzu tabulky.</p>
+<p>Vzorce se zapisují do políčka obsahu a musí začínat rovnítkem
+(=).</p>
+<h4 id="adresování-buněk">Adresování buněk</h4>
+<p>Velmi důležité pro automatizování práce s kalkulátorem je správné
+adresování buňek. Adresování buňek je odkázání na obsah jedné buňky v
+rámci buňky jiné. Existuje několik typů adresování buňek.</p>
+<h5 id="relativní-adresa-a1">Relativní adresa (A1)</h5>
+<p>Mění se při kopírování vzorce. To znamená, že když budeme přetahovat
+vzorec ve sloupci nebo řádku, tak se adresa bude měnit směrem, kterým
+přetahujeme.</p>
+<figure>
+<img src="../resources/relativni_adresa.png" alt="realtivní adresa" />
+<figcaption aria-hidden="true">realtivní adresa</figcaption>
+</figure>
+<p>Obě dvě adresy jsou relativní, takže při kopírování dolů se vzorec
+změní a sečte hodnoty v daném řádku.</p>
+<h5 id="absolutní-adresa-a1">Absolutní adresa ($A$1)</h5>
+<p>Zůstává neměná při kopírování vzorce. To znamená, že když budeme
+přětahovat vzorec tak se daná adresa nijak nezmění.</p>
+<figure>
+<img src="../resources/absolutni_adresa.png" alt="absolutní adresa" />
+<figcaption aria-hidden="true">absolutní adresa</figcaption>
+</figure>
+<p>Adresa A2 je absolutní a při kopírování se nezmění, takže výsledek
+bude vždy sčítat hodnotu A2(5) a relativní hodnotu sloupce B.</p>
+<h5 id="smíšená-adresa-a1">Smíšená adresa ($A1)</h5>
+<p>Kombinuje předchozí dvě druhy adres, ale jedna souřadnice je vždy
+relativní a druhá vždy absolutní.</p>
+<h4 id="matematické-využití-vzorců">Matematické využití vzorců</h4>
+<p>Vzorce mohou obsahovat matematické operace. Zapisují se stejně jako v
+matematice nebo programovacích jazycích a lze u nich využít adresování
+buňek.</p>
+<p>Příklady:</p>
+<ul>
+<li><code>=A1+5</code> - sečte buňku A1 s 5</li>
+<li><code>=A1-5</code> - odečte od buňku A1 5</li>
+<li><code>=A1*5</code> - vynásobí buňku A1 s 5</li>
+<li><code>=A1/5</code> - vydělí buňku A1 5</li>
+<li><code>=A1^5</code> - umocní buňku A1 na 5</li>
+</ul>
+<p>Lze také využít závorek a jiných zápisů pro určení pořadí
+operací.</p>
+<h4 id="funkce">Funkce</h4>
+<p>Tabulkové kalkulátory mají vestavěné funkce. Ty umožňují jednodušší
+možnosti výpočtů. Tákladní funcke jsou napčíklad:</p>
+<ul>
+<li>Matematické funkce - SUM, AVERAGE, ROUND</li>
+<li>Logické funkce - IF, AND, OR</li>
+<li>Statistické funkce - COUNT, COUNTIF, MEDIAN</li>
+</ul>
+<p>Například <code>=SUM(A1:A10)</code> spočítá součet hodnot v
+buňkách</p>
+<h2 id="atributy-buňky">Atributy buňky</h2>
+<p>Atributy buňky jsou nějaké neobsahové vlastnosti dané buňky =
+formátování. Formátování je důležité pro lepší přehlednost a také k
+rozšíření využití tabulky.</p>
+<p>Formátovat můžeme:</p>
+<ul>
+<li>Písmo - velikost, font, barva</li>
+<li>zarovnání textu a čísel</li>
+<li>ohraničení buňky</li>
+<li>barva pozadí buňky</li>
+<li>sloučení buněk</li>
+</ul>
+<h3 id="podmíněné-formátování">Podmíněné formátování</h3>
+<p>Podmíněné formátování zajišťuje automatizované formátování na základě
+obsahu buňky. Např. všechny buňky ve sloupci, které mají hodnotu větší
+než 100 budou mít žluté pozadí.</p>
+<h1 id="rozšířené-funkce">Rozšířené funkce</h1>
+<p>Do tabulkových kalkulátorů můžeme přidat i rozšířenou funkcionalitu.
+Nejčastěji se využívá grafů, které zobrazují křivku, zastoupení… v
+závislosti na hodnotách obsahu buněk. Nebo můžeme přidat třeba
+obrázek.</p>
+<h1 id="druhy-tabulkových-kalkulátorů">Druhy tabulkových
+kalkulátorů</h1>
+<p>Všechny tabulkové kalkulátory fungují na velmi podobném principu, ale
+jisté mechaniky mohou mít trochu jiný zápis a funkčnost.</p>
+<ul>
+<li>Microsoft Excel - nejpopulárnější tabulkový kalkulátor, je offline,
+musíme si ho koupit jako součást MS office suite</li>
+<li>LibreOffice Calc - opensource alternativa s podobnou funkcionalitou
+jako je Excel</li>
+<li>Google Sheets - součást online google kancelářského balíčku</li>
+</ul>
+<h1 id="zpracování-dat">Zpracování dat</h1>
+<p>Data tabulky je užitečné zpracovat pro rozšířené využití a lepší
+prezentaci. Je tedy vhodné exportovat grafy a tabulky do formátů jako je
+třeba PDF, které pak můžeme poslat bez závislosti na daný tabulkový
+kalkuátor (nezměnitelné).</p>
+</body>
+</html>
