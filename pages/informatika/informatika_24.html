@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Virtualizační technologie</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../stylesheet.css" />
+</head>
+<body>
+<div class="home-top-bar">
+  <a class="home-button" href="https://iwuvuu.github.io">HOME</a>
+</div>
+
+<header id="title-block-header">
+<h1 class="title">Virtualizační technologie</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#typy-virtualizačních-nástrojů"
+id="toc-typy-virtualizačních-nástrojů">Typy virtualizačních nástrojů</a>
+<ul>
+<li><a href="#virtualizace-hardwaru"
+id="toc-virtualizace-hardwaru">Virtualizace hardwaru</a>
+<ul>
+<li><a href="#princip-tvorby-virtuálizačního-stroje"
+id="toc-princip-tvorby-virtuálizačního-stroje">Princip tvorby
+virtuálizačního stroje</a></li>
+</ul></li>
+<li><a href="#virtualizace-na-operačním-systému-kontejnerizace"
+id="toc-virtualizace-na-operačním-systému-kontejnerizace">Virtualizace
+na operačním systému (kontejnerizace)</a>
+<ul>
+<li><a href="#kontejnery" id="toc-kontejnery">Kontejnery</a></li>
+</ul></li>
+<li><a href="#emulace" id="toc-emulace">Emulace</a></li>
+</ul></li>
+<li><a href="#důvody-využití-a-příklady"
+id="toc-důvody-využití-a-příklady">Důvody využití a příklady</a></li>
+</ul>
+</nav>
+<p>Virtualizace je proces, který umožňuje efektivní využití počítačového
+hardwaru. Umožňuje nám vytvářet virtuální (nefyzické) verze hardwaru,
+díky čemuž umožňuje běh více nezávislých prostředí (operační systém,
+uložiště, sítě…) na jednom fyzickém počítači.</p>
+<h1 id="typy-virtualizačních-nástrojů">Typy virtualizačních
+nástrojů</h1>
+<ul>
+<li>virtualizace na hardwaru - nejpoužívanější, umožní spouštět různé
+operační systémy na jednom zařízení - VirtualBox, QEMU</li>
+<li>virtualizace na operačním systému - izolované prostředí v rámci
+jednoho operačního systému (servery) - Docker</li>
+<li>virtualizace uložiště - sdružuje více fyzických uložišť do jednoho
+virtuálního celku</li>
+<li>virtualizace sítě - virtuální síťové prostředí</li>
+<li>desktopová virtualizace - umožňuje přístup k virtuálním desktopům
+odkudkoliv - MS Remote Desktop, Citrix</li>
+</ul>
+<h2 id="virtualizace-hardwaru">Virtualizace hardwaru</h2>
+<p>Vytváří izolované prostředí, ve kterém běží celý operační systém.
+Vytváří tzv. Virutálizační stroje.</p>
+<h3 id="princip-tvorby-virtuálizačního-stroje">Princip tvorby
+virtuálizačního stroje</h3>
+<p>Virtualizace využívá software, který vytvoří abstraktní vrstvu nad
+počítačovým hardwarem. Tato vrstva umožňuje rozdělit fyzický hardware
+počítače do několika virtuálních částí Virtualizačních strojů (VM),
+každý z nich využívá přidělenou část hardwaru (procesor, paměť, disk…) a
+vytovří virtuální alternativu.</p>
+<ol type="1">
+<li>Fyzický server (host) - samostatný hardware, ne kterém jsme schopni
+spustit virtualizační software. Důležitý je jeho výkon, abychom mohli
+alokovat dostatek fyzického hardwaru pro virtuální verze.</li>
+<li>Hypervizor - software, který spravuje běh VM a přiděluje jednotlivé
+zdroje</li>
+<li>Virtuální disk - soubor na reálném disku, který slouží VM jako
+virtuální disk</li>
+<li>Instalace OS - na VM nainstalujeme operační systém</li>
+</ol>
+<h4 id="hypervizor-a-jeho-typy">Hypervizor a jeho typy</h4>
+<p>Jak už bylo řečeno hypervizer je softwarová vrstva, která zpracovává
+zdroje pro VM a zajišťuje jejich správné připojení.</p>
+<h5 id="typ-1-bare-metal-hypervizor">Typ 1 (bare-metal hypervizor)</h5>
+<p>Běží přímo na fyzickém hardwaru, je velmi výkonný a bezpečný (nejedná
+se o vrstvu v jiném prostředí). Je trochu složitější na správu a proto
+není vhodný pro běžné domácí užití. Jeho nejčastější využití je v
+datových centrech a na serverech.</p>
+<ul>
+<li>VMware ESXi</li>
+<li>MS Hyper-V</li>
+<li>KVM (Linux ho má zabudovaný v jádře, umožňuje nativní virtualizaci v
+linuxovém prostředí)</li>
+</ul>
+<h5 id="typ-2-hostovaný-hypervizor">Typ 2 (hostovaný hypervizor)</h5>
+<p>Běží pouze jako aplikace pod operačním systémem. Je snadné ho
+používat a vhodný pro osobní účely nebo rychlé testování. Není tak
+výkonný oproti typu 1, protože nemá přímý přístup k hardwaru (pouze přes
+OS), ale je jednodušší implementovat.</p>
+<ul>
+<li>VirtualBox</li>
+<li>VMware Workstation</li>
+</ul>
+<h2 id="virtualizace-na-operačním-systému-kontejnerizace">Virtualizace
+na operačním systému (kontejnerizace)</h2>
+<p>Namísto celého VM sdílí jednotlivé kontejnery jádro hostitelského OS
+a oddělují jednotlivé aplikace.</p>
+<h3 id="kontejnery">Kontejnery</h3>
+<p>Každý kontejner běží jako izolovaný proces na operačním systému,
+takže není potřeba instalovat další. Kontejnery jsou velmi lehké a
+rychlé a jednodušše umožňují mít velké množství procesů na jednom
+stroji. Nevýhodou však je, že kontejnery nejsou tak izolované jako VM -
+bezpečnostní hrozny při špatném nastavení.</p>
+<p>Hlavní využití je v menších a domácích serverech, kde je potřeba více
+funkcí.</p>
+<ul>
+<li>Docker</li>
+<li>LXC/LXD (Linux Containers)</li>
+</ul>
+<h2 id="emulace">Emulace</h2>
+<p>Speciálním příkladem je emulace. Většinou chceme virtualizovat VM pro
+stejnou platformu, protože využívají poskytovaný hardware s maximální
+podporou. Problém nastává, když chceme virtualizovat operační systém pro
+jiné architektury - ARM, nebo specializovaný hardware (herní
+konzole).</p>
+<p>Emulace řeší tento problém tak, že simuluje nativní prostředí pro
+operační systém a využívá u toho dostupný hardware. Tento způsob
+virtualizace je velmi pomalý a je vhodný hlavně pro testování a vývoj
+pro jiné platformy.</p>
+<h1 id="důvody-využití-a-příklady">Důvody využití a příklady</h1>
+<p>S virtualizací se nejčastěji setkáváme v serverech a datových
+uložištích. Hlavním důvodem využití virtualizace je efektivní a levné
+využití hardwaru. Protože servery velmi často nepotřebují výkonnou
+výpočetní techniku, ale různorodost (web servery, e-mail servery, media
+seevery), je hardware rozdělen na virtuální díly a nemusíme tak
+nakupovat pro každý účel jiný hardware.</p>
+<p>Virtualizace je velmi také důležitá pro testování operačních systému
+- funkcionalita a bezpečnost, nebo pro aplikační prostředí - např.
+development aplikačního prostředí pro jiný hardware. Důležité je využití
+v kyberbezpečnosti - vytváří nezávislé prostředí pro test malwaru a
+bezpečnostních závad.</p>
+</body>
+</html>

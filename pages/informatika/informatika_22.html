@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Logické obvody</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../stylesheet.css" />
+</head>
+<body>
+<div class="home-top-bar">
+  <a class="home-button" href="https://iwuvuu.github.io">HOME</a>
+</div>
+
+<header id="title-block-header">
+<h1 class="title">Logické obvody</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#logická-hradla-logic-gate"
+id="toc-logická-hradla-logic-gate">Logická hradla (Logic Gate)</a>
+<ul>
+<li><a href="#opakovač-repeater" id="toc-opakovač-repeater">Opakovač
+(repeater)</a></li>
+<li><a href="#not-inventor" id="toc-not-inventor">NOT
+(Inventor)</a></li>
+<li><a href="#and-konjuktor" id="toc-and-konjuktor">AND
+(Konjuktor)</a></li>
+<li><a href="#or-disjuktor" id="toc-or-disjuktor">OR
+(Disjuktor)</a></li>
+<li><a href="#nand" id="toc-nand">NAND</a></li>
+<li><a href="#nor" id="toc-nor">NOR</a></li>
+<li><a href="#xor" id="toc-xor">XOR</a></li>
+<li><a href="#xnor" id="toc-xnor">XNOR</a></li>
+<li><a href="#příklad-využití" id="toc-příklad-využití">Příklad
+využití</a></li>
+<li><a href="#zapojení-logických-hradel"
+id="toc-zapojení-logických-hradel">Zapojení logických hradel</a>
+<ul>
+<li><a href="#kombinace-hradel" id="toc-kombinace-hradel">Kombinace
+hradel</a></li>
+<li><a href="#složená-logika-hradel"
+id="toc-složená-logika-hradel">Složená logika hradel</a></li>
+<li><a href="#kombinační-logické-obvody"
+id="toc-kombinační-logické-obvody">Kombinační logické obvody</a></li>
+<li><a href="#sekvenční-logické-obvody"
+id="toc-sekvenční-logické-obvody">Sekvenční logické obvody</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#využití-v-praxi" id="toc-využití-v-praxi">Využití v
+praxi</a></li>
+</ul>
+</nav>
+<p>Jsou to základní stavební prvky digitálních zařízení. Tvořeny
+elektronickými součástami, které vykonávají logické operace na vstupních
+signálech podle předem definovaných pravidel. Tyto obvody jsou široce
+používány v počítačích, automatizaci, komunikačních systémech a mnoha
+dalších elektrotechnických zařízení.</p>
+<h1 id="logická-hradla-logic-gate">Logická hradla (Logic Gate)</h1>
+<p>Jedná se o základní prvek logických obodů, které provádějí základní
+logické operace podle Booleovy algebry. Typicky mají jeden nebo více
+vstupů a jediný výstup.</p>
+<h2 id="opakovač-repeater">Opakovač (repeater)</h2>
+<p>Vůbec nejzákladnějším logickým členem je opakovač, který pouze
+opakuje zadaný výstup.</p>
+<table>
+<thead>
+<tr class="header">
+<th>vstup (A)</th>
+<th>výstup (X)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Jelikož zadanou hodnotu nijak nemění využívá se k speciálním účelům -
+zpožďovač s velmi krátkým spožděním.</p>
+<h2 id="not-inventor">NOT (Inventor)</h2>
+<p>Využívá logické negace, platí, že výstup je opačný než vstup. Stejně
+jako opakovač ma jeden vstup a výstup.</p>
+<table>
+<thead>
+<tr class="header">
+<th>vstup (A)</th>
+<th>výstup (X)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="../resources/not_gate.png" alt="NOT" />
+<figcaption aria-hidden="true">NOT</figcaption>
+</figure>
+<h2 id="and-konjuktor">AND (Konjuktor)</h2>
+<p>Tento člen již využívá dvou vstupů. Provádí funkci logického součinu
+(konjukce) - výstup je 1 pouze tehdy, pokud jsou oba vstupy 1.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Vstup(A)</th>
+<th>Vstup(B)</th>
+<th>Výstup(X)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="../resources/and_gate.png" alt="AND" />
+<figcaption aria-hidden="true">AND</figcaption>
+</figure>
+<h2 id="or-disjuktor">OR (Disjuktor)</h2>
+<p>Provádí funkci logického součtu (disjunkce) - výstup je 1 , pokud je
+alespoň jeden vstup je 1.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Vstup(A)</th>
+<th>Vstup(B)</th>
+<th>Výstup(X)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="../resources/or_gate.png" alt="OR" />
+<figcaption aria-hidden="true">OR</figcaption>
+</figure>
+<h2 id="nand">NAND</h2>
+<p>Provadí funkci negovaného logického součinu (součet negací) - výstup
+je negací AND (výstup je 1 pouze tedhdy pokud jsou oba vstupy 0).</p>
+<table>
+<thead>
+<tr class="header">
+<th>Vstup(A)</th>
+<th>Vstup(B)</th>
+<th>Výstup(X)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="../resources/nand_gate.png" alt="NAND" />
+<figcaption aria-hidden="true">NAND</figcaption>
+</figure>
+<h2 id="nor">NOR</h2>
+<p>Provádí funkci negovaného logického součtu (součin negací) - výstup
+je negací OR hradla (výstup je 1 pouze tehdy, pokud jsou oba vstupy
+0).</p>
+<table>
+<thead>
+<tr class="header">
+<th>Vstup(A)</th>
+<th>Vstup(B)</th>
+<th>Výstup(X)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="../resources/nor_gate.png" alt="NOR" />
+<figcaption aria-hidden="true">NOR</figcaption>
+</figure>
+<h2 id="xor">XOR</h2>
+<p>Vyčísluje exkluziví logický součet - výstup je 1 pouze tehdy, pokud
+je jeden vstup 1 a druhý 0.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Vstup(A)</th>
+<th>Vstup(B)</th>
+<th>Výstup(X)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="../resources/xor_gate.png" alt="XOR" />
+<figcaption aria-hidden="true">XOR</figcaption>
+</figure>
+<h2 id="xnor">XNOR</h2>
+<p>Jedná se o negaci exkluzivního logického součtu (negovaný XOR) -
+výstup je 1, pokud jsou oba vstupy stejné.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Vstup(A)</th>
+<th>Vstup(B)</th>
+<th>Výstup(X)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="../resources/xnor_gate.png" alt="XNOR" />
+<figcaption aria-hidden="true">XNOR</figcaption>
+</figure>
+<h2 id="příklad-využití">Příklad využití</h2>
+<p>Integrovaný obvod 7400 se 4 hradly NAND je vyrobený pomocí
+tranzistorů:</p>
+<p><img src="../resources/7400_cip.jpg" /></p>
+<h2 id="zapojení-logických-hradel">Zapojení logických hradel</h2>
+<p>Logická hradla mohou být propojena do složitějších struktur. V praxi
+se využívají hlavně integrované logické obvody, které obsahují obrovské
+množství logických hradel.</p>
+<h3 id="kombinace-hradel">Kombinace hradel</h3>
+<p>Hradla můžeme kombinovat.</p>
+<p>Například výstup AND jde do vstupu NOT a vznikne výsledek NAND</p>
+<p><img src="../resources/and_not.png" /></p>
+<p>Většina nejpoužívanějších kombinací (NAND, NOR…) jsou už
+implementovány jako samostatné hradlo.</p>
+<h3 id="složená-logika-hradel">Složená logika hradel</h3>
+<p>V složitějších obvodech je časté zapojovat hradla do rozlehlých
+logických obvodů.</p>
+<p>Příklad jednoduššího obvodu: (A AND B) OR (C AND D)</p>
+<p><img src="../resources/and_or_and.png" /></p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+<th>Výstup (X)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="kombinační-logické-obvody">Kombinační logické obvody</h3>
+<p>Výstup závisí pouze na aktuálních hodnotách vstupů (např.
+multiplexory, dekodéry, aritmetické jednotky).</p>
+<h3 id="sekvenční-logické-obvody">Sekvenční logické obvody</h3>
+<p>Výstup závisí nejen na aktuálním vstupu, ale také na předchotích
+stavech (klopné obvody, registry, čítače)</p>
+<h1 id="využití-v-praxi">Využití v praxi</h1>
+<ul>
+<li>počítače a mikroprocesory - složeny z milionů logických hradel
+<ul>
+<li>Jsou tvořeny velkým množstvím tranzistorů, které slouží jako
+spínače. Pomocí nich a odporů, vodičů vznikají jednotlivé logické
+funkce. Například AND hradlo je tvořeno tranzistory zapojenými v
+sérii.</li>
+</ul></li>
+<li>automatizace a řízení - průmyslových řídících systémech,
+robotika</li>
+<li>komunikační technologie - síťové zařízení, routery, mobilní
+telefony</li>
+<li>digitální elektronika - LED displaye, grafické procesory…</li>
+</ul>
+</body>
+</html>
