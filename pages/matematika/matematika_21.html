@@ -39,7 +39,20 @@
 <ul>
 <li><a href="#základní-kombinatorická-pravidla"
 id="toc-základní-kombinatorická-pravidla">Základní kombinatorická
-pravidla</a></li>
+pravidla</a>
+<ul>
+<li><a href="#kombinatorické-pravidlo-součtu"
+id="toc-kombinatorické-pravidlo-součtu">Kombinatorické pravidlo
+součtu</a>
+<ul>
+<li><a href="#příklad" id="toc-příklad">Příklad</a></li>
+</ul></li>
+<li><a href="#kombinatorické-pravidlo-součinu"
+id="toc-kombinatorické-pravidlo-součinu">Kombinatorické pravidlo
+součinu</a></li>
+<li><a href="#příklad-1" id="toc-příklad-1">Příklad</a></li>
+</ul></li>
+<li><a href="#faktoriál" id="toc-faktoriál">Faktoriál</a></li>
 <li><a href="#variace" id="toc-variace">Variace</a>
 <ul>
 <li><a href="#zápis-variací" id="toc-zápis-variací">Zápis
@@ -94,11 +107,88 @@ opakováním</a></li>
 id="toc-výpočet-kombinací-s-opakováním">Výpočet kombinací s
 opakováním</a></li>
 </ul></li>
+<li><a href="#vlastnosti-kombinačních-čísel"
+id="toc-vlastnosti-kombinačních-čísel">Vlastnosti kombinačních čísel</a>
+<ul>
+<li><a href="#pascalův-trojúhelník"
+id="toc-pascalův-trojúhelník">Pascalův trojúhelník</a></li>
+<li><a href="#binomická-věta" id="toc-binomická-věta">Binomická věta</a>
+<ul>
+<li><a href="#výpočet-jednotlivého-členu"
+id="toc-výpočet-jednotlivého-členu">Výpočet jednotlivého členu</a></li>
+</ul></li>
+</ul></li>
 </ul>
 </nav>
+<p>Kombinatorika se zabývá především určováním počtu různých objektů
+(možností), které splňují dané podmínky.</p>
 <h1 id="základní-kombinatorická-pravidla">Základní kombinatorická
 pravidla</h1>
-<p>TO;DO</p>
+<h2 id="kombinatorické-pravidlo-součtu">Kombinatorické pravidlo
+součtu</h2>
+<p>Využíváme jej chceme-li sečíst všechny prvky v různých množinách.</p>
+<p>D: Jsou-li <span class="math inline">\(A_{1},A_{2},...,A_{n}\)</span>
+konečné množiny, které mají po řadě <span
+class="math inline">\(p_{1},p_{2},...,p_{n}\)</span>, a jsou-li každé
+dvě disjunktní, pak počet prvků množiny <span
+class="math inline">\(A_{1}\cup A_{2}\cup ...\cup A_{n}\)</span> je
+roven <span
+class="math inline">\(\mathbf{p_{1}+p_{2}+...+p_{n}}\)</span>.</p>
+<h3 id="příklad">Příklad</h3>
+<p>V jedné třídě, ve které každý žák ovládá aspoň jeden ze dvou jazyků
+(AJ/N), hovoří 25 žáků anglicky, 16 žáků němeky a 7 žáků oběma jazyky.
+Kolik žáků chodí do této třídy?</p>
+<ol type="1">
+<li>Prvně musíme z množin udělat množiny disjunktní. Víme, že 7 žáků
+mluví oběma jazyky, takže je odečteme od jednotlivých jazyků.</li>
+</ol>
+<math>
+<span class="math display">\[\begin{array}{lc}
+{AJ = 25;}\\
+{NJ = 16;}\\
+{Oba = 7;}\\
+\end{array}\]</span>
+<p></math></p>
+<math>
+<span class="math display">\[\begin{array}{lc}
+{AJ - Oba = 25 - 7=18}\\
+{NJ - Oba = 16-7=9}
+\end{array}\]</span>
+<p></math></p>
+<ol start="2" type="1">
+<li>Teď víme, že počet žáků, kteří mluví pouze anglicky je 18 a počet
+žáků, kteří mluví pouze německy je 9. Sečteme je a přidáme žáky, kteří
+mluví oběma jazyky a vyjde nám počet žáků ve třídě,</li>
+</ol>
+<p><span class="math display">\[
+(AJ-Oba)+(NJ-Oba)+Oba=18+9+7=34
+\]</span></p>
+<h2 id="kombinatorické-pravidlo-součinu">Kombinatorické pravidlo
+součinu</h2>
+<p>D: Využíváme tehdy máme-li uspořádáané <span
+class="math inline">\(k\)</span>-tice takové, že jejich první člen lze
+vybrat <span class="math inline">\(n_{1}\)</span> způsoby, druhý po
+výběru prvního $n_{2} způsoby až <span
+class="math inline">\(k\)</span>-tý člen vybereme po všech
+předcházejících <span class="math inline">\(n_{k}\)</span> způsoby. Pak
+počet takových <span class="math inline">\(k\)</span>-tice roven <span
+class="math inline">\(n_{1}\cdot n_{2}\cdot ...\cdot n_{k}\)</span>.</p>
+<p>Takového pravidla využíváme při většíně kombinatorických operací.</p>
+<h2 id="příklad-1">Příklad</h2>
+<p>Kolik čtyřciferných kódů lze sestavit z čísel <span
+class="math inline">\({0, 3, 4, 5, 9}\)</span>. Jelikož se daná čísla
+mohou opakovat, tak takových čísel bude podle pravidla součinu <span
+class="math inline">\(5\cdot 5\cdot 5\cdot 5\cdot 5}\)</span>.</p>
+<h1 id="faktoriál">Faktoriál</h1>
+<p>Ve kombinatorických výpočtech často využíváme faktoriály. Faktoriál
+je definován jako součin všech po sobě jdoucích přirozených čísel od
+<span class="math inline">\(n\)</span> do 1 - <span
+class="math inline">\(n! = n\cdot (n-1)\cdot (n-2) \cdot ...\cdot 3\cdot
+2\cdot 1\)</span>.</p>
+<p>Podstatné je, že <span class="math inline">\(n!\)</span> je stejmné
+jako <span class="math inline">\(n\cdot (n-1)!\)</span> nebo <span
+class="math inline">\(n\cdot (n-1)\cdot (n-2)!\)</span> atd.</p>
+<p>Platí, že <span class="math inline">\(0! =1\)</span></p>
 <h1 id="variace">Variace</h1>
 <p>D: <span class="math inline">\(k\)</span>-členné variace z <span
 class="math inline">\(n\)</span> prvků je každá uspořádaná <span
@@ -245,5 +335,139 @@ opakováním</h2>
 <p><span
 class="math display">\[\mathbf{K(k,n)^{′}=\binom{n+k-1}{k}=\frac{(n+k-1)!}{k!\cdot
 (n-1)!}}\]</span></p>
+<h1 id="vlastnosti-kombinačních-čísel">Vlastnosti kombinačních
+čísel</h1>
+<p>Víme, že kombinační čísla se dají vypočítat takto:</p>
+<p><span class="math display">\[
+    \mathbf{\binom{n}{k}=\frac{n!}{k!\cdot (n-k)!}};\space k\le n
+\]</span></p>
+<p>Platí také tyto vzorce:</p>
+<p><span class="math display">\[
+\mathbf{\binom{n}{k}=\binom{n}{n-k}};\space n,k\in N_{0};\space k\le n
+\]</span> <span class="math display">\[
+\mathbf{\binom{n}{k}+\binom{n}{k+1}=\binom{n+1}{k+1}};\space n,k\in
+N_{0};\space k&lt;0
+\]</span></p>
+<h2 id="pascalův-trojúhelník">Pascalův trojúhelník</h2>
+<p>Paskalův trojúhelník je je graficky znázorněné vztahy mezi
+kombinačními čísly. Vypadá takto:</p>
+<math>
+<span class="math display">\[\begin{array}{lc}
+n=0 &amp;
+{\binom{0}{0}}
+\\
+n=1 &amp;
+{\binom{1}{0}}{\binom{1}{1}}
+\\
+n=2 &amp;
+{\binom{2}{0}}{\binom{2}{1}}{\binom{2}{2}}
+\\
+n=3 &amp;
+{\binom{3}{0}}{\binom{3}{1}}{\binom{3}{2}}{\binom{3}{3}}
+\\
+n=4 &amp;
+{\binom{4}{0}}{\binom{4}{1}}{\binom{4}{2}}{\binom{4}{3}}{\binom{4}{4}}
+\\                                     
+\end{array}\]</span>
+<p></math></p>
+<p>Vidíme, že každý řádek představuje jednu hodnotu <span
+class="math inline">\(n\)</span>, počínaje nulou a každý další člen je
+roven <span class="math inline">\(k+1\)</span>, počínaje 0 a končeje
+<span class="math inline">\(n\)</span>.</p>
+<p>Když si přepočteme jednotlivá kombinační čísla. Vznikne nám pak tento
+trojúhelník:</p>
+<math>
+<span class="math display">\[\begin{array}{lc}
+n=0 &amp;
+{1}\\
+n=1 &amp;
+{1 \quad 1} \\
+n=2 &amp;
+{1 \quad 2 \quad 1} \\
+n=3 &amp;
+{1 \quad 3 \quad 3 \quad 1} \\
+n=4 &amp;
+{1 \quad 4 \quad 6 \quad 4 \quad 1} \\
+n=5 &amp;
+{1 \quad 5 \quad 10 \quad 10 \quad 5 \quad 1} \\
+n=6 &amp;
+{1 \quad 6 \quad 15 \quad 20 \quad 15 \quad 6 \quad 1} \\
+n=7 &amp;
+{1 \quad 7 \quad 21 \quad 35 \quad 35 \quad 21 \quad 7 \quad 1} \\
+\end{array}\]</span>
+<p></math></p>
+<p>Jak lze vidět každé další číslo je součtem dvou čísel nad ním:</p>
+<figure>
+<img src="../resources/paskaluv_trojuhelnik.gif"
+alt="Paskalův trojúhelní" />
+<figcaption aria-hidden="true">Paskalův trojúhelní</figcaption>
+</figure>
+<p>Pro další vlastnosti je lepší přepsat si trojúhelník do této
+podoby:</p>
+<math>
+<span class="math display">\[\begin{array}{lc}
+n=0\space |\quad
+{1}\\
+n=1\space |\quad
+{1 \quad 1} \\
+n=2\space |\quad
+{1 \quad 2 \quad 1} \\
+n=3\space |\quad
+{1 \quad 3 \quad 3 \quad\space\space 1} \\
+n=4\space |\quad
+{1 \quad 4 \quad 6 \quad\space\space 4 \quad\space\space 1} \\
+n=5\space |\quad
+{1 \quad 5 \quad 10 \quad 10 \quad 5 \quad\space\space 1} \\
+n=6\space |\quad
+{1 \quad 6 \quad 15 \quad 20 \quad 15 \quad 6 \quad\space\space 1} \\
+n=7\space |\quad
+{1 \quad 7 \quad 21 \quad 35 \quad 35 \quad 21 \quad 7 \quad 1} \\
+\end{array}\]</span>
+<p></math></p>
+<p>Vidíme, že první a poslední číslo je vždy rovno jedné.</p>
+<p>Druhé číslo je vždy rovno <span class="math inline">\(n\)</span>.</p>
+<p>A třetí čísla jsou tzv. trojúhelníková čísla. To jsou čísla, která
+udávají součet <span class="math inline">\(n\)</span> přirozených čísel
+- <span class="math inline">\(0+1=1;\space 1+2=3;\space 3+3=6;\space
+6+4=10;\space 10+5=15...\)</span></p>
+<p>Součet všech čísel v jednom řádku trojúhelníku je <span
+class="math inline">\(2^{n}\)</span>.</p>
+<h2 id="binomická-věta">Binomická věta</h2>
+<p>Díky Paskalově trojúhelníku jsme schopni spočítat umocnění dvojčlenů
+(binomů) ve tvaru <span class="math inline">\((a+b)^{n}\)</span>.</p>
+<p>Příkladně můžeme rozložit tento mnohočlen: <span
+class="math inline">\((a+b)^{5}\)</span> <span class="math display">\[
+(a+b)^{5}=a^{5}+5a^{4}b+10a^{3}b^{2}+10a^{2}b^{3}+5ab^{4}+b^{5}
+\]</span></p>
+<p>Vidíme, že čísla před neznámými se rovnají číslům v daném řádku
+trojúhelníku: 1 5 10 10 5 1. Princip tohoto rozkladu označujeme termínem
+Binoická věta. Ta v obecném tvaru vypadá takto:</p>
+<p><span class="math display">\[
+(a+b)^{n}=\binom{n}{0}\cdot a^{n}\cdot b^{0}  +\binom{n}{1}\cdot
+a^{n-1}\cdot b^{1}  +...+\binom{n}{k}\cdot a^{n-k}\cdot
+b^{k}+...+\binom{n}{n-1}\cdot a^{1}\cdot b^{n-1}  +\binom{n}{n}\cdot
+a^{0}\cdot b^{n}
+\]</span></p>
+<p>Platí, že <span class="math inline">\(a,b\in\mathbb{R};\space
+n\in\mathbb{N}\)</span></p>
+<p>Tato věta lze také zkráceně zapsat pomocí sumy:</p>
+<p><span class="math display">\[
+(a+b)^n=\sum_{k=0}^{n} a^{n-k}\cdot b^{k}
+\]</span></p>
+<h3 id="výpočet-jednotlivého-členu">Výpočet jednotlivého členu</h3>
+<p>Samozřejmě jednotlivé čelny se dají vypočítat z definice binomické
+věty. Rychlý způsob je určit si <span class="math inline">\(n\)</span> a
+<span class="math inline">\(k\)</span>. Příkladně: <span
+class="math inline">\((a+b)^{10}\)</span> a chceme vypočítat patý člen
+<span class="math inline">\(A_{5}\)</span>. Určíme, že <span
+class="math inline">\(n=10\)</span> a pro <span
+class="math inline">\(k\)</span> si musíme uvědomit, že se začíná od 0,
+tudíž obecně bude <span class="math inline">\(A_{K};\space
+k=K-1\)</span> takže v našem příkladě <span
+class="math inline">\(k=4\)</span>. Z definice sumy vychází: <span
+class="math inline">\(\binom{n}{k}+\cdot a^{n-k}\cdot b^{k}\)</span>
+takže zase v našem případě: <span
+class="math inline">\(\binom{10}{4}\cdot a^{6}\cdot
+b^{4}=210a^{6}b^{4}\)</span></p>
 </body>
 </html>
