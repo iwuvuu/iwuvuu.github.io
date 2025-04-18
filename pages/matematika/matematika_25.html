@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Pravděpodobnost a statistika</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../stylesheet.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<div class="home-top-bar">
+  <a class="home-button" href="https://iwuvuu.github.io">HOME</a>
+</div>
+
+<header id="title-block-header">
+<h1 class="title">Pravděpodobnost a statistika</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#pravděpodobnost"
+id="toc-pravděpodobnost">Pravděpodobnost</a>
+<ul>
+<li><a href="#náhodné-pokusy" id="toc-náhodné-pokusy">Náhodné
+pokusy</a></li>
+<li><a href="#náhodné-jevy" id="toc-náhodné-jevy">Náhodné jevy</a></li>
+<li><a href="#pravděpodobnost-náhodného-jevu"
+id="toc-pravděpodobnost-náhodného-jevu">Pravděpodobnost náhodného
+jevu</a></li>
+<li><a href="#nezávislé-jevy" id="toc-nezávislé-jevy">Nezávislé jevy</a>
+<ul>
+<li><a href="#příklad" id="toc-příklad">Příklad</a></li>
+</ul></li>
+<li><a href="#závislé-jevy" id="toc-závislé-jevy">Závislé jevy</a></li>
+</ul></li>
+<li><a href="#statistika" id="toc-statistika">Statistika</a>
+<ul>
+<li><a href="#zpracování-statistického-souboru"
+id="toc-zpracování-statistického-souboru">Zpracování statistického
+souboru</a>
+<ul>
+<li><a href="#třídění-souboru" id="toc-třídění-souboru">Třídění
+souboru</a></li>
+</ul></li>
+<li><a href="#statistické-charakteristiky"
+id="toc-statistické-charakteristiky">Statistické charakteristiky</a>
+<ul>
+<li><a href="#charakteristiky-polohy"
+id="toc-charakteristiky-polohy">Charakteristiky polohy</a></li>
+<li><a href="#charakteristika-variability-proměnlivost"
+id="toc-charakteristika-variability-proměnlivost">Charakteristika
+variability (proměnlivost)</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="pravděpodobnost">Pravděpodobnost</h1>
+<p>Pravděpodobnosti se využívá chceme li spočítat jaká je šance, že se
+nám jisté snažení povede či nepovede.</p>
+<h2 id="náhodné-pokusy">Náhodné pokusy</h2>
+<p>Pokud nejsou podmínky pokusů jednoznačné, může dojít k jistým změnám
+a výsledek je tak nepředvídatelný. SOuboru těchto výsledků se říká
+náhoda. A každá opakovatelná činnost prováděná za přibližně stejných
+podmínek, jejíž výsledek je nejistý se nazývá <strong>náhodný
+pokus</strong>.</p>
+<p>Výsledky náhodných pokusů musí splňovat následující podmínky:</p>
+<ul>
+<li>navzájem se vylučují (nastane-li jeden, nenastane druhý)</li>
+<li>jeden z nich nastane vždy</li>
+<li>Množinou takto stanovených výsledků nazýváme <strong>množina všech
+možných výsledků náhodného pokusu</strong>. Značí se <span
+class="math inline">\(\Omega\)</span> a její prvky <span
+class="math inline">\(\omega\)</span>. O těchto výsledcích se
+předpokládá, že jsou elementární, tj. dále nerozložitelné v podmínkách
+náhodného pokusu</li>
+</ul>
+<p><span class="math display">\[
+\omega\in\Omega
+\]</span></p>
+<h2 id="náhodné-jevy">Náhodné jevy</h2>
+<p>Každou podmnožinu podmnožinu všech možných výsledků pokusu nazýváme
+<strong>Náhodným jevem</strong> (krátce jevem). Značí se: <span
+class="math inline">\(A, B, C...\)</span> a platí <span
+class="math inline">\(A\subset\Omega\)</span>.</p>
+<p>Náhodným jevem rozumíme jakékoli tvrzení o výsledku náhodného pokusu,
+o kterém lze (po provedení pokusu) rozhodnout, zda je pravdivé. Je-li
+pravdivé, říkáme, že jev nastává, v opačném případě jev nenastává.</p>
+<p>Speciální případy jevů:</p>
+<ul>
+<li>jistý jev - přědstavovaný celou množinou <span
+class="math inline">\(\Omega\)</span> (nastane vždy)</li>
+<li>nemožný jev - reprezentovaný prázdnou množinou <span
+class="math inline">\(\emptyset\)</span> (nikdy nenastane)</li>
+</ul>
+<p>Pro náhodné jevy platí množinové vztahy a množinové operace:</p>
+<ul>
+<li>Je-li <span class="math inline">\(\omega in A\)</span>, říkáme, že
+výsledek <span class="math inline">\(\omega\)</span> je
+<strong>příznivý</strong> jevu A.</li>
+<li>Jeli <span class="math inline">\(A\subset B\)</span>, říkáme, že jev
+A je <strong>podjemev</strong> jevu B. Tj. jev A nastane vždy, když
+nastane jev B.</li>
+<li>Sjednocení jevů A, B je jev <span class="math inline">\(A\cup
+B\)</span>, který nastane právě tehdy, když nastane jev A nebo jev
+B.</li>
+<li>Průnik jevů A, B je jev <span class="math inline">\(A\cap
+B\)</span>, který nastane právě tehdy, když nastane jev A a zároveň jev
+B.</li>
+<li>Jevy A, B, pro které platí <span class="math inline">\(A\cap B =
+\emptyset\)</span> (nemohou zároveň nastat), se nazývají dijunktní -
+vzájemně se vylučují.</li>
+<li>Opačný jev (pdolňkový) k jevu A je takový jev <span
+class="math inline">\(A^{&#39;}\)</span>, který nastává právě tehdy,m
+když nenastává jev A.</li>
+</ul>
+<p><span class="math display">\[
+A\cup A^{&#39;}=\Omega
+\]</span> <span class="math display">\[
+A\cap A^{&#39;}=\emptyset
+\]</span></p>
+<h2 id="pravděpodobnost-náhodného-jevu">Pravděpodobnost náhodného
+jevu</h2>
+<p>Pravděpodobnost jevu je mírou očekávání toho, že daný náhodný jev
+nastane.</p>
+<p><strong>Definice pravděpodobnosti (Laplaceova):</strong></p>
+<p>Nechť náhodný pokus splňuje předpoklady:</p>
+<ul>
+<li>všech možných výsledků je konečný počet</li>
+<li>všechny výsledky jsou stejně možné</li>
+<li>všechny výsledky se navzájem vylučují</li>
+</ul>
+<p>Pak pravděpodobnost jevu A se nazývá číslo:</p>
+<p><span class="math display">\[
+P(A)=\frac{m}{n}
+\]</span></p>
+<p>kde <span class="math inline">\(m\)</span> je počet všech výsledků
+příznivých jevu A a <span class="math inline">\(n\)</span> je počet
+všěch možnýčh výsledků pokusu.</p>
+<ul>
+<li>Pravděpodobnost jistého jevu <span class="math inline">\(P(\Omega
+)=1\)</span></li>
+<li>Pravděpodobnost nemožného jevu: <span
+class="math inline">\(P(\emptyset )=0\)</span></li>
+<li>Pravděpodobnost P(A) libovoln2ho náhodného jevu A je: <span
+class="math inline">\(0\leq P(A)\leq 1\)</span> - často se převádí na
+procenta.</li>
+<li>Pravděpodobnost jevu <span class="math inline">\(A^{&#39;}\)</span>
+(opačného jevu k A) platí: <span class="math inline">\(P(A^{&#39;}) =
+1-P(A)\)</span></li>
+</ul>
+<p>Při výpočtech náhodných jevů se často využívá kombinatorika!</p>
+<h2 id="nezávislé-jevy">Nezávislé jevy</h2>
+<p>Pokud je jeden jev nezávislý na druhém, pak platí, že:</p>
+<p><span class="math display">\[
+P(A\cap B)=P(A)\cdot P(B)
+\]</span></p>
+<h3 id="příklad">Příklad</h3>
+<p>Př. Hodíme 3x kostkou jaká je šance, že na první kostce bude liché
+číslo, na druhé kostce bude sudé číslo a na třetí kostce bude
+šestka.</p>
+<p>Vypočítáme si všechny příznivé výsledky, pro každý hod:</p>
+<ul>
+<li>A, číslo bude liché (1, 3, 5) - <span
+class="math inline">\(A=3\)</span></li>
+<li>B, číslo bude sudé (2, 4, 6) - <span
+class="math inline">\(B=3\)</span></li>
+<li>C, číslo bude šestka (6) - <span
+class="math inline">\(C=1\)</span></li>
+</ul>
+<p>Jelikož jsou hody nezávislé na sobě (když hodíme 6, tak ji můžeme
+hodit znovu), budou mít všechny pravděpodobnosti stejný počet celkových
+možných výsledků <span class="math inline">\(n=6\)</span>.</p>
+<p>Můžeme je tedy mezi sebou vynásobit:</p>
+<p><span class="math display">\[
+P(X)=\frac{3}{6}\frac{3}{6}\frac{1}{6}=\frac{1}{24}=4,2 %
+\]</span></p>
+<h2 id="závislé-jevy">Závislé jevy</h2>
+<p>Pokud jsou jevy na sobě závislé potom musí být každý následující jev
+ovlivněn výsledkem předchozího.</p>
+<h1 id="statistika">Statistika</h1>
+<p>Je věda o metodách sběru, zpracování a vyhodnocování statistickýh
+údajů. Zkoumá společenské, přírodní, technické a jiné jevy bždy na
+dostatečně rozsáhlém souboru údajů.</p>
+<p><strong>Matematická statistika</strong> vychází ze shromážděných
+statistickýhc údajů. Zabývá se jejich matematickým zpracováním a
+rozborem výsledků.</p>
+<p><strong>Statistické údaje</strong> (data) jsou číselné ůdaje o
+společenských, přírodních,technických a jiných skutečnostech -
+statistické jevy</p>
+<p><strong>Statistický soubor</strong> je soubor osob, věcí…
+shromážděných na základě určité společné vlastnosti</p>
+<p><strong>Statistické jednotky</strong> jsou jednotlivé prvky
+statistického souboru.</p>
+<p><strong>Rozsah souboru</strong> je počet všech prvků statistického
+souboru. Značíme jej <span class="math inline">\(n\)</span>.</p>
+<p><strong>Statistický znak</strong> je společná vlastnost statistických
+jednotek, kterou vyšetřujeme. Ten může být:</p>
+<ul>
+<li><strong>Kvantitativní</strong> - vyjádřen číselným údajem (známka z
+testu, roční příjem…)</li>
+<li><strong>Kvalitativní</strong> - vyjádřen slovním popisem (náodnost,
+povolání…)</li>
+</ul>
+<h2 id="zpracování-statistického-souboru">Zpracování statistického
+souboru</h2>
+<h3 id="třídění-souboru">Třídění souboru</h3>
+<p>Většina šetření má počet hodnot sledovaného znaku <span
+class="math inline">\(x\)</span> menší, než je celkový počet jednotek
+<span class="math inline">\(n\)</span> tohoto souboru. Tudíž několik
+různých statistických jednotek téhož souboru má stejné hodnoty
+znaku.</p>
+<h4 id="absolutní-četnost-četnost">Absolutní četnost (četnost)</h4>
+<p>Četnost hodnoty znaku <span class="math inline">\(n_{j}\)</span>
+udává počet statistických jednotek, kterým přísluší stejná hodnota znaku
+<span class="math inline">\(x_{j}\)</span>. Když všechny četnosti
+sečteme, musíme dostat počet všech zkoumaných jednotek, tedy n:</p>
+<p><span class="math display">\[
+\sum_{j=1}^{r}n_{j}=n_{1}+n_{2}+...+n_{r}=n
+\]</span></p>
+<h4 id="relativní-četnost">Relativní četnost</h4>
+<p>Relativní četnost hodnoty znaku udává, jaká část souboru má hodnotu
+znaku x_{j}.</p>
+<p><span class="math display">\[
+v_{j}=\frac{n_{j}}{n}
+\]</span></p>
+<p>Součet relativních četností se rovná jedné:</p>
+<p><span class="math display">\[
+\sum_{j=1}^{r}v_{j}=v_{1}+v_{2}+...+v_{r}=1
+\]</span></p>
+<p>Relativní četnost se často vyjadřuje v procentech a potom platí, že
+součet je 100%.</p>
+<p>Všechny různé hodnoty znaku a jim odpovídající četnosti lze zapsat do
+tabulky (tabulk arozdělení četností a relativních četností) nebo
+graficky.</p>
+<ul>
+<li>spojnicový graf (polygon četností) - spojení bodů [hodnota
+kvantitativního znaku, četnost]</li>
+</ul>
+<figure>
+<img src="../resources/matematika/matematika_25/graf_spojnicovy.png"
+alt="spojnicový graf" />
+<figcaption aria-hidden="true">spojnicový graf</figcaption>
+</figure>
+<ul>
+<li>sloupkový diagram</li>
+</ul>
+<figure>
+<img src="../resources/matematika/matematika_25/graf_sloupkovy.png"
+alt="sloupkový diagram" />
+<figcaption aria-hidden="true">sloupkový diagram</figcaption>
+</figure>
+<ul>
+<li>kruhový diagram</li>
+</ul>
+<figure>
+<img src="../resources/matematika/matematika_25/graf_vysecovy.png"
+alt="kruhový diagram" />
+<figcaption aria-hidden="true">kruhový diagram</figcaption>
+</figure>
+<h2 id="statistické-charakteristiky">Statistické charakteristiky</h2>
+<p>Jedná se o čísla, která podávají souhrnou informaci o souboru. Slouží
+k porovnávání různých statistických souborů. Pokud soubor budeme
+vyšetřovat na základě jednoho kvantitativního znaku, tak se využívají
+následující charakteristiky:</p>
+<h3 id="charakteristiky-polohy">Charakteristiky polohy</h3>
+<p>Charakteristiky polohy hodnoty znaku (střední hodnoty znaku) jsou
+čísla, která zastupují celý soubor. Nahrazují tak dlouhou řadu hodnot
+zkoumaného znaku a lze s nimi jednodušeji porovnávat soubory.
+Charakterizují polohu znaku na číselné ose.</p>
+<h4 id="aritmetický-průměr">Aritmetický průměr</h4>
+<p>Vyjadřuje typickou hodnotu popisující daný soubor mnoha hodnot (př.
+přůměrný plat v ČR). Má smysl, pokud jsou odchylky naměřených hodnot
+nahodilé a v souboru se nevyskytují extrémně nízké nebo vysoké hodnoty
+(jinak je nepřesný).</p>
+<p>Aritmetický průměr prostý:</p>
+<p><span class="math display">\[
+\bar{x}=\frac{1}{n}(x_{1}+x_{2}+...+x_{r})=\frac{1}{n}\sum_{j=1}^{r}x_{i}
+\]</span></p>
+<p>Aritmetický průměr vážený:</p>
+<p><span class="math display">\[
+\bar{x}=\frac{1}{n}(n_{1}\cdot x_{1}+n_{2}\cdot x_{2}+...+n_{r}\cdot
+x_{r})=\frac{1}{n}\sum_{j=1}^{r}x_{i}
+\]</span></p>
+<ul>
+<li>užíváme jej tam, kde statistický soubor je složen z r podsouborů.
+Máme-li tedy tabulku rozdelení četnosti, užijeme pro výpočet
+aritmetického průměru vážený aritmetický průměr.</li>
+</ul>
+<h5 id="vlastnosti-aritmetického-průměru">Vlastnosti aritmetického
+průměru</h5>
+<p>Změní-li se každá z hodnot o stejnou konstantu <span
+class="math inline">\(c\)</span>, pak se o tuto konstantu změní i
+aritemtický průměr.</p>
+<p><span class="math display">\[
+\frac{(x_{1}+c)+(x_{2}+c)+...+(x_{n}+c)}{n}=\frac{(x_{1}+x_{2}+...+x_{n}+nc)}{n}=\frac{x_{1}+x_{2}+...+x_{n}}{n}+\frac{nc}{n}=\bar{x}+c
+\]</span></p>
+<p>Změní-li se každá hodnota <span
+class="math inline">\(k\)</span>-násobně, pak se <span
+class="math inline">\(k\)</span>-násobně změní i aritmetický průměr.</p>
+<p><span class="math display">\[
+\frac{(kx_{1})+(kx_{2})+...+(kx_{n})}{n}=\frac{k(x_{1}+x_{2}+...+x_{n})}{n}=k\bar{x}
+\]</span></p>
+<h4 id="modus">Modus</h4>
+<p>Modus znaku <span class="math inline">\(x\)</span> je hodnota, která
+má v souboru největší četnost.</p>
+<p>Představuje typickou hodnotu sledovaného souboru. Nemusí být určen
+jednoznačně (více hodnot se může vyskytovat stejněkrát) a může obsahovat
+i nečíselné hodnoty.-</p>
+<p>Značí se: <span class="math inline">\(Mod (x)\)</span> nebo <span
+class="math inline">\(\hat{x}\)</span>.</p>
+<h4 id="medián">Medián</h4>
+<p>Medián znaku <span class="math inline">\(x\)</span> je prostřední
+hodnota znaku, jsou-li hodnoty <span
+class="math inline">\(x_{1},x_{2},...,x_{n}\)</span> uspořádány
+vzestupně.</p>
+<p>Medián dělí řadu (podle velikosti seřazených výsledků) na dvě stejně
+velké poloviny. Platí, že neméně 50 % hodnot je menších nebo rovných a
+nejméně 50 % hodnot je větších nebo rovných mediánu.</p>
+<p>Pro nalezení mediánu daného souboru stačí hodnoty seřadit podle
+velikosti a vzít hodnotu, která se nachází uprostřed. Pokud má soubor
+sudý počet prvků, tak se medián vypočítá jako aritmetický průměr
+prostředních dvou hodnot.</p>
+<p>Medián (narozdíl od aritmetického průměru) není ovlivněn extrémními
+hodnotami.</p>
+<p>Medián patří do tzv. kvantilů - ty dělí soubor na části a spočítají
+hodnotu. Medián dělí soubor právě na dvě části. Další kvantily jsou
+třeba - kvartily (dělí na 4 části), decily (10 částí) a percentily (100
+částí).</p>
+<p>Značí se: <span class="math inline">\(Med (x)\)</span> nebo <span
+class="math inline">\(\tilde{x}\)</span></p>
+<h3 id="charakteristika-variability-proměnlivost">Charakteristika
+variability (proměnlivost)</h3>
+<p>Charakteristika variability vyjadřuje kolísání hodnot znaku kolem
+čísla stanoveného charakteristikou polohy. V souboru, kde
+charakteristika polohy je aritmetický průměr, je vhodné využít rozptyl a
+směrodatnou odchylku</p>
+<h4 id="průměrná-absolutní-odchylka">Průměrná absolutní odchylka</h4>
+<p>Průměrná absolutní odchylka je aritmetický průměr absolutních hodnot
+odchylek jednotlivých hodnto znaku všech prvků daného souboru od jejich
+aritmetického průměru.</p>
+<p>V neváženém tvaru:</p>
+<p><span class="math display">\[
+\bar{d}=\frac{1}{n}\sum_{i=1}^{n}\left| x_{i}-\bar{x} \right|
+\]</span></p>
+<p>Ve váženém tvaru:</p>
+<p><span class="math display">\[
+\bar{d}=\frac{1}{n}\sum_{j=1}^{r}n_{j}\left| x_{j}-\bar{x} \right|
+\]</span></p>
+<h4 id="rozptyl">Rozptyl</h4>
+<p>Rozptyl znaku <span class="math inline">\(x\)</span> je aritmetický
+průměr druhých mocnin odchylek hodnot znaku od aritmetického
+průměru.</p>
+<p>V neváženém tvaru:</p>
+<p><span class="math display">\[
+s_{x}^{2}=\frac{1}{n}\sum_{i=1}^{n}\left( x_{i}-\bar{x} \right)^{2}
+\]</span></p>
+<p>Ve váženém tvaru:</p>
+<p><span class="math display">\[
+s_{x}^{2}=\frac{1}{n}\sum_{j=1}^{r}n_{j}\left( x_{j}-\bar{x} \right)^{2}
+\]</span></p>
+<p>Jednotka (fyzikální jednotka) rozptylu je druhou mocninou jednotky
+hodnot znaku (<span class="math inline">\(cm\)</span> -&gt; <span
+class="math inline">\(cm^{2}\)</span>).</p>
+<h4 id="směrodatná-odchylka">Směrodatná odchylka</h4>
+<p>Směrodatná odchylka je druhá odmocnina z rozptylu.</p>
+<p>V neváženém tvaru:</p>
+<p><span class="math display">\[
+s_{x}=\sqrt{\frac{1}{n}\sum_{i=1}^{n}\left( x_{i}-\bar{x} \right)^{2}}
+\]</span></p>
+<p>Ve váženém tvaru:</p>
+<p><span class="math display">\[
+s_{x}=\sqrt{\frac{1}{n}\sum_{j=1}^{r}n_{j}\left( x_{j}-\bar{x}
+\right)^{2}}
+\]</span></p>
+<p>Jednotka (fyzikální jednotka) směrodatné odchylky je stejná jako
+jednotka hodnoty znaku.</p>
+<p>Směrodatná odchylka ukazij, jak se rozprostíjaí hodnoty v souboru
+dat. Přesněji, je to míra průměrné vzdálenosti hodnot dat od jejich
+průměru. Pokud budou všechny hodnoty dat stejné, pak bude směrodatná
+odchylka nulová.</p>
+<h4 id="variační-koeficient">Variační koeficient</h4>
+<p>Variační koeficient je míruou relativní variability a užívá se při
+porovnávání variability různých souborů. Je definován jako podíl
+směrodatné odchylky a aritmetického průměru. Vyjadřuje se v
+procentech.</p>
+<p><span class="math display">\[
+v_{x}=\frac{s_{x}}{\bar{x}}\cdot 100%
+\]</span></p>
+</body>
+</html>
