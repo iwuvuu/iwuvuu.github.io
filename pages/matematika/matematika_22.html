@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Komplexní čísla</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../stylesheet.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<div class="home-top-bar">
+  <a class="home-button" href="https://iwuvuu.github.io">HOME</a>
+</div>
+
+<header id="title-block-header">
+<h1 class="title">Komplexní čísla</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#gausova-rovina" id="toc-gausova-rovina">Gausova
+rovina</a></li>
+<li><a href="#imaginární-jednotka"
+id="toc-imaginární-jednotka">Imaginární jednotka</a></li>
+<li><a href="#hodnoty-imaginárních-čísel"
+id="toc-hodnoty-imaginárních-čísel">Hodnoty imaginárních čísel</a>
+<ul>
+<li><a href="#absolutní-hodnota" id="toc-absolutní-hodnota">Absolutní
+hodnota</a></li>
+<li><a href="#číslo-komplexně-sdružené"
+id="toc-číslo-komplexně-sdružené">Číslo komplexně sdružené</a></li>
+<li><a href="#číslo-opačné" id="toc-číslo-opačné">Číslo opačné</a></li>
+</ul></li>
+<li><a href="#operace-s-komplexními-čísly"
+id="toc-operace-s-komplexními-čísly">Operace s komplexními čísly</a>
+<ul>
+<li><a href="#algebraický-tvar" id="toc-algebraický-tvar">Algebraický
+tvar</a>
+<ul>
+<li><a href="#umocňování" id="toc-umocňování">Umocňování</a></li>
+<li><a href="#dělení" id="toc-dělení">Dělení</a></li>
+<li><a href="#operace-s-absolutní-hodnotou"
+id="toc-operace-s-absolutní-hodnotou">Operace s absolutní
+hodnotou</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#zobrazení-komplexních-čísel-v-gausově-rovině"
+id="toc-zobrazení-komplexních-čísel-v-gausově-rovině">Zobrazení
+komplexních čísel v gausově rovině</a>
+<ul>
+<li><a href="#zobrazení-bodu" id="toc-zobrazení-bodu">Zobrazení
+bodu:</a></li>
+<li><a href="#zobrazení-všech-komplexních-čísel-pro-které-platí"
+id="toc-zobrazení-všech-komplexních-čísel-pro-které-platí">Zobrazení
+všech komplexních čísel, pro které platí</a>
+<ul>
+<li><a href="#s-rozdílem-komplexních-čísel"
+id="toc-s-rozdílem-komplexních-čísel">S rozdílem komplexních
+čísel</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#goniometrický-tvar-komplexního-čísla"
+id="toc-goniometrický-tvar-komplexního-čísla">Goniometrický tvar
+komplexního čísla</a>
+<ul>
+<li><a href="#násobení-komplexních-čísel-v-goniometrickém-tvaru"
+id="toc-násobení-komplexních-čísel-v-goniometrickém-tvaru">Násobení
+komplexních čísel v goniometrickém tvaru</a></li>
+<li><a href="#dělení-komplexních-čísel-v-goniometrickém-tvaru"
+id="toc-dělení-komplexních-čísel-v-goniometrickém-tvaru">Dělení
+komplexních čísel v goniometrickém tvaru</a></li>
+<li><a href="#moivreova-věta" id="toc-moivreova-věta">Moivreova
+věta</a></li>
+</ul></li>
+<li><a href="#rovnice-v-oboru-komplexních-čísel"
+id="toc-rovnice-v-oboru-komplexních-čísel">Rovnice v oboru komplexních
+čísel</a>
+<ul>
+<li><a href="#rovnice-s-komplexním-číslem-sdruženým"
+id="toc-rovnice-s-komplexním-číslem-sdruženým">Rovnice s komplexním
+číslem sdruženým</a></li>
+<li><a href="#kvadratické-rovnice-v-oboru-komplexních-čísel"
+id="toc-kvadratické-rovnice-v-oboru-komplexních-čísel">Kvadratické
+rovnice v oboru komplexních čísel</a></li>
+<li><a href="#binoické-rovnice" id="toc-binoické-rovnice">Binoické
+rovnice</a></li>
+</ul></li>
+</ul>
+</nav>
+<p>Komplexní čísla jsou taková čísla, která jsou řešením rovnic, které
+by v oboru reálných čísel neměli řešení. Konkrétně kvadratické rovnice,
+u kterých je diskriminant menší, než 0.</p>
+<h1 id="gausova-rovina">Gausova rovina</h1>
+<p>Obor reálných číslel <span class="math inline">\(\mathbb{R}\)</span>
+můžeme zobrazit na číselné ose:</p>
+<figure>
+<img src="../resources/matematika/matematika_22/ciselna_rada.png"
+alt="R" />
+<figcaption aria-hidden="true">R</figcaption>
+</figure>
+<p>Ale obor komplexních čísel přidává další rozměr a znázorňujeme ho v
+<strong>Gausově rovině</strong>:</p>
+<figure>
+<img src="../resources/matematika/matematika_22/gausova_rovina.png"
+alt="R" />
+<figcaption aria-hidden="true">R</figcaption>
+</figure>
+<p>Komplexní čísla v této rovině píšeme v souřadnicovém tvaru: <span
+class="math inline">\(z=[z_{1};z_{2}]\)</span>. Kde <span
+class="math inline">\(z_{1}\)</span> je reálná část (souřadnice na ose
+<span class="math inline">\(x\)</span> = reálná osa) a <span
+class="math inline">\(z_{2}\)</span> je imaginární část (souřadnice na
+ose <span class="math inline">\(y\)</span> = imaginární osa).</p>
+<p>Pokud je:</p>
+<ul>
+<li><span class="math inline">\(z_{2}=0\)</span> - hovoříme o reálných
+číslech <span class="math inline">\(z=[5;0]\)</span> - leží na ose <span
+class="math inline">\(x\)</span></li>
+<li><span class="math inline">\(z_{2}\neq 0\)</span> - hovoříme o
+imaginárních číslech <span class="math inline">\(z=[3;-12]\)</span></li>
+<li><span class="math inline">\(z_{1}=0\)</span> - hovoříme o ryze
+imaginárních číslech <span class="math inline">\(z=[0;6]\)</span> - leží
+na ose <span class="math inline">\(y\)</span></li>
+</ul>
+<h1 id="imaginární-jednotka">Imaginární jednotka</h1>
+<p>Imaginární jednotka je základní imaginární číslo, které má v gausově
+rovině souřadnice <span class="math inline">\(i=[0,1]\)</span>. Pro
+imaginární jednotku platí, že <span
+class="math inline">\(i^{2}=-1\)</span>.</p>
+<h1 id="hodnoty-imaginárních-čísel">Hodnoty imaginárních čísel</h1>
+<h2 id="absolutní-hodnota">Absolutní hodnota</h2>
+<p>Absolutní hodnota komplexního čísla je vzdálenost obrazu daného
+komplexního čísla od počátku <span class="math inline">\([0;0]\)</span>
+Gausovi roviny.</p>
+<p><span class="math display">\[
+\left| z \right| =\sqrt{z^{2}_{1}+z^{2}_{2}}
+\]</span></p>
+<p>Speciální případ je <strong>komplexní jednotka</strong> - jedná se o
+všechny čísla, jejichž absolutní hodnota je rovna 1.</p>
+<p><span class="math display">\[
+\left| z \right| =\sqrt{1}
+\]</span></p>
+<h2 id="číslo-komplexně-sdružené">Číslo komplexně sdružené</h2>
+<p>Číslo komplexně sdružené číslu <span class="math inline">\(z\)</span>
+je takové číslo, které má opačnou hodnotu <span
+class="math inline">\(z_{2}\)</span>. Obrazy těchto dvou čísel jsou
+souměrn2 podle reálné osy.</p>
+<p><span class="math display">\[
+z=[z_{1};z_{2}] \longrightarrow \bar{z}=[z_{1};-z_{2}]
+\]</span></p>
+<figure>
+<img src="../resources/matematika/matematika_22/komplexne_sdruzene.png"
+alt="Číslo komplexně sdružené" />
+<figcaption aria-hidden="true">Číslo komplexně sdružené</figcaption>
+</figure>
+<p>Součin komplexního čísla a s ním čísla komplexně sdruženého má
+výsledek nezáporné reálné číslo.</p>
+<p><span class="math display">\[
+z\cdot \bar{z}=z_{1}^{2}+z_{2}^{2}\geq 0
+\]</span></p>
+<h2 id="číslo-opačné">Číslo opačné</h2>
+<p>Číslo opačné ke komplexnímu číslu <span
+class="math inline">\(z\)</span> je takové číslo, které má obě
+souřadnice opačné. Obrazy těchto dvou čísel jsou souměrné podle počátku
+Gausovi roviny.</p>
+<p><span class="math display">\[
+z=[z_{1};z_{2}] \longrightarrow \bar{z}=[-z_{1};-z_{2}]
+\]</span></p>
+<figure>
+<img src="../resources/matematika/matematika_22/komplexne_opacne.png"
+alt="Číslo opačné" />
+<figcaption aria-hidden="true">Číslo opačné</figcaption>
+</figure>
+<h1 id="operace-s-komplexními-čísly">Operace s komplexními čísly</h1>
+<p>V souřadnicovém tvaru jsme schopni celkem jedoduše provádět základní
+algebraické operace.</p>
+<p><span class="math display">\[
+x=[x_{1};x_{2}]
+\]</span> <span class="math display">\[
+y=[y_{1};y_{2}]
+\]</span></p>
+<p>Sčítání:</p>
+<p><span class="math display">\[
+x+y=[x_{1}+y_{1};x_{2}+y_{2}]
+\]</span></p>
+<p>Odčítání:</p>
+<p><span class="math display">\[
+x-y=[x_{1}-y_{1};x_{2}-y_{2}]
+\]</span></p>
+<h2 id="algebraický-tvar">Algebraický tvar</h2>
+<p>Pro sližitější operace a jednodušší zápis využíváme tzv. algebraický
+tvar.</p>
+<p><span class="math display">\[
+a=[a_{1};a_{2}]\longrightarrow a=a_{1}+a_{2}i
+\]</span></p>
+<p>Zase platím, že <span class="math inline">\(a_{1}\)</span> je reálná
+složka a <span class="math inline">\(a_{2}i\)</span> je imaginární
+složka, jak naznačuje obsažená imaginární jednotka.</p>
+<p>S algebraickým tvarem se počítá stejně, jako bychom pracovali s
+lineárními dvojčleny. Ale nesmíme zapomenout, že <span
+class="math inline">\(i^2=-1\)</span>.</p>
+<h3 id="umocňování">Umocňování</h3>
+<p>Při umocňování komplexních čísel platí stejné vzorce jako při
+umocňování lineárních dvojčlenů. Stejně tak platí binomická rovnice.</p>
+<p><span class="math display">\[
+(a+i)^{2}=a^{2}+2ai+i^{2}=a^{2}+2ai-1
+\]</span> <span class="math display">\[
+(a-i)^{2}=a^{2}-2ai+i^{2}=a^{2}-2ai-1
+\]</span> <span class="math display">\[
+(a+i)^{3}=a^{3}+3a^{2}i+3ai^{2}+i^{3}=a^{3}+3a^{2}i-3a-i
+\]</span> <span class="math display">\[
+(a-i)^{3}=a^{3}-3a^{2}i+3ai^{2}-i^{3}=a^{3}-3a^{2}i-3a+i
+\]</span></p>
+<p>Pro imaginární jednotku platí:</p>
+<ul>
+<li><span class="math inline">\(i^{4k}=1\)</span></li>
+<li><span class="math inline">\(i^{4k+1}=i\)</span></li>
+<li><span class="math inline">\(i^{4k+2}=-1\)</span></li>
+<li><span class="math inline">\(i^{4k+3}=-i\)</span></li>
+</ul>
+<p>Příkladně:</p>
+<ul>
+<li><span class="math inline">\(i^{2}=-1\)</span></li>
+<li><span class="math inline">\(i^{3}=-i\)</span></li>
+<li><span class="math inline">\(i^{4}=1\)</span></li>
+<li><span class="math inline">\(i^{5}=i\)</span></li>
+<li><span class="math inline">\(i^{6}=-1\)</span></li>
+<li>atd.</li>
+</ul>
+<h3 id="dělení">Dělení</h3>
+<p>Podíl komplexního čísla (s komplexním číslem ve jmenovateli)
+rozšíříme číslem komplexně sdruženým ke jmenovateli.</p>
+<p><span class="math display">\[
+\frac{1+2i}{3-i}=\frac{1+2i}{3-i}\cdot
+\frac{3+i}{3+i}=\frac{3+i+6i+2i^{2}}{9-i^{2}}=\frac{1+7i}{10}=\frac{1}{10}+\frac{7}{10}i
+\]</span></p>
+<h3 id="operace-s-absolutní-hodnotou">Operace s absolutní hodnotou</h3>
+<p>Při práci s absolutní hodnotou komplexního čísla platí stejná
+pravidla jako v oboru reálných čísel:</p>
+<p><span class="math display">\[
+\left| a\cdot b\right| = \left| a\right| \cdot \left| b\right|
+\]</span> <span class="math display">\[
+\left| \frac{a}{b}\right| = \frac{\left| a\right| }{\left| b\right| }
+\]</span></p>
+<p>Příklad:</p>
+<p><span class="math display">\[
+\left| \frac{1+2i}{1+4i}\right| =
+\frac{\sqrt{1^{2}+2^2}}{\sqrt{1^2+4^2}}=\frac{\sqrt{5}}{\sqrt{17}}=\sqrt{\frac{5}{17}}\cdot
+\frac{\sqrt{17}}{\sqrt{17}}=\frac{\sqrt{85}}{17}
+\]</span></p>
+<h1 id="zobrazení-komplexních-čísel-v-gausově-rovině">Zobrazení
+komplexních čísel v gausově rovině</h1>
+<h2 id="zobrazení-bodu">Zobrazení bodu:</h2>
+<p><img
+src="../resources/matematika/matematika_22/bod_v_rovine.png" /></p>
+<h2 id="zobrazení-všech-komplexních-čísel-pro-které-platí">Zobrazení
+všech komplexních čísel, pro které platí</h2>
+<ol type="1">
+<li><p><span class="math inline">\(\left| z\right| = \left|
+-3+4i\right|\)</span></p>
+<ul>
+<li>hledáme všechna taková čísla jejichž vzdálenost od počátku je rovna
+<span class="math inline">\(-3+4i\)</span></li>
+</ul></li>
+</ol>
+<p><img
+src="../resources/matematika/matematika_22/zobrazeni_kruznice.png" /></p>
+<ol start="2" type="1">
+<li><p><span class="math inline">\(\left| z\right| &lt; \left|
+-3+4i\right|\)</span></p>
+<ul>
+<li>hledáme všechna taková čísla jejichž vzdálenost od počátku je menší,
+než <span class="math inline">\(-3+4i\)</span></li>
+</ul></li>
+</ol>
+<p><img
+src="../resources/matematika/matematika_22/zobrazeni_kruh.png" /></p>
+<ol start="3" type="1">
+<li><p><span class="math inline">\(\left| z\right| &gt; \left|
+-3+4i\right|\)</span></p>
+<ul>
+<li>hledáme všechna taková čísla jejichž vzdálenost od počátku je větší,
+než <span class="math inline">\(-3+4i\)</span></li>
+</ul></li>
+</ol>
+<p><img
+src="../resources/matematika/matematika_22/zobrazeni_rovina.png" /></p>
+<ol start="4" type="1">
+<li><p><span class="math inline">\(\left| 2+2i\right| \leq \left|
+z\right| \leq \left| -3+4i\right|\)</span></p>
+<ul>
+<li>hledáme všechna taková čísla jejichž vzdálenost od počátku je větší,
+než <span class="math inline">\(2+2i\)</span> a zároveň menší, než <span
+class="math inline">\(-3+4i\)</span></li>
+</ul></li>
+</ol>
+<p><img
+src="../resources/matematika/matematika_22/zobrazeni_mezikruzi.png" /></p>
+<h3 id="s-rozdílem-komplexních-čísel">S rozdílem komplexních čísel</h3>
+<p>Absoutní hodnota rozdílu komplexních čísel představuje vzdálenost
+mezi danými čísli v Gausově rovině.</p>
+<p><span class="math display">\[
+\left| a-b\right| =\left|a_{1}+a_{2}i-(b_{1}+b_{2}i)\right| =\left|
+a_{1}-b_{1}+(a_{2}-b_{2})i\right|
+=\sqrt{(a_{1}-b_{1})^{2}+(a_{2}+b_{2})^{2}}
+\]</span></p>
+<ol type="1">
+<li><p><span class="math inline">\(\left| z-i\right| =1\)</span></p>
+<ul>
+<li>hledáme všechna taková čísla jejichž vzdálenost od <span
+class="math inline">\(i\)</span> je rovna <span
+class="math inline">\(1\)</span></li>
+</ul></li>
+</ol>
+<p><img
+src="../resources/matematika/matematika_22/zobrazeni_1.png" /></p>
+<ol start="2" type="1">
+<li><p>$| z-1+3i| = | z-2-2i|</p>
+<ul>
+<li><p>musíme upravit zadání tak, abychom v něm měli rozdíl dvou bodů
+(tím, že od komplexního čísla vytkneme <span
+class="math inline">\(-1\)</span>): $| z-(1-3i)| = | z-(2+2i)|</p></li>
+<li><p>hledáme všechna taková čísla jejichž vzdálenost od <span
+class="math inline">\(1-3i\)</span> je stejná jako vzdálenost od <span
+class="math inline">\(2+2i\)</span></p></li>
+</ul></li>
+</ol>
+<p><img
+src="../resources/matematika/matematika_22/zobrazeni_2.png" /></p>
+<ol start="3" type="1">
+<li><p><span class="math inline">\(2\leq\left|
+z+1+2i\right|\)</span></p>
+<ul>
+<li><p>úprava: <span class="math inline">\(2\leq\left|
+z-(-1-2i)\right|\)</span></p></li>
+<li><p>hledáme všechna taková čísla jejichž vzdálenost od <span
+class="math inline">\(-1-2i\)</span> je větší nebo rovna <span
+class="math inline">\(2\)</span> a menší nebo rovna <span
+class="math inline">\(3\)</span></p></li>
+</ul></li>
+</ol>
+<p><img
+src="../resources/matematika/matematika_22/zobrazeni_3.png" /></p>
+<ol start="4" type="1">
+<li><p><span class="math inline">\(\left| z-1-2i\right| \leq
+3\wedge\left| z\right|\geq\left| z-4\right|\)</span></p>
+<ul>
+<li><p>úprava: <span class="math inline">\(\left| z-(1+2i)\right| \leq
+3\wedge\left| z\right|\geq\left| z-(4)\right|\)</span></p></li>
+<li><p>hledáme všechna taková čísla jejichž vzdálenost od <span
+class="math inline">\(1+2i\)</span> je menší nebo rovna <span
+class="math inline">\(3\)</span> a zároveň jejich vzdálenost od počátku
+je větší, než od 4</p></li>
+</ul></li>
+</ol>
+<p><img
+src="../resources/matematika/matematika_22/zobrazeni_5.png" /></p>
+<h1 id="goniometrický-tvar-komplexního-čísla">Goniometrický tvar
+komplexního čísla</h1>
+<p>Komplexní číslo v goniometrickém tvaru zapíšeme pomocí absolutní
+hodnoty (vzdálenosti od počátku) komplexního čísla a úhlu argumentu.</p>
+<p><img
+src="../resources/matematika/matematika_22/goniometricky_tvar.png" /></p>
+<p>Víme, že algebraický tvar komplexního čísla je <span
+class="math inline">\(z=z_{1}+z_{2}i\)</span>. Také víme, že když úsečka
+spojující toto číslo s počátkem má velikost absolutní hodnoty daného
+čísla <span
+class="math inline">\(|z|=\sqrt{z_{1}^2+z_{2}^2}\)</span>.</p>
+<p>Pomocí goniometrických funkcí si můžeme vyjádřit úhel <span
+class="math inline">\(\varphi\)</span> mezi úsečkou a reálnou osou. A
+pomocí goniometrické funkce úhlu si můžeme vyjádřit souřadnice <span
+class="math inline">\(z_{1}\)</span> a <span
+class="math inline">\(z_{2}\)</span>.</p>
+<p><span class="math display">\[
+cos\varphi = \frac{z_{1}}{|z|}\longrightarrow z_{1}=|z|\cdot cos\varphi
+\]</span> <span class="math display">\[
+sin\varphi = \frac{z_{2}}{|z|}\longrightarrow z_{2}=|z|\cdot sin\varphi
+\]</span></p>
+<p>Když dosadíme do algebraického tvaru:</p>
+<p><span class="math display">\[
+z=|z|\cdot cos\varphi+|z|\cdot sin\varphi\cdot i
+\]</span></p>
+<p>A po úpravě dostaneme goniometrický tvar komplexního čísla:</p>
+<p><span class="math display">\[
+z=|z|\cdot (cos\varphi+isin\varphi)
+\]</span></p>
+<h2 id="násobení-komplexních-čísel-v-goniometrickém-tvaru">Násobení
+komplexních čísel v goniometrickém tvaru</h2>
+<p>Máme komplexní čísla <span class="math inline">\(z_{1}\)</span> a
+<span class="math inline">\(z_{2}\)</span>:</p>
+<p><span class="math display">\[
+z_{1}=|z_{1}|\cdot (cos\varphi_{1}+isin\varphi_{1})
+\]</span> <span class="math display">\[
+z_{2}=|z_{2}|\cdot (cos\varphi_{2}+isin\varphi_{2})
+\]</span></p>
+<p>Pro násobení těchto čísel platí následující vztah:</p>
+<p><span class="math display">\[
+z_{1}\cdot z_{2}=|z_{1}|\cdot |z_{2}|\cdot
+[cos(\varphi_{1}+\varphi_{2})+isin(\varphi_{1}+\varphi_{2})]
+\]</span></p>
+<p>Tento vzorec lze použít i pro více činitelů: <span
+class="math display">\[
+z_{1}\cdot z_{2}\cdot z_{3}=|z_{1}|\cdot |z_{2}|\cdot |z_{3}|\cdot
+[cos(\varphi_{1}+\varphi_{2}+\varphi_{3})+isin(\varphi_{1}+\varphi_{2}+\varphi_{3})]
+\]</span></p>
+<h2 id="dělení-komplexních-čísel-v-goniometrickém-tvaru">Dělení
+komplexních čísel v goniometrickém tvaru</h2>
+<p>Máme komplexní čísla <span class="math inline">\(z_{1}\)</span> a
+<span class="math inline">\(z_{2}\)</span>:</p>
+<p><span class="math display">\[
+z_{1}=|z_{1}|\cdot (cos\varphi_{1}+isin\varphi_{1})
+\]</span> <span class="math display">\[
+z_{2}=|z_{2}|\cdot (cos\varphi_{2}+isin\varphi_{2})
+\]</span></p>
+<p>Pro dělení těchto čísel platí následující vztah:</p>
+<p><span class="math display">\[
+\frac{z_{1}}{z_{2}}=\left| \frac{z_{1}}{z_{2}}\right|\cdot
+[cos(\varphi_{1}-\varphi_{2})+isin(\varphi_{1}-\varphi_{2})]
+\]</span></p>
+<h2 id="moivreova-věta">Moivreova věta</h2>
+<p>Pro každé <span class="math inline">\(n \in \mathbb{N}\)</span> a pro
+každé <span class="math inline">\(z\in \mathbb{C}\)</span>, <span
+class="math inline">\(z=|z|\cdot (cos\varphi+isin\varphi)\)</span>,
+platí:</p>
+<p><span class="math display">\[
+z^{n}=|z|^{n}\cdot [cos(n\varphi)+isin(n\varphig)]
+\]</span></p>
+<p>Pro komplexní jednotku (|z|=1) lze vzorec zjednodušit:
+$z^{n}=cos(n)+isin(n)]</p>
+<h1 id="rovnice-v-oboru-komplexních-čísel">Rovnice v oboru komplexních
+čísel</h1>
+<p>S komplexními čísli se počítá stejně jako bychom počítali s lineátním
+dvojčlenem. Ale zase <span class="math inline">\(i^{2}=-1\)</span>.</p>
+<p>Příklad:</p>
+<p><math> <span class="math display">\[\begin{align}
+    z&amp;=3i(z-i)-5z\\
+    z&amp;=3iz-3i^{2}-5z\\
+    6z-3iz&amp;=3\\
+    2z-iz&amp;=1\\
+    z(2-i)&amp;=1\\
+    z&amp;=\frac{1}{2-i}=\frac{1}{2-i}\cdot\frac{2+i}{2+i}=\frac{2+i}{4+1}=\frac{2+i}{5}=\frac{2}{5}+\frac{i}{5}\\
+\end{align}\]</span> </math></p>
+<p><span class="math display">\[
+K=\{\frac{2}{5}+\frac{i}{5}\}\\
+\]</span></p>
+<h2 id="rovnice-s-komplexním-číslem-sdruženým">Rovnice s komplexním
+číslem sdruženým</h2>
+<p>Pro výpočet rovnic s číslem komplexně sdruženým k číslu <span
+class="math inline">\(z\)</span> využíváme rovnost komplexních čísel - 2
+komplexní čísla jsou si rovna, když se rovnají jejich reálné i
+imaginární části. To znamená, že spočítáme zvlášť reálnou a imaginární
+část. Je také výhodné převést <span class="math inline">\(z\)</span> do
+následujícího tvaru:</p>
+<p><span class="math display">\[
+z=x+yi
+\]</span></p>
+<p>Jedná se o stejný algebraický zápis jako <span
+class="math inline">\(z=z_{1}+z_{2}i\)</span>, ale v rovnicích je
+přehlednější. K takovému číslu <span class="math inline">\(z\)</span> je
+pak rovno takové komplexně sdružené číslo <span
+class="math inline">\(\bar{z}\)</span>:</p>
+<p><span class="math display">\[
+\bar{z}=x-yi
+\]</span></p>
+<p>Příklad:</p>
+<math> <span class="math display">\[\begin{align}
+    z+\bar{z}&amp;=3+2i\\
+    (x+yi)+2(x-yi)&amp;=3+2i\longleftarrow\text{převedeme }z\text{ a
+}\bar{z}\text{ na jejich algebraické tvary}\\
+    x+yi+2x-2yi&amp;=3+2i\\
+    3x-yi&amp;=3+2i\\
+\end{align}\]</span>
+<span class="math display">\[\begin{array}{lc}
+    {\text{Rozdělíme rovnici do dvou menších rovnic - rovnice s
+}\bbox[yellow]{\text{reálnou}}\text{ a
+}\bbox[cyan]{\text{imaginární}}\text{ částí:}}\\
+    {\bbox[yellow]{3x}\bbox[cyan]{-yi}=\bbox[yellow]{3}+\bbox[cyan]{2i}}\\
+\end{array}\]</span>
+<span class="math display">\[\begin{align}
+    3x&amp;=3\longleftarrow\text{reálná část}\\
+    x&amp;=1\\
+    \\
+    -y&amp;=2\longleftarrow\text{imaginární část, }i\text{ se do rovnice
+nezapisuje}\\
+    y&amp;=-2\\
+    \\
+    z&amp;=1-2i\longleftarrow\text{doplníme souřadnice do výsledku}\\
+\end{align}\]</span>
+<span class="math display">\[\begin{array}{lc}
+{Zkouška:}\\
+\end{array}\]</span>
+<p><span class="math display">\[\begin{align}
+L&amp;:1-2i+2(1+2i)=1-2i+2+4i=3+2i\\
+P&amp;:3+2i
+\end{align}\]</span></p>
+<h2 id="kvadratické-rovnice-v-oboru-komplexních-čísel">Kvadratické
+rovnice v oboru komplexních čísel</h2>
+<p>Jak víme některé kvadratické rovnice, které v oboru reálných čísel
+spočítat nelze, mají v oboru komplexních čísel řešení. Jsou to konkrétně
+ty, které mají diskriminant menší, než 0. Pokud počítáme kvadratickou
+rovnici se záporným diskriminantem v oboru komplexních čísel, využíváme
+k výpočtu kořenů náseldující vzorec:</p>
+<p><span class="math display">\[
+\mathbb{D}&lt;0;\space x_{1;2}=\frac{-b\pm i\sqrt{|\mathbb{D}|}}{2a}
+\]</span></p>
+<p>Taková rovnice pak bude mít dva imaginární kořeny, které jsou zároveň
+komplexně sdruženými čísly.</p>
+<p>Příklad:</p>
+<math>
+<span class="math display">\[\begin{array}{lc}
+    {x^{2}+4x+5=0}\\
+\end{array}\]</span>
+<span class="math display">\[\begin{align}
+    \mathbb{D}&amp;=b^{2}-4ac=16-20=-4\\
+    \left| \mathbb{D}\right| &amp;=4
+\end{align}\]</span>
+<span class="math display">\[\begin{array}{lc}
+    {\frac{-4\pm i\sqrt{4}}{2}=\frac{-4\pm 2i}{2}=-2\pm i}\\
+    {K=\{-2+i;-2-i\}}
+\end{array}\]</span>
+<p>&lt;&gt;</p>
+<p>Kvadratické rovnice lze počítat i pomocí větových vzorců.</p>
+<h2 id="binoické-rovnice">Binoické rovnice</h2>
+<p>Jsou rovnice ve tvaru:</p>
+<p><span class="math display">\[
+x^{n}-a=0
+\]</span></p>
+<p>Kdy <span class="math inline">\(a\in\mathbb{C}\)</span> a <span
+class="math inline">\(n\in\mathbb{N}\)</span>. Díky binomický rovnicím
+počítáme exponenciální rovnice komplexního čísla. Je výhodné počítat
+binomické rovnice v goniometrickém tvaru, tedy: <span
+class="math inline">\(x=|x|\cdot (cos\varphi+isin\varphi)\)</span>. Pro
+binomické rovnice platí následující vzorec:</p>
+<p><span class="math display">\[
+x_{k}=\sqrt[n]{|a|}(cos\frac{\varphi +2k\pi }{n}+isin\frac{\varphi
++2k\pi }{n});\space k\in\mathbb{Z}
+\]</span></p>
+<p>Počet kořenů rovnice <span class="math inline">\((k)\)</span> je
+roven <span class="math inline">\(n\)</span> - jsou to všechny hodnoty
+začínající pro <span class="math inline">\(k=0\)</span> a končící pro
+<span class="math inline">\(k=n-1\)</span>. Kdybychom zobrazili kořeny v
+Gausově rovině, vytvoří nám vrcholy pravidelného <span
+class="math inline">\(n\)</span>-úhelníku.</p>
+<p>Příklad:</p>
+<p><math> <span class="math display">\[\begin{align}
+    x^{4}-1&amp;=0\\
+    x^4&amp;=1\longleftarrow\text{převedeme }1{ do goniometrického
+tvaru}\\
+    x^4&amp;=cos0^{\circ}+isin0^{\circ}\\
+    \\
+    |a|&amp;=\sqrt[4]{1}\longleftarrow\text{vypočítáme absolutní
+hodnotu}
+    |a|&amp;=1\\
+    \\
+    x_k&amp;=1\cdot (cos\frac{0+2k\pi }{4}+isin\frac{0+2k\pi }{4})\\
+    \\
+    k&amp;=0\rightarrow x_0=(cos0+isin0)=1\\
+    k&amp;=1\rightarrow x_1=(cos\frac{\pi }{2}+isin\frac{\pi }{2})=i\\
+    k&amp;=2\rightarrow x_2=(cos\pi +isin\pi)=-1\\
+    k&amp;=3\rightarrow x_3=(cos\frac{3\pi }{2}+isin\frac{3\pi}{2})=-i\\
+\end{align}\]</span> </math></p>
+<p>V Gausově rovině by zobrazení kořenů bylo následující:</p>
+<p><img
+src="../resources/matematika/matematika_22/binomicka_rovnice.png" /></p>
+</body>
+</html>
