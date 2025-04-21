@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Posloupnosti a nekonečné řady</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../stylesheet.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<div class="home-top-bar">
+  <a class="home-button" href="https://iwuvuu.github.io">HOME</a>
+</div>
+
+<header id="title-block-header">
+<h1 class="title">Posloupnosti a nekonečné řady</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#posloupnosti" id="toc-posloupnosti">Posloupnosti</a>
+<ul>
+<li><a href="#zápis-posloupnosti" id="toc-zápis-posloupnosti">Zápis
+posloupnosti</a>
+<ul>
+<li><a href="#vzorec-pro-n-tý-člen" id="toc-vzorec-pro-n-tý-člen">Vzorec
+pro <span class="math inline">\(n\)</span>-tý člen</a></li>
+<li><a href="#rekurentní-zadání" id="toc-rekurentní-zadání">Rekurentní
+zadání</a></li>
+<li><a href="#přepis-ze-vzorce-pro-n-tý-člen-na-rekurentní-zadání"
+id="toc-přepis-ze-vzorce-pro-n-tý-člen-na-rekurentní-zadání">Přepis ze
+vzorce pro <span class="math inline">\(n\)</span>-tý člen na rekurentní
+zadání</a></li>
+</ul></li>
+<li><a href="#fibonachiho-posloupnost"
+id="toc-fibonachiho-posloupnost">Fibonachiho posloupnost</a></li>
+<li><a href="#vlastnosti-posloupností"
+id="toc-vlastnosti-posloupností">Vlastnosti posloupností</a>
+<ul>
+<li><a href="#monotónost" id="toc-monotónost">Monotónost</a></li>
+<li><a href="#omezenost" id="toc-omezenost">Omezenost</a></li>
+</ul></li>
+<li><a href="#druhy-posloupností" id="toc-druhy-posloupností">Druhy
+posloupností</a>
+<ul>
+<li><a href="#aritmetická-posloupnost"
+id="toc-aritmetická-posloupnost">Aritmetická posloupnost</a></li>
+</ul></li>
+<li><a
+href="#d-posloupnost-a_n_n1infty-je-aritmetická-exists-dinmathbbrspaceforall-ninmathbbn-pro-které-platí-a_n1a_nd"
+id="toc-d-posloupnost-a_n_n1infty-je-aritmetická-exists-dinmathbbrspaceforall-ninmathbbn-pro-které-platí-a_n1a_nd">D:
+Posloupnost <span class="math inline">\((a_n)_{n=1}^\infty\)</span> je
+aritmetická <span class="math inline">\(\exists
+d\in\mathbb{R};\space\forall n\in\mathbb{N}\)</span> pro které platí
+<span class="math inline">\(a_{n+1}=a_n+d\)</span></a>
+<ul>
+<li><a href="#geometrická-posloupnost"
+id="toc-geometrická-posloupnost">Geometrická posloupnost</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#nekonečné-řady" id="toc-nekonečné-řady">Nekonečné řady</a>
+<ul>
+<li><a href="#limita-nekonečné-řady"
+id="toc-limita-nekonečné-řady">Limita nekonečné řady</a></li>
+<li><a href="#druhy-nekonečných-řad"
+id="toc-druhy-nekonečných-řad">Druhy nekonečných řad</a>
+<ul>
+<li><a href="#nekonečná-aritmetická-řada"
+id="toc-nekonečná-aritmetická-řada">Nekonečná aritmetická řada</a></li>
+<li><a href="#nekonečná-geometrická-řada"
+id="toc-nekonečná-geometrická-řada">Nekonečná geometrická řada</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<pre><code>• rekurentní určení posloupnosti a určení posloupnosti vztahem pro n-tý člen
+• aritmetická a geometrická posloupnost, nekonečná geometrická řada</code></pre>
+<h1 id="posloupnosti">Posloupnosti</h1>
+<p>Posloupnost je speciální funkce, kde definičním oborem je množina
+přirozených čísel <span class="math inline">\(\mathbb{N}\)</span> (nebo
+její konečná podmnožina) a oborem hodnot nejčastěji obor reálných
+čísel.</p>
+<p>Posloupnosti dělíme podle její konečnosti:</p>
+<ul>
+<li>Nekonečná posloupnost - je každá funkce, jejíž <span
+class="math inline">\(D_f\)</span> je <span
+class="math inline">\(\mathbb{N}\)</span></li>
+<li>Konečná posloupnost - je každá funkce, jejiž <span
+class="math inline">\(D_f\)</span> je množina <span
+class="math inline">\(n\in\mathbb{N};\space n\leq n_0\)</span>, kde
+<span class="math inline">\(n_0\)</span> je pevně dané přirozené
+číslo</li>
+</ul>
+<h2 id="zápis-posloupnosti">Zápis posloupnosti</h2>
+<h3 id="vzorec-pro-n-tý-člen">Vzorec pro <span
+class="math inline">\(n\)</span>-tý člen</h3>
+<p>Zápis pomocí vzorce pro <span class="math inline">\(n\)</span>-tý
+člen je obecný předpis, díky kterému jsme schopni dopočítat jakýkoliv
+člen posloupnosti bez znalosti předcházejícího členu.</p>
+<p>Pro konečnou posloupnost:</p>
+<p><span class="math display">\[
+(n-3)^7_{n=1}
+\]</span></p>
+<ul>
+<li>čteme: “posloupnost <span class="math inline">\(n-3\)</span> od
+<span class="math inline">\(n=1\)</span> do <span
+class="math inline">\(6\)</span>”</li>
+<li>taková posloupnost bude obsahovat následující členy:</li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 10%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(n\)</span></th>
+<th><span class="math inline">\(1\)</span></th>
+<th><span class="math inline">\(2\)</span></th>
+<th><span class="math inline">\(3\)</span></th>
+<th><span class="math inline">\(4\)</span></th>
+<th><span class="math inline">\(5\)</span></th>
+<th><span class="math inline">\(6\)</span></th>
+<th><span class="math inline">\(7\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(a\)</span></td>
+<td><span class="math inline">\(-2\)</span></td>
+<td><span class="math inline">\(-1\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(2\)</span></td>
+<td><span class="math inline">\(3\)</span></td>
+<td><span class="math inline">\(4\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Pro nekonečnou posloupnost:</p>
+<p><span class="math display">\[
+(n-3)^\infty _{n=1}
+\]</span></p>
+<ul>
+<li>čteme: “posloupnost <span class="math inline">\(n-3\)</span> od
+<span class="math inline">\(n=1\)</span> do nekonečna”§</li>
+</ul>
+<h3 id="rekurentní-zadání">Rekurentní zadání</h3>
+<p>Rekurentní zadání je zapsáno pomocí několika prvních členů a postupu,
+pomocí kterých určíme následující členy.</p>
+<p><span class="math display">\[
+a_n+1=2a_n+3;\space a_1=-2
+\]</span><D-Space></p>
+<ul>
+<li>čteme: pro člen <span class="math inline">\(a_n+1\)</span> platí
+<span class="math inline">\(2a_n+3\)</span></li>
+<li>taková posloupnost bude obsahovat členy:</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(n\)</span></th>
+<th><span class="math inline">\(1\)</span></th>
+<th><span class="math inline">\(2\)</span></th>
+<th><span class="math inline">\(3\)</span></th>
+<th><span class="math inline">\(4\)</span></th>
+<th><span class="math inline">\(5\)</span></th>
+<th>…</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(a\)</span></td>
+<td><span class="math inline">\(-1\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(5\)</span></td>
+<td><span class="math inline">\(13\)</span></td>
+<td><span class="math inline">\(29\)</span></td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<h3 id="přepis-ze-vzorce-pro-n-tý-člen-na-rekurentní-zadání">Přepis ze
+vzorce pro <span class="math inline">\(n\)</span>-tý člen na rekurentní
+zadání</h3>
+<h4 id="metoda-rozdílu">Metoda rozdílu</h4>
+<p><span class="math display">\[
+(3n-5)_{n=1}^\infty
+\]</span></p>
+<p>Prvně vypíšeme první členy posloupnosti:</p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(n\)</span></th>
+<th><span class="math inline">\(1\)</span></th>
+<th><span class="math inline">\(2\)</span></th>
+<th><span class="math inline">\(3\)</span></th>
+<th><span class="math inline">\(4\)</span></th>
+<th><span class="math inline">\(5\)</span></th>
+<th>…</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(a\)</span></td>
+<td><span class="math inline">\(-2\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(4\)</span></td>
+<td><span class="math inline">\(7\)</span></td>
+<td><span class="math inline">\(10\)</span></td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<p>Určíme obecné členy pomocí <span class="math inline">\(n\)</span> -
+dosadíme postupně <span class="math inline">\(n\)</span> a <span
+class="math inline">\(n+1\)</span> do zadání a počítáme jako s
+neznámou:</p>
+<p><math> <span class="math display">\[\begin{align}
+    a_n&amp;=3n-5\\
+    a_{n+1}&amp;=3(n+1)-5=3n-2
+\end{align}\]</span> &lt;&gt;</p>
+<p>Dále uděláme rozdíl těchto členů:</p>
+<p><math> <span class="math display">\[\begin{align}
+    a_{n+1}-a_n&amp;=3n-2-(3n-5)\\
+    a_{n+1}-a_n&amp;=3\\
+    a_{n+1}&amp;=a_n+3
+\end{align}\]</span> &lt;&gt;</p>
+<p>Celé rekurentní zadání je tedy:</p>
+<p><span class="math display">\[
+a_{n+1}=a_n+3;\space a_1=-2
+\]</span></p>
+<h4 id="metoda-podílu">Metoda podílu</h4>
+<p><span class="math display">\[
+(3^{n+1})_{n=1}^\infty
+\]</span></p>
+<p>Prvně vypíšeme první členy posloupnosti:</p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(n\)</span></th>
+<th><span class="math inline">\(1\)</span></th>
+<th><span class="math inline">\(2\)</span></th>
+<th><span class="math inline">\(3\)</span></th>
+<th><span class="math inline">\(4\)</span></th>
+<th>…</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(a\)</span></td>
+<td><span class="math inline">\(9\)</span></td>
+<td><span class="math inline">\(27\)</span></td>
+<td><span class="math inline">\(81\)</span></td>
+<td><span class="math inline">\(243\)</span></td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<p>Určíme obecné členy pomocí <span class="math inline">\(n\)</span> -
+dosadíme postupně <span class="math inline">\(n\)</span> a <span
+class="math inline">\(n+1\)</span> do zadání a počítáme jako s
+neznámou:</p>
+<p><math> <span class="math display">\[\begin{align}
+    a_n&amp;=3^{n+1}\\
+    a_{n+1}&amp;=3^{n+1+1}=3^{n+2}
+\end{align}\]</span> &lt;&gt;</p>
+<p>Dále uděláme podíl těchto členů:</p>
+<p><math> <span class="math display">\[\begin{align}
+    \frac{a_{n+1}}{a_n}&amp;=\frac{3^{n+2}}{3^{n+1}}\\
+    \frac{a_{n+1}}{a_n}&amp;=3\\
+    a_{n+1}&amp;=3\cdot a_n
+\end{align}\]</span> &lt;&gt;</p>
+<p>Celé rekurentní zadání je tedy:</p>
+<p><span class="math display">\[
+a_{n+1}=3\cdot a_n;\space a_1=9
+\]</span></p>
+<hr />
+<p>Obecně platí, že metoda rozdílu je výhodnější, když se členy liší o
+konstantní sčítanec a metoda podílu je výhodnější, když je následující
+člen násobkem předchozího. V případě, že ani jedna metoda nevypadá po
+vypsání členů výhodně, např. <span
+class="math inline">\((3n^2)_{n=1}^\infty\)</span> je na nás, kterou
+využijeme.</p>
+<p>Pozor! Neexistuje žádná univerzální metoda pro přepis rekurentního
+zadání na n-tý člen.</p>
+<h2 id="fibonachiho-posloupnost">Fibonachiho posloupnost</h2>
+<p>Speciálním příkldem posloupnosti je Fibonachiho posloupnost. Jedná se
+o nekonečnou posloupnost přirozených čísel, kde každé číslo je součtem
+dvou předchozích. Prvními členy jsou tedy: 0, 1, 1, 2, 3, 5, 8, 13…</p>
+<p>Ehm… ehm… věděli jste, že skladba Lateralus na stejnojmenném albu od
+Award winning kapely Tool má slabiky začínajících veršů seskládány právě
+podle Fibonachiho posloupnosti?</p>
+<h2 id="vlastnosti-posloupností">Vlastnosti posloupností</h2>
+<h3 id="monotónost">Monotónost</h3>
+<p>Monotóní posloupnost je rostoucí nebo klesající nebo neklesající nebo
+nerostoucí</p>
+<ul>
+<li>Posloupnost <span class="math inline">\((a_n)^\infty _{n=1}\)</span>
+je <strong>rostoucí</strong>, právě když pro všechny <span
+class="math inline">\(r,s\in \mathbb{N}\)</span>; je-li <span
+class="math inline">\(r&lt;s\)</span> pak <span
+class="math inline">\(a_r&lt;a_s\)</span></li>
+<li>Posloupnost <span class="math inline">\((a_n)^\infty _{n=1}\)</span>
+je <strong>klesající</strong>, právě když pro všěchny <span
+class="math inline">\(r,s\in \mathbb{N}\)</span>; je-li <span
+class="math inline">\(r&lt;s\)</span> pak <span
+class="math inline">\(a_r&gt;a_s\)</span></li>
+</ul>
+<p>Neklesající nebo nerostoucí posloupnosti mohou být buď zcela rostoucí
+nebo zcela klesající, ale patří sem i situace, kdy se členy opakují.</p>
+<ul>
+<li>Posloupnost <span class="math inline">\((a_n)^\infty _{n=1}\)</span>
+je <strong>neklesající</strong>, právě když <span
+class="math inline">\(a_n\leq a_{n+1}\)</span></li>
+<li>Posloupnost <span class="math inline">\((a_n)^\infty _{n=1}\)</span>
+je <strong>nerostoucí</strong>, právě když <span
+class="math inline">\(a_n\geq a_{n+1}\)</span></li>
+</ul>
+<h3 id="omezenost">Omezenost</h3>
+<ul>
+<li>Posloupnost <span class="math inline">\((a_n)^\infty _{n=1}\)</span>
+je <strong>shora omezená</strong>, právě když <span
+class="math inline">\(a_n\leq k;\space k\in\mathbb{R}\)</span></li>
+<li>Posloupnost <span class="math inline">\((a_n)^\infty _{n=1}\)</span>
+je <strong>zdola omezená</strong>, právě když <span
+class="math inline">\(a_n\geq k;\space k\in\mathbb{R}\)</span></li>
+</ul>
+<p>Omezená posloupnost je omezená shora i zdola. Příkladem může být
+konstantní posloupnost <span
+class="math inline">\((5)_{n=1}^\infty\)</span>.</p>
+<h2 id="druhy-posloupností">Druhy posloupností</h2>
+<h3 id="aritmetická-posloupnost">Aritmetická posloupnost</h3>
+<p>Aritmetická posloupnost je každá posloupnost, u které je rozdíl
+předchozího a následujícího členu konstantní.</p>
+<h2
+id="d-posloupnost-a_n_n1infty-je-aritmetická-exists-dinmathbbrspaceforall-ninmathbbn-pro-které-platí-a_n1a_nd">D:
+Posloupnost <span class="math inline">\((a_n)_{n=1}^\infty\)</span> je
+aritmetická <span class="math inline">\(\exists
+d\in\mathbb{R};\space\forall n\in\mathbb{N}\)</span> pro které platí
+<span class="math inline">\(a_{n+1}=a_n+d\)</span></h2>
+<p>Kde <span class="math inline">\(d\)</span> je tzv. diference
+aritmetické posloupnosti</p>
+<p>Příklad:</p>
+<p><span class="math inline">\(a_{n+1}=a_n+2\)</span> je aritmetická
+posloupnost. Diference <span class="math inline">\(d\)</span> je <span
+class="math inline">\(2\)</span>. Prvních pět členů je tedy:</p>
+<p><span class="math display">\[
+1,3,5,7,9
+\]</span></p>
+<h4 id="výpočet-libovolného-členu-aritmetické-posloupnosti">Výpočet
+libovolného členu aritmetické posloupnosti</h4>
+<p>Pomocí prvního členu určíme zadání pro <span
+class="math inline">\(n\)</span>-člen:</p>
+<p><span class="math display">\[
+\boxed{a_n=a_1+(n-1)\cdot d}
+\]</span></p>
+<p>Z toho dokážeme odvodit vzorec pro výpočet pomocí libovolného
+členu:</p>
+<p><span class="math display">\[
+\boxed{a_s=a_r+(s-r)\cdot d}
+\]</span></p>
+<p>Příklad:</p>
+<p>Máme AP <span class="math inline">\(a_{n+1}=a_n+2\)</span>. Chceme
+vypočítat 20 člen. Víme, že 3 člen je <span
+class="math inline">\(5\)</span> a diference je <span
+class="math inline">\(2\)</span>.</p>
+<p><math> <span class="math display">\[\begin{align}
+    a_s&amp;=a_r+(s-r)\cdot d\\
+    a_{20}&amp;=5+(20-3)\cdot 2=5+17\cdot2=39
+\end{align}\]</span> &lt;&gt;</p>
+<h4 id="součet-prvních-n-členů">Součet prvních <span
+class="math inline">\(n\)</span>-členů</h4>
+<p><span class="math display">\[
+\boxed{\frac{n}{2}(a_1+a_n)}
+\]</span></p>
+<p>Příklad:</p>
+<p>Součet prvních 20 členů AP <span
+class="math inline">\(a_{n+1}=a_n+2\)</span>. Víme, že diference je
+<span class="math inline">\(2\)</span> a první člen je <span
+class="math inline">\(a_1=1\)</span>. Z toho odvodíme, že <span
+class="math inline">\(a_20=39\)</span>.</p>
+<p><math> <span class="math display">\[\begin{align}
+    \frac{n}{2}(a_1+a_n)\\
+    \frac{20}{2}(1+20)=210
+\end{align}\]</span> &lt;&gt;</p>
+<h3 id="geometrická-posloupnost">Geometrická posloupnost</h3>
+<p>Geometrickou posloupností je každá posloupnost, u které je
+následující člen <span class="math inline">\(q\)</span>-násobkem
+předchozího členu.</p>
+<p>D: Posloupnost <span
+class="math inline">\((a_n)_{n=1}^\infty\)</span> je geometrická <span
+class="math inline">\(\exists q\in\mathbb{R};\space\forall
+n\in\mathbb{N}\)</span> pro které platí <span
+class="math inline">\(a_{n+1}=a_n\cdot q\)</span>§</p>
+<p>Kde <span class="math inline">\(q\)</span> je tzv. kvocient
+geometrické posloupnosti. Pro kvocient platí:</p>
+<p><span class="math display">\[
+\boxed{\frac{a_{n+1}}{a_n}=q}
+\]</span></p>
+<p>U geometrické posloupnosti mohou nastat speciální případy:</p>
+<ul>
+<li><span class="math inline">\(a_1=\)</span>, potom členy posloupnosti
+jsou <span class="math inline">\(0,0,0...\)</span></li>
+<li><span class="math inline">\(a_1\neq 0;\space q=0\)</span>, potom
+členy posloupnosti jsou <span
+class="math inline">\(0,0,0...\)</span></li>
+</ul>
+<p>Z toho vyplývá, že pro geometrickou posloupnosto platí následující
+podmínky:</p>
+<p><span class="math display">\[
+\boxed{a_1\neq 0;\space q\neq 0}
+\]</span></p>
+<h4 id="výpočet-libovolného-členu-geometrické-posloupnosti">Výpočet
+libovolného členu geometrické posloupnosti</h4>
+<p>Pomocí prvního členu určíme zadání pro <span
+class="math inline">\(n\)</span>-člen:</p>
+<p><span class="math display">\[
+\boxed{a_n=a_1\cdot q^{n-1}}
+\]</span></p>
+<p>Z toho dokážeme odvodit vzorec pro výpočet pomocí libovolného
+členu:</p>
+<p><span class="math display">\[
+\boxed{a_s=a_r\cdot q^{s-r}}
+\]</span></p>
+<h4 id="součet-prvních-n-členů-1">Součet prvních <span
+class="math inline">\(n\)</span> členů</h4>
+<p>Pro <span class="math inline">\(q=1\)</span>:</p>
+<p><span class="math display">\[
+\boxed{n\cdot a_1}
+\]</span></p>
+<p>Pro <span class="math inline">\(q\neq 1\)</span>:</p>
+<p><span class="math display">\[
+\boxed{s_n=a_1\cdot\frac{q^n-1}{q-1}}
+\]</span></p>
+<h4 id="užití-geometrické-posloupnosti">Užití geometrické
+posloupnosti</h4>
+<p>S posloupnostmi se často setkáváme v nejrůznějších oborech a velkmi
+často ve finanční matematice.</p>
+<p>Základem aplikačních úloh je určitý procentní přírůstek k číslu.</p>
+<p>Máme počáteční číselný údaj <span class="math inline">\(a_0\)</span>,
+který v určitých období postupně pravidelně zvětšujeme (nebo zmenšujeme)
+o <span class="math inline">\(p\space %\)</span> předchozí hodnoty.
+Označíme <span class="math inline">\(a_n\)</span> takto získané hodnoty
+po uplynutí <span class="math inline">\(n\)</span>-tého období <span
+class="math inline">\((n\in\mathbb{N})\)</span>. Platí:</p>
+<p>Pro pravidelný přírůstek:</p>
+<p><math> <span class="math display">\[\begin{align}
+    a_1&amp;=a_0+p\cdot\frac{a_0}{100}=a_0(1+\frac{p}{100})\\
+    a_2&amp;=a_1+p\cdot\frac{a_1}{100}=a_0(1+\frac{p}{100})^2\\
+    a_n&amp;=a_0(1+\frac{p}{100})^3\\
+\end{align}\]</span> &lt;&gt;</p>
+<p>Pro pravidelný úbytek podobně:</p>
+<p><span class="math display">\[
+a_n&amp;=a_0(1-\frac{p}{100})^3
+\]</span></p>
+<p>Obecně pak můžeme zapsat:</p>
+<math>
+<span class="math display">\[\begin{array}{lc}
+    {a_n=a_0\cdot r^n}\\
+    {r=1\pm\frac{p}{100}}   
+\end{array}\]</span>
+<p>&lt;&gt;</p>
+<h5 id="úrokování">Úrokování</h5>
+<p>… dodělat později</p>
+<p>Vložíme-li do banky</p>
+<h1 id="nekonečné-řady">Nekonečné řady</h1>
+<p>Nekonečné řady jsou součty čelnů posloupnosti, které narozdíl od
+tradičního součtu nemají daný konec.</p>
+<p>D: Je-li dána posloupnost <span
+class="math inline">\((a_n)_{n=1}^\infty\)</span>, pak výraz <span
+class="math inline">\(a_1+a_2+a_3+...+a_n+...\)</span> se nazývá
+<strong>nekonečná řada</strong>. Číslům <span
+class="math inline">\(a_1,a_2,...a_n,...\)</span> se říká čelny
+nekonečné řady.</p>
+<p>Zkráceně se zápis zapisuje pomocí sumy: <span
+class="math inline">\(\sum_{n=1}^\infty a_n\)</span>.</p>
+<h2 id="limita-nekonečné-řady">Limita nekonečné řady</h2>
+<p>Jelikož nekonečné řady nemají klasický součet, tak je součet
+definován pomocí limity posloupnosti.</p>
+<p>Pro danou nekonečnou řadu <span
+class="math inline">\(\sum_{n=1}^\infty a_n\)</span>, vytvoříme
+posloupnost <span class="math inline">\((s_n)^\infty _{n=1}\)</span>,
+jejímiž členy jsou:</p>
+<math>
+<span class="math display">\[\begin{array}{lc}
+    {s_1=a_1$\\
+    {s_2=a_1+a_2}\\
+    {s_n=a_1+a_2+a_3+...+a_n}$
+\end{array}\]</span>
+<p></math></p>
+<p>Tato posloupnost se nazývá posloupnost čáštečnýčh součtů nekonečné
+řady <span class="math inline">\(\sum_{n=1}^\infty a_n\)</span>. Kde
+<span class="math inline">\(n\)</span>-tý člen je <span
+class="math inline">\(n\)</span>-tý částečný součet nekonečné řady <span
+class="math inline">\(s_n=\sum_{k=1}^\infty a_k\)</span>.</p>
+<p>Má-li posloupnost částečných součtů nekonečné řady limitu <span
+class="math inline">\(\lim_{n\to 0}s_n=s\)</span>, pak tuto limitu
+nazýváme součět nekonečné řády <span
+class="math inline">\(\sum_{n=1}^\infty a_n=s\)</span> a říkáme, že
+nekonečná řada je <strong>konvergentní</strong>.</p>
+<p>Jesliže posloupnost nekonečné řady nemá limitu, pak je nekonečná řada
+divergentní.</p>
+<h2 id="druhy-nekonečných-řad">Druhy nekonečných řad</h2>
+<h3 id="nekonečná-aritmetická-řada">Nekonečná aritmetická řada</h3>
+<p>Nekonečná aritmetická řada je součet všech členů aritmetické
+posloupnosti:</p>
+<p><span class="math display">\[
+\sum_{n=1}^\infty a_n=\sum_{n=1}^\infty a_1+(n-1)d
+\]</span></p>
+<p>Nekonečná aritmetická řada je vždý divergentní (nemá limitu) s
+výjimkou případu, kdy <span class="math inline">\(d=0 \wedge
+a_1=0\)</span></p>
+<h3 id="nekonečná-geometrická-řada">Nekonečná geometrická řada</h3>
+<p>Nekonečná geometrická řada je součet všech členů geometrické
+posloupnosti:</p>
+<p><span class="math display">\[
+\sum_{n=1}^\infty a_n=\sum_{n=1}^\infty a_1\cdot q^{n-1}
+\]</span></p>
+<p>Nekonečná geometrická řada je pro <span
+class="math inline">\(a_1=0\)</span> vždy konvergentní a má součět <span
+class="math inline">\(0\)</span>.</p>
+<p>A pro <span class="math inline">\(a_1\neq 0\)</span> je nekonečná
+geometrická řada <span class="math inline">\(\sum_{n=1}^\infty a_1\cdot
+q^{n-1}\)</span> konvergentní právě tehdy, když platí <span
+class="math inline">\(|q|&lt;1\)</span> čili <span
+class="math inline">\(q\in (-1,1)\)</span>. Její součet je pak potom dán
+vztahem:</p>
+<p><span class="math display">\[
+\boxed{s=\frac{a_1}{1-q}}
+\]</span></p>
+</body>
+</html>
