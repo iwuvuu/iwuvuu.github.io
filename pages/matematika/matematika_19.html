@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Analytická geometrie kvadratických útvarů</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../stylesheet.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<div class="home-top-bar">
+  <a class="home-button" href="https://iwuvuu.github.io">HOME</a>
+</div>
+
+<header id="title-block-header">
+<h1 class="title">Analytická geometrie kvadratických útvarů</h1>
+</header>
+<div class="custom-toc">
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#elipsa" id="toc-elipsa">Elipsa</a>
+<ul>
+<li><a href="#analytické-vyjádření-elipsy"
+id="toc-analytické-vyjádření-elipsy">Analytické vyjádření elipsy</a>
+<ul>
+<li><a href="#středová-rovnice-elipsy"
+id="toc-středová-rovnice-elipsy">Středová rovnice elipsy</a></li>
+<li><a href="#obecná-rovnice-elipsy"
+id="toc-obecná-rovnice-elipsy">Obecná rovnice elipsy</a></li>
+<li><a href="#sepsání-obecné-rovnice-ze-středové-rovnice"
+id="toc-sepsání-obecné-rovnice-ze-středové-rovnice">Sepsání obecné
+rovnice ze středové rovnice</a></li>
+<li><a href="#sepsání-středové-rovnice-z-obecné-rovnice"
+id="toc-sepsání-středové-rovnice-z-obecné-rovnice">Sepsání středové
+rovnice z obecné rovnice</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+<ul>
+<li>kružnice, kruh, elipsa, parabola, hyperbola</li>
+<li>vzájemná poloha přímky a kuželosečky, tečny kuželoseček</li>
+</ul>
+<section id="elipsa" class="panel">
+<h1>Elipsa</h1>
+<p>D: Elipsa je množina všech bodů v rovině, které mají od daných 2
+různých bodů (ohnisek) konstantní <strong>součet</strong>
+vzdáleností</p>
+<p><img src="../resources/matematika/matematika_19/elipsa.png" alt="Elipsa" class="image-center-big"></p>
+<ul>
+<li><strong>Ohniska</strong> <span
+class="math inline">\((F_1,F_2)\)</span> -&gt; body, které neleží na
+elipse, každý bod elipsy má od nich stejný součet vzdáleností</li>
+<li><strong>Hlavní osa elipsy</strong> <span
+class="math inline">\((o_1)\)</span> -&gt; přímka na které leží obě
+ohniska, děli elipsu na dva osově soumšrné útvary</li>
+<li><strong>Střed elipsy</strong> <span
+class="math inline">\((S)\)</span> - střed úsečky <span
+class="math inline">\(F_1F_2\)</span></li>
+<li><strong>Vedlejsí osa elipsy</strong> <span
+class="math inline">\((o_2)\)</span> -&gt; přímka kolmá k hlavní ose
+elipsy procházející středem elipsy</li>
+<li><strong>Hlavní vrcholy elipsy</strong> <span
+class="math inline">\((A,B)\)</span> -&gt; průsečíky elipsy a její
+hlavní osy</li>
+<li><strong>Vedlejší vrcholy elipsy</strong> <span
+class="math inline">\((C,D)\)</span> -&gt; průsečíky elipsy a její
+vedlejší osy</li>
+<li><strong>Délka hlavní poloosy</strong> <span
+class="math inline">\((a=|AS|=|BS|)\)</span> -&gt; vzdálenost hlavních
+vrcholů od středu elipsy</li>
+<li><strong>Délka vedlejší poloosy</strong> <span
+class="math inline">\((b=|CS|=|DS|)\)</span> -&gt; vzdálenost vedlejších
+vrcholů od středu poloosy</li>
+<li><strong>Výstřednost (excentricita)</strong> <span
+class="math inline">\((e=|F_1S=F_2S)\)</span> -&gt; vzdálenost ohnisek
+od středu elipsy</li>
+</ul>
+<p>Vime, že vzdálenost bodu libovolného bodu <span
+class="math inline">\(X\)</span> od ohnisek musí být konstantní:</p>
+<p><span class="math display">\[
+|F_1X|+|F_2X|=konst
+\]</span></p>
+<p>Odvodíme také, že vzdálenost hlavních vrcholů je dvojnásobek délky
+hlavní poloosy:</p>
+<p><span class="math display">\[
+|AB|=2a
+\]</span></p>
+<p>Jelikož víme, že součet vzdáleností <span
+class="math inline">\(X\)</span> od ohnisek je konstantní, tak musí být
+konstantní i v hlavních vrcholech. Tudíž součet vzdáleností musí být
+roven velikosti úsečky <span class="math inline">\(|AB|\)</span>.</p>
+<p><math> <span class="math display">\[\begin{align}
+    |F_1X|+|F_2X|&amp;=|F_1A|+|F_2A|\\
+    |F_1X|+|F_2X|&amp;=e+(a+e)\\
+    |F_1X|+|F_2X|&amp;=a+2e\\
+    |F_1X|+|F_2X|&amp;=2a\\
+\end{align}\]</span> </math></p>
+<h2 id="analytické-vyjádření-elipsy">Analytické vyjádření elipsy</h2>
+<p>Určíme, že bod ležící na elipse má souřadnice $X[x,y].</p>
+<h3 id="středová-rovnice-elipsy">Středová rovnice elipsy</h3>
+<h4 id="střed-elipsy-je-ve-středu-soustavy-sousařdnic">Střed elipsy je
+ve středu soustavy sousařdnic</h4>
+<p>Podle toho jestli je v analytickém zápisu <span
+class="math inline">\(a\)</span> pod souřadnicí <span
+class="math inline">\(x\)</span> nebo <span
+class="math inline">\(y\)</span> určíme s jakou souřadnicovou osou bude
+hlavní osa splývat.</p>
+<h5 id="hlavní-osa-splývá-s-osou-x">Hlavní osa splývá s osou <span
+class="math inline">\(x\)</span></h5>
+<p><img src="../resources/matematika/matematika_19/elipsa_stred_x.png" alt="Elipsa" class="image-center-big"></p>
+<p>Souřadnice ohnisek jsou <span
+class="math inline">\(F_1[-e,0]\)</span> a <span
+class="math inline">\(F_2[e,0]\)</span>.</p>
+<p>Analytický zápis:</p>
+<p><span class="math display">\[
+\frac{x^2}{a^2}+\frac{y^2}{b^2}=1
+\]</span></p>
+<h5 id="hlavní-osa-splývá-s-osou-y">Hlavní osa splývá s osou <span
+class="math inline">\(y\)</span></h5>
+<p><img src="../resources/matematika/matematika_19/elipsa_stred_y.png" alt="Elipsa" class="image-center-big"></p>
+<p>Souřadnice ohnisek jsou <span class="math inline">\(F_1[0,e]\)</span>
+a <span class="math inline">\(F_2[0,-e]\)</span></p>
+<p>Analytický zápis:</p>
+<p><span class="math display">\[
+\frac{x^2}{b^2}+\frac{y^2}{a^2}=1
+\]</span></p>
+<h4 id="střed-elipsy-je-mimo-střed-soustavy-souřadnic">Střed elipsy je
+mimo střed soustavy souřadnic</h4>
+<p>Střed elipsy má souřadnice <span
+class="math inline">\(S[m,n]\)</span>.</p>
+<p>Podle toho jestli je v analytickém zápisu <span
+class="math inline">\(a\)</span> pod souřadnicí <span
+class="math inline">\(x\)</span> nebo <span
+class="math inline">\(y\)</span> určíme s jakou souřadnicovou osou bude
+hlavní osa splývat.</p>
+<p>Toto analytické vyjádření se nazývá <strong>středová rovnice
+elipsy</strong>.</p>
+<h5 id="hlavní-osa-je-rovnoběžná-s-osou-x">Hlavní osa je rovnoběžná s
+osou <span class="math inline">\(x\)</span></h5>
+<p><img src="../resources/matematika/matematika_19/elipsa_x.png" alt="Elipsa" class="image-center-big"></p>
+<p>Souřadnice ohnisek jsou <span
+class="math inline">\(F_1[-e,0]\)</span> a <span
+class="math inline">\(F_2[e,0]\)</span>.</p>
+<p>Analytický zápis:</p>
+<p><span class="math display">\[
+\frac{(x-m)^2}{a^2}+\frac{(y-n)^2}{b^2}=1
+\]</span></p>
+<h5 id="hlavní-osa-je-rovnoběžná-s-osou-x-1">Hlavní osa je rovnoběžná s
+osou <span class="math inline">\(x\)</span></h5>
+<p><img src="../resources/matematika/matematika_19/elipsa_y.png" alt="Elipsa" class="image-center-big"></p>
+<p>Souřadnice ohnisek jsou <span
+class="math inline">\(F_1[-e,0]\)</span> a <span
+class="math inline">\(F_2[e,0]\)</span>.</p>
+<p>Analytický zápis:</p>
+<p><span class="math display">\[
+\frac{(x-m)^2}{b^2}+\frac{(y-n)^2}{a^2}=1
+\]</span></p>
+<h3 id="obecná-rovnice-elipsy">Obecná rovnice elipsy</h3>
+<p>Pro elipsu se středovou rovnicí:</p>
+<p><span class="math display">\[
+\frac{(x-1)^2}{9}+\frac{(y-2)^2}{4}=1
+\]</span></p>
+<p>Existuje obecná rovnice ve tvaru:</p>
+<p><span class="math display">\[
+4x^2+9y^2-8x-36y+4=0
+\]</span></p>
+<p>POZOR! Ne každá obecně vypadající rovnice je rovnicí elipsy.</p>
+<h3 id="sepsání-obecné-rovnice-ze-středové-rovnice">Sepsání obecné
+rovnice ze středové rovnice</h3>
+<p>Máme rovnici:</p>
+<p><span class="math display">\[
+\frac{(x-2)^2}{9}+\frac{(y-2)^2}{4}=1
+\]</span></p>
+<p>Na obecnou rovnici ji převedeme tak, že rovnici vynásobíme
+jmenovateli a upravíme rovnici.</p>
+<p><math> <span class="math display">\[\begin{align}
+    \frac{(x-1)^2}{9}+\frac{(y-2)^2}{4}=1/\cdot 36\\
+    4(x-1)^2+9(y-2)^2=36\\
+    4(x^2-2x+1)+9(y^2-4y+4)=36\\
+    4x^2-8x+4+9y^2-36y+36=36\\
+    4x^2+9y^2-8x-36y+4=0
+\end{align}\]</span> </math></p>
+<h3 id="sepsání-středové-rovnice-z-obecné-rovnice">Sepsání středové
+rovnice z obecné rovnice</h3>
+<p>Máme rovnici:</p>
+<p><span class="math display">\[
+9x^2+25y^2-54x-50y-119=0
+\]</span></p>
+<p>Abychom ji převedli na středovou rovnici musíme ji převést na
+středové dvojčleny:</p>
+<math>
+<span class="math display">\[\begin{array}{lc}
+    {\text{seřadíme stejné neznáme k sobě}}\\
+    {9x^2-54x+25y^2-50y-119=0}\\
+    {\text{vytkneme největší společný násobek od stejných neznámých}}\\
+    {9(x^2-6x)+25(y^2-2y)-119=0}\\
+    {\text{doplníme dvojčlen na roznásobený tvar
+}(a+b)^2=a^2+2ab+b^2\text{ nesmíme zapomenout odečíst hodnoty, které
+přičteme (a vynásobit vytknutým číslem)}}\\
+    {9(x^2-6x+9)-9\cdot 9+25(y^2-2y+1)-25\cdot 1-119=0}\\
+    {\text{zkrátíme rozepsané závorky na dvojčleny a sečteme čísla bez
+proměnných}}\\
+    {9(x-3)^2+25(y-1)^2-225=0}\\
+    {\text{převedeme číslo bez proměnné na pravou stranu}}\\
+    {9(x-3)^2+25(y-1)^2=225}\\
+    {\text{vydělíme celou rovnici pravou stranou}}
+    {\frac{(x-3)^2}{25}\frac{(y-1)^2}{9}=1}\\
+\end{array}\]</span>
+<p></math></p>
+</section>
+<div class="panel">
+<h1 id="parabola">Parabola</h1>
+<p>D: Parabola je mnoýona všech bodů v rovině, které mají stejnou
+vzdálenost od daného bodu <span class="math inline">\(F\)</span> a od
+dané přímky <span class="math inline">\(d\)</span> , která tímto bodem
+neprochází.</p>
+<p><span class="math display">\[
+\left| |XF| = |Xd| \right|
+\]</span></p>
+<p><img src="../resources/matematika/matematika_19/parabola.png" alt="Elipsa" class="image-center-big"></p>
+<p><math> <span class="math display">\[\begin{align}
+    F&amp;...\text{ohnisko paraboly}\\
+    d&amp;...\text{řídící přímka}\\
+    V&amp;...\text{vrchol paraboly}\\
+    v&amp;...\text{vrcholová tečna}\\
+    o&amp;...\text{osa paraboly}\\
+    p&amp;=|DF|...\text{parametr paraboly}
+\end{align}\]</span> </math></p>
+<p>Z definice paraboly lze odvodit rovnice paraboly.</p>
+<h1 id="analytické-vyjádření-parabol">Analytické vyjádření parabol</h1>
+<h2 id="s-parametrem-p-a-vrcholem-v-počátku-soustavy-souřadnic">S
+parametrem <span class="math inline">\(p\)</span> a vrcholem v počátku
+soustavy souřadnic</h2>
+<p><span class="math display">\[
+x^2=2py
+\]</span></p>
+<ul>
+<li>osa paraboly totožná s osou <span class="math inline">\(y\)</span>;
+<span class="math inline">\(F\)</span> je na kladné poloose <span
+class="math inline">\(y\)</span></li>
+</ul>
+<p><img src="../resources/matematika/matematika_19/parabola_stred_nahoru.png" alt="Elipsa" class="image-center-big"></p>
+<p><span class="math display">\[
+x^2=-2py
+\]</span></p>
+<ul>
+<li>osa paraboly totožná s osou <span class="math inline">\(y\)</span>;
+<span class="math inline">\(F\)</span> je na záporné poloose <span
+class="math inline">\(y\)</span></li>
+</ul>
+<p><img src="../resources/matematika/matematika_19/parabola_stred_dolu.png" alt="Elipsa" class="image-center-big"></p>
+<p><span class="math display">\[
+y^2=2px
+\]</span></p>
+<ul>
+<li>osa paraboly totožná s osou <span class="math inline">\(x\)</span>;
+<span class="math inline">\(F\)</span> je na kladné poloose <span
+class="math inline">\(x\)</span></li>
+</ul>
+<p><img src="../resources/matematika/matematika_19/parabola_stred_doprava.png" alt="Elipsa" class="image-center-big"></p>
+<p><span class="math display">\[
+y^2=-2px
+\]</span></p>
+<ul>
+<li>osa paraboly totožná s osou <span class="math inline">\(x\)</span>;
+<span class="math inline">\(F\)</span> je na záporné poloose <span
+class="math inline">\(x\)</span></li>
+</ul>
+<p><img src="../resources/matematika/matematika_19/parabola_stred_doleva.png" alt="Elipsa" class="image-center-big"></p>
+<h2 id="vrcholové-rovnice-paraboly">Vrcholové rovnice paraboly</h2>
+<p>Souřadnice vrcholu označíme: <span
+class="math inline">\(V[m,n]\)</span>.</p>
+<p><span class="math display">\[
+(y-n)^2=2p(x-m)
+\]</span></p>
+<ul>
+<li><span class="math inline">\(F\)</span> je vpravo od vrcholu</li>
+</ul>
+<p><img src="../resources/matematika/matematika_19/parabola_doprava.png" alt="Elipsa" class="image-center-big"></p>
+<p><span class="math display">\[
+(y-n)^2=-2p(x-m)
+\]</span></p>
+<ul>
+<li><span class="math inline">\(F\)</span> je vlevo od vrcholu</li>
+</ul>
+<p><img src="../resources/matematika/matematika_19/parabola_doleva.png" alt="Elipsa" class="image-center-big"></p>
+<p><span class="math display">\[
+(x-m)^2=2p(y-n)
+\]</span></p>
+<ul>
+<li><span class="math inline">\(F\)</span> je nad vrcholem</li>
+</ul>
+<p><img src="../resources/matematika/matematika_19/parabola_nahoru.png" alt="Elipsa" class="image-center-big"></p>
+<p><span class="math display">\[
+(x-m)^2=-2p(y-n)
+\]</span></p>
+<p>-<span class="math inline">\(F\)</span> je pod vrcholem</p>
+<p><img src="../resources/matematika/matematika_19/parabola_dolu.png" alt="Elipsa" class="image-center-big"></p>
+<h2 id="obecná-rovnice-paraboly">Obecná rovnice paraboly:</h2>
+<p>Jestliže umocníme a roznásobíme závorky ve vrcholové rovnici a
+rovnici anulujeme, dostaneme obecnou rovnici paraboly.</p>
+<p>Osa paraboly je rovnoběžná s osou <span
+class="math inline">\(x\)</span></p>
+<math>
+<span class="math display">\[\begin{array}{lc}
+    {y^2+ax+by+c=0}\\
+    {a\neq 0}
+\end{array}\]</span>
+<p></math></p>
+<p>Osa paraboly je rovnoběžná s osou <span
+class="math inline">\(y\)</span></p>
+<math>
+<span class="math display">\[\begin{array}{lc}
+    {x^2+ax+by+c=0}\\
+    {b\neq 0}
+\end{array}\]</span>
+<p></math></p>
+</div>
+<div class="panel">
+<h1 id="hyperbola">Hyperbola</h1>
+<p>Hyperbola je rovinná křivka, kuželosečka.</p>
+<p>D: Hyperbola je množina všech bodů <span
+class="math inline">\(X\)</span> v rovině, které mají od dvou daných
+různých bodů (ohnisek <span class="math inline">\(F_1\)</span> a <span
+class="math inline">\(F_2\)</span>) konstantní (neměnnou) absolutní
+hodnota rozdílu vzdáleností.</p>
+<p><span class="math display">\[
+\left| |F_1X| - |F_2X| \right| = 2a
+\]</span></p>
+<p>OBRAZEK KUZELOSECKY</p>
+<p><img src="../resources/matematika/matematika_19/hyperbola.png" alt="Elipsa" class="image-center-big"></p>
+<ul>
+<li><span class="math inline">\(F_1,F_2\)</span>…ohniska hyperboly</li>
+<li><span class="math inline">\(S\)</span>…střed hyperboly</li>
+<li><span class="math inline">\(A,B\)</span>…vrcholy hyperboly</li>
+<li><span class="math inline">\(o_1\)</span>…halvní osa hyperboly</li>
+<li><span class="math inline">\(o_2\)</span>…vedlejší osa hyperboly</li>
+<li><span class="math inline">\(a_1,a_2\)</span>…asymptoty
+hyperboly</li>
+<li><span class="math inline">\(a=|AS|=|BS|\)</span>…velikost hlavní
+poloosy</li>
+<li><span class="math inline">\(b=|CS|=|DS|\)</span>…velikost vedlejší
+poloosy</li>
+<li><span
+class="math inline">\(e=|F_1S|=|F_2S|\)</span>…ecentricita</li>
+</ul>
+<p>Platí:</p>
+<math>
+<span class="math display">\[\begin{array}{lc}
+    {e^2=a^2+b^2}\\
+    {e&gt;a}
+\end{array}\]</span>
+<p>&lt;&gt;</p>
+<p>Když <span class="math inline">\(a=b\)</span>, tak dostáváme rovnici
+rovnoosé hyperboly.</p>
+<h1 id="analytické-vyjádření-hyperboly">Analytické vyjádření
+hyperboly</h1>
+<h2 id="se-středem-v-počátku">Se středem v počátku</h2>
+<p>Když je hlavní osa rovnoběžná s osou <span
+class="math inline">\(x\)</span>:</p>
+<math>
+<span class="math display">\[\begin{array}{lc}
+    {\frac{x^2}{a^2}-\frac{y^2}{b^2}=1}\\
+    {p_1:y=\frac{b}{a}x}\\
+    {p_2:y=-\frac{b}{a}x}
+\end{array}\]</span>
+<p>&lt;&gt;</p>
+<p><img src="../resources/matematika/matematika_19/hyperbola_stred_x.png" alt="Elipsa" class="image-center-big"></p>
+<p>Když je hlavni osa rovnoběžná s osou <span
+class="math inline">\(y\)</span>:</p>
+<math>
+<span class="math display">\[\begin{array}{lc}
+    {-\frac{x^2}{b^2}+\frac{y^2}{a^2}=1}\\
+    {p_1:y=\frac{a}{b}x}\\
+    {p_2:y=-\frac{a}{b}x}
+\end{array}\]</span>
+<p>&lt;&gt;</p>
+<p><img src="../resources/matematika/matematika_19/hyperbola_stred_y.png" alt="Elipsa" class="image-center-big"></p>
+<h2 id="středová-rovnice-hyperboly">Středová rovnice hyperboly</h2>
+<p>Máme střed hyperboly o souřadnicích <span
+class="math inline">\(S[m,n]\)</span>.</p>
+<p>Hlavní osa je rovnoběžná s osou <span
+class="math inline">\(x\)</span>:</p>
+<math>
+<span class="math display">\[\begin{array}{lc}
+    {\frac{(x-m)^2}{a^2}+\frac{(y-n)^2}{b^2}=1}\\
+    {p_1:y-n=\frac{b}{a}(x-m)}\\
+    {p_2:y-n=-\frac{b}{a}(x-m)}
+\end{array}\]</span>
+<p>&lt;&gt;</p>
+<p><img src="../resources/matematika/matematika_19/hyperbola_x.png" alt="Elipsa" class="image-center-big"></p>
+<p>Hlavní osa je rovnoběžná s osou <span
+class="math inline">\(y\)</span>:</p>
+<math>
+<span class="math display">\[\begin{array}{lc}
+    {-\frac{(x-m)^2}{b^2}+\frac{(y-n)^2}{a^2}=1}\\
+    {p_1:y-n=\frac{a}{b}(x-m)}\\
+    {p_2:y-n=-\frac{a}{b}(x-m)}
+\end{array}\]</span>
+<p>&lt;&gt;</p>
+<p><img src="../resources/matematika/matematika_19/hyperbola_y.png" alt="Elipsa" class="image-center-big"></p>
+</div>
+</body>
+</html>

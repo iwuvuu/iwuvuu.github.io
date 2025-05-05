@@ -231,6 +231,12 @@ img {
   margin-right: auto;
   width: 30%;
 }
+.image-center-big {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
 
 
 table {
