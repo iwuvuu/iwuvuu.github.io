@@ -22,6 +22,10 @@
     }
   </style>
   <link rel="stylesheet" href="../stylesheet.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
 </head>
 <body>
 <div class="home-top-bar">
@@ -56,6 +60,17 @@ informací:</a></li>
 </ul></li>
 <li><a href="#informační-společnost" id="toc-informační-společnost">3.
 Informační společnost</a></li>
+<li><a href="#praktická-část---převody-soustav"
+id="toc-praktická-část---převody-soustav">Praktická část - převody
+soustav</a>
+<ul>
+<li><a href="#převod-z-desítkové-soustavy"
+id="toc-převod-z-desítkové-soustavy">Převod Z desítkové
+soustavy</a></li>
+<li><a href="#převod-do-desítkové-soustavy"
+id="toc-převod-do-desítkové-soustavy">Převod DO desítkové
+soustavy</a></li>
+</ul></li>
 </ul>
 </nav>
 </div>
@@ -200,6 +215,68 @@ invazivností technologií. Což je v dnešní době obzválště složité,
 jelikož velké společnosti vydělávají právě na sběru a zpracovávání dat a
 nejsou ohledně toho plně transparentní.</p>
 </div>
+</section>
+<section id="praktická-část---převody-soustav" class="panel">
+<h1>Praktická část - převody soustav</h1>
+<p>Základní máme desítkovou soustavu -&gt; ta se skládá z čísel <span
+class="math inline">\(0,1,2,3,4,5,6,7,8,9\)</span></p>
+<p>Dvojková soustava (binární) se skládá z <span
+class="math inline">\(0,2\)</span> a šesnáctkové se skládá z <span
+class="math inline">\(0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F\)</span>.</p>
+<div class="note">
+<p>Nejjednodušší je převod z jakékoliv soustavy na jakoukoliv jinou
+soustavu přes desítkovou soustavu. Potom nám stačí znát jen převod na
+desítkovou a z desítkové.</p>
+</div>
+<h2 id="převod-z-desítkové-soustavy">Převod Z desítkové soustavy</h2>
+<p>Pokud převádíme z desítkové soustavy do jiné soustavy
+<strong>vydělíme (se zbytkem) číslo</strong> v desítkové soustavě číslem
+soustavy do které převádíme (do dvojkové - 2; do šesnáctkové - 16…).
+Zapíšeme si zbytek po dělení a opakujeme proces s výsledkem dokud
+nezbyde 0. Když <strong>poskládáme zbytky v opačném pořadí</strong>, než
+jsme je zapisovali, dostaneme výsledek v chtěné soustavě.</p>
+<p>Příklad - převedeme číslo 70 v desítkové soustavě do dvojkové:</p>
+<p><math> <span class="math display">\[\begin{align}
+    (70)_{10}&amp;= (x)_2\\
+    70:2&amp;=35\rightarrow zb. 0\\
+    35:2&amp;=17\rightarrow zb. 1\\
+    17:2&amp;=8\rightarrow zb.1\\
+    8:2&amp;=4\rightarrow zb.0\\
+    4:2&amp;=2\rightarrow zb.0\\
+    2:2&amp;=1\rightarrow zb.0\\
+    1:2&amp;=0\rightarrow zb.1\\
+    (70)_{10}&amp;=(1000110)_2
+\end{align}\]</span> </math></p>
+<p>Příklad - převedeme číslo 176 v desítkové soustavě do
+šesnáctkové:</p>
+<p><math> <span class="math display">\[\begin{align}
+    (90)_{10}&amp;= (x)_2\\
+    90:16&amp;=5\rightarrow zb. 10\rightarrow A\\
+    5:16&amp;=0\rightarrow zb. 5\\
+    (90)_{10}&amp;=(5A)_2
+\end{align}\]</span> </math></p>
+<h2 id="převod-do-desítkové-soustavy">Převod DO desítkové soustavy</h2>
+<p>Do desítkové soustavy převádíme čísla z jiné soustavy tak, že
+<strong>sečteme násobky <span class="math inline">\(n\)</span>-té
+mocniny (<span class="math inline">\(n\)</span> je pořadí čísla zprava
+počínaje 0) základního čísla soustavy (dvojková - 2…) a příslušnou
+číslicí v pořadí</strong>.</p>
+<p>Příklad - převedeme číslo 1000110 ve dvojkové soustavě do
+desítkové:</p>
+<p><math> <span class="math display">\[\begin{align}
+    (1000110)_2&amp;=(x)_{10}\\
+    100010&amp;=1\cdot 2^6+0\cdot 2^5+0\cdot 2^4+0\cdot 2^3+1\cdot
+2^2+1\cdot 2^1+0\cdot 2^0\\
+    100010&amp;=64+0+0+0+4+2+0\\
+    (1000110)_2&amp;=(70)_{10}
+\end{align}\]</span> </math></p>
+<p>Příklad - převedeme číslo 5A v šesnáctkové soustavě do destíkové:</p>
+<p><math> <span class="math display">\[\begin{align}
+    (5A)_{16}&amp;=(x)_10\\
+    5A&amp;=5\cdot 16^1+10\cdot 16^0\\
+    5A&amp;=80+10\\
+    (5A)_{16}&amp;=(90)_10
+\end{align}\]</span> </math></p>
 </section>
 </body>
 </html>
