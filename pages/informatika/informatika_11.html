@@ -31,18 +31,9 @@
 <header id="title-block-header">
 <h1 class="title">Rastrová grafika počítače</h1>
 </header>
+<div class="custom-toc">
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#základní-princip" id="toc-základní-princip">Základní
-princip</a>
-<ul>
-<li><a href="#výhody-rastrové-grafiky"
-id="toc-výhody-rastrové-grafiky">Výhody rastrové grafiky</a></li>
-<li><a href="#nevýhody-vektorové-grafiky"
-id="toc-nevýhody-vektorové-grafiky">Nevýhody rastrové grafiky</a></li>
-</ul></li>
-<li><a href="#využití-rastrové-grafiky"
-id="toc-využití-rastrové-grafiky">Využití rastrové grafiky</a></li>
 <li><a href="#teoreticky-něco-s-barvami"
 id="toc-teoreticky-něco-s-barvami">Teoreticky něco s barvami</a>
 <ul>
@@ -56,17 +47,10 @@ Key/Black)</a></li>
 <li><a href="#hslhsv" id="toc-hslhsv">HSL/HSV</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#formáty" id="toc-formáty">Formáty</a></li>
-<li><a href="#programy" id="toc-programy">Programy</a>
-<ul>
-<li><a href="#adobe-photoshop" id="toc-adobe-photoshop">Adobe
-photoshop</a></li>
-<li><a href="#gimp-gnu-image-manipulation-program"
-id="toc-gimp-gnu-image-manipulation-program">GIMP (GNU Image
-Manipulation Program)</a></li>
-</ul></li>
 </ul>
 </nav>
+</div>
+<div class="panel">
 <p>základní principy, využití, vhodné programy, formáty grafických
 souborů, váhody, nevýhody, parametry rastrové grafiky</p>
 <p>Důležitou součástí digitálního světa je grafika. Všichni se chceme
@@ -116,7 +100,75 @@ k sdílení nebo na webové stránky (bez komprese)</li>
 <p>Největší využití rastrové grafiky jsou digitální fotografie. Ale jako
 další využití můžeme uvést digital art a jiné detailní grafické
 práce.</p>
-<h1 id="teoreticky-něco-s-barvami">Teoreticky něco s barvami</h1>
+<h1 id="formáty">Formáty</h1>
+<ul>
+<li>JPEG/JPG - ztrátový formát pro rastrovou grafiku s velkým počtem
+barev, využívaný pro fotofrafie</li>
+</ul>
+<div class="question">
+<p>JPEG je <strong>kompresní formát</strong> to znamená, že na úkor
+kvality fotografie snižuje velikost souboru. Funguje tak, že rozdělí
+fotografii do bloků; upraví barvy tak, aby jich nebylo tolik, ale
+zároveň si toho lidské oko nevšimlo; a vyhladí určité detaily, které
+nejsou velmi důležité. Při velké kompresi tak může dojít například ke
+zkostkovatění obrazu.</p>
+</div>
+<ul>
+<li>PNG - bezztrátový formát s podporou alpha hladiny barev
+(průhlednost)</li>
+<li>GIF - formát využívaný pro animace</li>
+</ul>
+<h1 id="programy">Programy</h1>
+<h2 id="adobe-photoshop">Adobe photoshop</h2>
+<ul>
+<li>jeden z nejpopulárnějších grafických editorů</li>
+<li>flexibilní - práce s rastrovou/vektorovou grafikou, vhodný pro
+editaci fotek i digitální malování</li>
+<li>pokročilé profesionální funkce</li>
+<li>nevýhodou může být propretární kód, požadavek výkoného hardwaru,
+nekompatibilita se všemi operacními systémy (linux, bsd), drahé měsíční
+předplatné</li>
+</ul>
+<h2 id="gimp-gnu-image-manipulation-program">GIMP (GNU Image
+Manipulation Program)</h2>
+<ul>
+<li>foss program</li>
+<li>mnoho nástrojů pro práci s rastrovou grafikou a úpravou fotografií,
+méně vhodné pro digital art</li>
+<li>není tak náročný jako Adobe Photoshop</li>
+<li>nekompatibilní s Adobe formáty</li>
+<li>chybějí pokročilé funkce (a některé základní funkce, kde je fkin
+shape tool???? Je tok 2025, už vydejte novou verzi wtf)</li>
+</ul>
+<hr />
+<div class="note">
+<p>Další foss rastrový editor, který je předně určen pro profesionální
+digital art je krita.</p>
+</div>
+<p><br></p>
+<div class="question">
+<p>S nástupem umělé inteligence přišla i nová éra úpravy fotografií.
+Užitečným využitím AI je <strong>vylepšování a restaurování starých
+fotografií</strong>. AI odstraňuje šum a poškození fotek, zvětšuje
+rozlišení tím, že si domýšlí detaily. Dokáže vybarvit černobílou
+fotografii nebo kompletně rekontruuje rozmatané nebo chybějící části.
+Problém je, že AI si často domýšlí (jinak to ani nejde) detaily, které
+ale ve skutečnosti nikdy neexistovaly.</p>
+</div>
+<br>
+<div class="question">
+<p>Dalším AI technologii, která je v dnešní době problém je
+<strong>Deepfake a manipulace s obrázky</strong>. Deepfake je umělou
+inteligencí vytvořený obrázek či video vetšinou někoho slavného, kdo se
+potom chová nebo říká věci, které se nikdy nestaly. Manipulace s obrázky
+je také problém moderního internetu. Ačkoliv úprava fotografii je všudy
+přítomná, popularita sociálních sítí je důvodem, proč si nikdy nemůžeme
+být jistí, zda to, co vidíme je skutečné nebo jen filtr popřípadě AI
+vygenerovaná fotka.</p>
+</div>
+</div>
+<section id="teoreticky-něco-s-barvami" class="panel">
+<h1>Teoreticky něco s barvami</h1>
 <p>Stejně jako barvy v reálném životě, v digitálním prostoru existují
 barvy a barevná teorie.</p>
 <p>Všechny barvy mají základní vlastnosti:</p>
@@ -147,38 +199,6 @@ proto se dodává i samostatná černá složka</li>
 <h3 id="hslhsv">HSL/HSV</h3>
 <p>Alternativní model pro práci s barvami, funguje na principu výběru
 odstínů, sytosti a jasu</p>
-<h1 id="formáty">Formáty</h1>
-<ul>
-<li>JPEG/JPG - ztrátový formát pro rastrovou grafiku s velkým počtem
-barev, využívaný pro fotofrafie</li>
-<li>PNG - bezztrátový formát s podporou alpha hladiny barev
-(průhlednost)</li>
-<li>GIF - formát využívaný pro animace</li>
-</ul>
-<h1 id="programy">Programy</h1>
-<h2 id="adobe-photoshop">Adobe photoshop</h2>
-<ul>
-<li>jeden z nejpopulárnějších grafických editorů</li>
-<li>flexibilní - práce s rastrovou/vektorovou grafikou, vhodný pro
-editaci fotek i digitální malování</li>
-<li>pokročilé profesionální funkce</li>
-<li>nevýhodou může být propretární kód, požadavek výkoného hardwaru,
-nekompatibilita se všemi operacními systémy (linux, bsd), drahé měsíční
-předplatné</li>
-</ul>
-<h2 id="gimp-gnu-image-manipulation-program">GIMP (GNU Image
-Manipulation Program)</h2>
-<ul>
-<li>foss program</li>
-<li>mnoho nástrojů pro práci s rastrovou grafikou a úpravou fotografií,
-méně vhodné pro digital art</li>
-<li>není tak náročný jako Adobe Photoshop</li>
-<li>nekompatibilní s Adobe formáty</li>
-<li>chybějí pokročilé funkce (a některé základní funkce, kde je fkin
-shape tool???? Je tok 2025, už vydejte novou verzi wtf)</li>
-</ul>
-<hr />
-<p>Další foss rastrový editor, který je předně určen pro profesionální
-digital art je krita.</p>
+</section>
 </body>
 </html>

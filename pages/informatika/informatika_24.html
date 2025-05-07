@@ -31,30 +31,9 @@
 <header id="title-block-header">
 <h1 class="title">Virtualizační technologie</h1>
 </header>
-<nav id="TOC" role="doc-toc">
-<ul>
-<li><a href="#typy-virtualizačních-nástrojů"
-id="toc-typy-virtualizačních-nástrojů">Typy virtualizačních nástrojů</a>
-<ul>
-<li><a href="#virtualizace-hardwaru"
-id="toc-virtualizace-hardwaru">Virtualizace hardwaru</a>
-<ul>
-<li><a href="#princip-tvorby-virtuálizačního-stroje"
-id="toc-princip-tvorby-virtuálizačního-stroje">Princip tvorby
-virtuálizačního stroje</a></li>
-</ul></li>
-<li><a href="#virtualizace-na-operačním-systému-kontejnerizace"
-id="toc-virtualizace-na-operačním-systému-kontejnerizace">Virtualizace
-na operačním systému (kontejnerizace)</a>
-<ul>
-<li><a href="#kontejnery" id="toc-kontejnery">Kontejnery</a></li>
-</ul></li>
-<li><a href="#emulace" id="toc-emulace">Emulace</a></li>
-</ul></li>
-<li><a href="#důvody-využití-a-příklady"
-id="toc-důvody-využití-a-příklady">Důvody využití a příklady</a></li>
-</ul>
-</nav>
+<div class="custom-toc">
+</div>
+<div class="panel">
 <p>Virtualizace je proces, který umožňuje efektivní využití počítačového
 hardwaru. Umožňuje nám vytvářet virtuální (nefyzické) verze hardwaru,
 díky čemuž umožňuje běh více nezávislých prostředí (operační systém,
@@ -141,6 +120,11 @@ konzole).</p>
 operační systém a využívá u toho dostupný hardware. Tento způsob
 virtualizace je velmi pomalý a je vhodný hlavně pro testování a vývoj
 pro jiné platformy.</p>
+<div class="question">
+<p>Často se s emulací setkáváme u emulování <strong>starých herních
+konzolí</strong> (SNES, Game Boy, PS1…), u kterých už hardware nelze
+jednoduše v dobrém stavu sehnat.</p>
+</div>
 <h1 id="důvody-využití-a-příklady">Důvody využití a příklady</h1>
 <p>S virtualizací se nejčastěji setkáváme v serverech a datových
 uložištích. Hlavním důvodem využití virtualizace je efektivní a levné
@@ -148,10 +132,17 @@ využití hardwaru. Protože servery velmi často nepotřebují výkonnou
 výpočetní techniku, ale různorodost (web servery, e-mail servery, media
 seevery), je hardware rozdělen na virtuální díly a nemusíme tak
 nakupovat pro každý účel jiný hardware.</p>
-<p>Virtualizace je velmi také důležitá pro testování operačních systému
-- funkcionalita a bezpečnost, nebo pro aplikační prostředí - např.
-development aplikačního prostředí pro jiný hardware. Důležité je využití
-v kyberbezpečnosti - vytváří nezávislé prostředí pro test malwaru a
-bezpečnostních závad.</p>
+<div class="question">
+<p>Virtualizace je velmi také důležitá pro <strong>testování</strong>
+operačních systému - funkcionalita a bezpečnost, nebo pro aplikační
+prostředí - např. development aplikačního prostředí pro jiný hardware.
+Důležité je využití v kyberbezpečnosti - vytváří <strong>nezávislé
+prostředí</strong> pro test malwaru a bezpečnostních závad. V takovém
+případě by měl být systém opatřen i obnovitelnými snapshoty, které mohou
+systém vrátit do předchozího bodu.</p>
+<p>Ve <strong>školství</strong> se s virtualizací můžeme setkat
+například při experimentování s operačními systémy.</p>
+</div>
+</div>
 </body>
 </html>

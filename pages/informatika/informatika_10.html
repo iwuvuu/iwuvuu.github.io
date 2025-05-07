@@ -31,16 +31,9 @@
 <header id="title-block-header">
 <h1 class="title">Vektorová počítačová grafika</h1>
 </header>
+<div class="custom-toc">
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#základy-vektorové-grafiky"
-id="toc-základy-vektorové-grafiky">Základy vektorové grafiky</a>
-<ul>
-<li><a href="#výhody" id="toc-výhody">Výhody</a></li>
-<li><a href="#nevýhody" id="toc-nevýhody">Nevýhody</a></li>
-</ul></li>
-<li><a href="#využití-vektorové-grafiky"
-id="toc-využití-vektorové-grafiky">Využití vektorové grafiky</a></li>
 <li><a href="#teoreticky-něco-s-barvami-zkopírovat-i-do-rastru-lol"
 id="toc-teoreticky-něco-s-barvami-zkopírovat-i-do-rastru-lol">Teoreticky
 něco s barvami (zkopírovat i do rastru lol)</a>
@@ -55,16 +48,10 @@ Key/Black)</a></li>
 <li><a href="#hslhsv" id="toc-hslhsv">HSL/HSV</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#formáty" id="toc-formáty">Formáty</a></li>
-<li><a href="#vektorové-editory" id="toc-vektorové-editory">Vektorové
-editory</a>
-<ul>
-<li><a href="#adobe-illustrator" id="toc-adobe-illustrator">Adobe
-Illustrator</a></li>
-<li><a href="#inkscape" id="toc-inkscape">Inkscape</a></li>
-</ul></li>
 </ul>
 </nav>
+</div>
+<div class="panel">
 <p>Důležitou součástí digitálního světa je grafika. Všichni se chceme
 dívat na hezké obrázky, když doomscollujeme hodiny v kuse. Vedle
 rastrové grafiky se využívá také vektorová grafika, kterou můžeme hojně
@@ -78,8 +65,8 @@ pixely můžeme je libovolně zvětšovat a zmenšovat při zachování stejné
 ostrosti jako původní zdroj.</p>
 <p>Vektorová grafika se tedy skládá ze základních geometrických útvarů:
 bod, přímka, křivka, které dohromady tvoří složitější tvary. Počátkme
-všeho je bod, spojením dvou bodů vznikne přímka a přidáním více bodů
-můžeme přímku zahnout a vytvořit křivku. Například kruh je defionván
+všeho je bod, spojením dvou bodů vznikne křivka a přidáním více bodů
+můžeme kpřímku zahnout a vytvořit křivku. Například kruh je defionván
 jako geometrický objekt s poloměrem a středem.</p>
 <h2 id="výhody">Výhody</h2>
 <ul>
@@ -118,11 +105,14 @@ bylo jednoduše upraveno do různých velikostí podle potřeby a zároveň
 chceme, aby za jekékoliv velikosti zůstaly ostré. V dnešní době
 simplifikování je menší detailnost vektorových obrazců snad i
 výhodou.</p>
+<div class="question">
 <p>Velmi důležitým a častým využitím jsou webové stránky, které
 benefitují z flexibility velikosti. Setkáme se s ní v podobě tlačítek a
 všech speciálních ikon. Díky škálovatelnosti budou vypadat ostře na
 jakémkoliv rozměru zařízení a dovolují tak i automatickou upravu
-velikosti.</p>
+velikosti (obrázek bude ostrý jak na velém monitoru, tak na malé
+obrazovce mobilu).</p>
+</div>
 <p>Pod pojmem grafika si samozřejmě nejčastěji představíme nějakou malbu
 nebo něco podobného. A vektorová grafika se také používá na tradiční
 obrázky a ilustrace. Nejedná se obvykle o velká a rozsáhlá díla (nemyslí
@@ -134,8 +124,36 @@ informací v podobě obrázku.</p>
 jiných výtvorů určených k tisku. Protože ty vyžadují velikou kvalitu a
 přesnost, která může být snadno dosažitelná právě vektorovou
 grafikou.</p>
-<h1 id="teoreticky-něco-s-barvami-zkopírovat-i-do-rastru-lol">Teoreticky
-něco s barvami (zkopírovat i do rastru lol)</h1>
+<div class="warn">
+<p>Nejdůležitější je však využití vektorové grafiky ve formátech
+textu!</p>
+</div>
+<h1 id="formáty">Formáty</h1>
+<p>SVG - nejpoužívanější a takový standard pro využívání vektorové
+grafiky. Je to otevřen formát, narozdíl od většiny ostatních
+closed-sourced verzí. Využívá se hlavně jako formát pro web.</p>
+<p>EPS - je starší a využívá se hlavně k tisku.</p>
+<p>AI - je nativní formát pro Adobe Illustrator.</p>
+<p>Přestože SVG je prakticky standard, velké množství programů využívá
+svých vlastních formátů nebo iterací SVG, které nemusí být kompatibilní
+se vším ostatním. Většinou se však jedná jen o formát lépe čitelný pro
+dany program a výsledek lze vždy exprotovat do standardního formátu.</p>
+<h1 id="vektorové-editory">Vektorové editory</h1>
+<h2 id="adobe-illustrator">Adobe Illustrator</h2>
+<ul>
+<li>využití v profesionálním grafickém designu</li>
+<li>spousta specializovanách funkcí pro práci, exportování a tisk</li>
+</ul>
+<h2 id="inkscape">Inkscape</h2>
+<ul>
+<li>open source</li>
+<li>je velmi schopný, ale “chybí” mu jisté funkce</li>
+<li>vhodnější pro začátečníky</li>
+</ul>
+</div>
+<section id="teoreticky-něco-s-barvami-zkopírovat-i-do-rastru-lol"
+class="panel">
+<h1>Teoreticky něco s barvami (zkopírovat i do rastru lol)</h1>
 <p>Stejně jako barvy v reálném životě, v digitálním prostoru existují
 barvy a barevná teorie.</p>
 <p>Všechny barvy mají základní vlastnosti:</p>
@@ -166,27 +184,6 @@ proto se dodává i samostatná černá složka</li>
 <h3 id="hslhsv">HSL/HSV</h3>
 <p>Alternativní model pro práci s barvami, funguje na principu výběru
 odstínů, sytosti a jasu</p>
-<h1 id="formáty">Formáty</h1>
-<p>SVG - nejpoužívanější a takový standard pro využívání vektorové
-grafiky. Je to otevřen formát, narozdíl od většiny ostatních
-closed-sourced verzí. Využívá se hlavně jako formát pro web.</p>
-<p>EPS - je starší a využívá se hlavně k tisku.</p>
-<p>AI - je nativní formát pro Adobe Illustrator.</p>
-<p>Přestože SVG je prakticky standard, velké množství programů využívá
-svých vlastních formátů nebo iterací SVG, které nemusí být kompatibilní
-se vším ostatním. Většinou se však jedná jen o formát lépe čitelný pro
-dany program a výsledek lze vždy exprotovat do standardního formátu.</p>
-<h1 id="vektorové-editory">Vektorové editory</h1>
-<h2 id="adobe-illustrator">Adobe Illustrator</h2>
-<ul>
-<li>využití v profesionálním grafickém designu</li>
-<li>spousta specializovanách funkcí pro práci, exportování a tisk</li>
-</ul>
-<h2 id="inkscape">Inkscape</h2>
-<ul>
-<li>open source</li>
-<li>je velmi schopný, ale “chybí” mu jisté funkce</li>
-<li>vhodnější pro začátečníky</li>
-</ul>
+</section>
 </body>
 </html>

@@ -31,6 +31,7 @@
 <header id="title-block-header">
 <h1 class="title">Počítačové sítě</h1>
 </header>
+<div class="custom-toc">
 <nav id="TOC" role="doc-toc">
 <ul>
 <li><a href="#historie-internetu" id="toc-historie-internetu">Historie
@@ -56,37 +57,11 @@ id="toc-milnet-internet-a-dns---1983">MILNET, internet a DNS -
 <li><a href="#www-world-wide-web---1989"
 id="toc-www-world-wide-web---1989">WWW (World Wide Web) - 1989</a></li>
 </ul></li>
-<li><a href="#dělení-sítí-podle-rozlehlosti"
-id="toc-dělení-sítí-podle-rozlehlosti">Dělení sítí podle rozlehlosti</a>
-<ul>
-<li><a href="#pan-personal-area-network"
-id="toc-pan-personal-area-network">PAN (Personal Area Network)</a></li>
-<li><a href="#lan-local-area-network"
-id="toc-lan-local-area-network">LAN (Local Area Network)</a></li>
-<li><a href="#man-metropolitan-area-network"
-id="toc-man-metropolitan-area-network">MAN (Metropolitan Area
-Network)</a></li>
-<li><a href="#wan-wide-area-network" id="toc-wan-wide-area-network">WAN
-(Wide Area Network)</a></li>
-</ul></li>
-<li><a href="#síťová-architektura" id="toc-síťová-architektura">Síťová
-architektura</a>
-<ul>
-<li><a href="#klient-server"
-id="toc-klient-server">Klient-server</a></li>
-<li><a href="#peer-to-peer" id="toc-peer-to-peer">Peer-to-peer</a></li>
-</ul></li>
-<li><a href="#přenosová-média" id="toc-přenosová-média">Přenosová
-média</a>
-<ul>
-<li><a href="#drátová-média" id="toc-drátová-média">Drátová
-média</a></li>
-<li><a href="#bezdrátová-média" id="toc-bezdrátová-média">Bezdrátová
-média</a></li>
-</ul></li>
 </ul>
 </nav>
-<h1 id="historie-internetu">Historie internetu</h1>
+</div>
+<section id="historie-internetu" class="panel">
+<h1>Historie internetu</h1>
 <h2 id="arpa-darpa---1958">ARPA (DARPA) - 1958</h2>
 <p>Počátky internetu sahají až do 60. let 20. století v období studené
 války. Jako výsledek expandujícího raketového průmyslu a nekonečné
@@ -137,6 +112,8 @@ umožňuje prohlížení, ukládání a odkazování dokumentů nacházející s
 internetu. K tomu byl vynalezen jazyk HTML a protokol HTTP.</p>
 <p>Touto dobou také končí ARPANET a do popředí se dostává dnešní
 Internet.</p>
+</section>
+<div class="panel">
 <h1 id="dělení-sítí-podle-rozlehlosti">Dělení sítí podle
 rozlehlosti</h1>
 <h2 id="pan-personal-area-network">PAN (Personal Area Network)</h2>
@@ -165,10 +142,12 @@ sebou.</p>
 nadřazen jiným počítačům (client). Data jsou uloženy na serveru a
 komunikace mezi server a klientem nastává v případě, že klient o data
 zažádá nebo nahrává jiná data.</p>
+<div class="note">
 <p>Na tomto principu funguje většina dnešních služeb: SMTP (e-mail),
 internetové protokoly (HTTP). Nejčastějším případem jsou právě webové
 prohlížeče, které jako klient žádají o data (webové stránky) hostitelský
 webový server.</p>
+</div>
 <p>Výhody:</p>
 <ul>
 <li>rozdělí jednotlivé úkoly mezi server a klient (klient žádá, sever
@@ -197,9 +176,11 @@ a žádný z klientů se k nim nedostane</li>
 rovni a komunikují přímo mezi sebou. U P2P je každý uživatel zároveň
 serverem i klientem. Data může tak šířit jakýkoliv uživatel s kýmkoliv
 jiným na síti.</p>
+<div class="note">
 <p>Na P2P je založen torrentová distribuce souborů nebo platební síť
 Bitcoin. Často se s ním lze setkat na domácích sítí při sdílení souborů
 mezi počítači.</p>
+</div>
 <p>Výhody:</p>
 <ul>
 <li>decentralizace
@@ -246,5 +227,44 @@ prostřednicvím mobilního signálu</li>
 <li>Satelitní připojení - využití tam, kde není dostupná běžná
 infrastruktura</li>
 </ul>
+<hr />
+<div class="question">
+<p><strong>Darkweb</strong> je část internetu nepřístupná pro běžné
+prohlížeče a k přístupu na něj je zapotřebí specializovaného softwaru.
+Provoz přesměrovává přes několik serverových uzlů (i přes Peer-to-peer)
+a výsledkem je vysoká aninymita a šifrování. Obvykle je využíván k
+blogům o svobodě projevu, ale i pro nelegální činosti - obchod s
+drogami, zbraněmi, data breache…</p>
+</div>
+<p><br></p>
+<div class="question">
+<p><strong>Internet věcí (IoT)</strong> označuje fyzická zařízení, která
+jsou připojena k internetu (nebo jiné síti) a mohou přijímat a odesílat
+data - chytré spotřebiče, chytré hodinky, bezpečnostní kamery…</p>
+<p>IoT není sám o sobě nebezpečný, co je ale problém je špatné zacházení
+s nimi. Většinou jsou všechny produkty poskytovány výrobcem, který má
+přístup ke všem sbíraným datům (třeba záznamy z kamer) a jakožto větší
+společnost mohou být terčem hackerů. Problém také je, když se software
+neaktualizuje a vznikají tak bezpečnostní rizika.</p>
+<p>Produkty, které jsou závislé na správě výrobce mohou obsahovat
+nežádoucí funkce (sledování obrazu, zvuku) bez závislosti na vůli
+uživatele. Tyto data později mohou být zneužity.</p>
+<p>A samozřejmě fungování přes internet je k ničemu, když vypadne
+připojení. Potom jsou dané věci obvykle nepoužitelné. Nejlepší řešení je
+mít IoT na lokální síti a spravovat ho čistě lokálně, nikdy přes
+internet.</p>
+</div>
+<p><br></p>
+<div class="question">
+<p><strong>Digitální stopa</strong> je veškerá data, která o sobě
+necháváme při používání internetu. Sbírají se všechny aktivně zadávaná
+data - formuláře, e-maily… tak i pasivní data - IP adresa, cookies, GPS.
+Weby si potom z této stopy dokáží o nás udělat dost přehledný profil a
+mohou nám třeba takto doporučovat cílenou reklamu (v nejhorším případě
+prodávat bez našeho souhlasu). Digitální stopa je velký a rostoucí
+problém moderní doby a ztrácíme tak to málo soukromí, co na internetu
+může být.</p>
+</div>
+</div>
 </body>
 </html>

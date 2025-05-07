@@ -31,42 +31,9 @@
 <header id="title-block-header">
 <h1 class="title">Logické obvody</h1>
 </header>
-<nav id="TOC" role="doc-toc">
-<ul>
-<li><a href="#logická-hradla-logic-gate"
-id="toc-logická-hradla-logic-gate">Logická hradla (Logic Gate)</a>
-<ul>
-<li><a href="#opakovač-repeater" id="toc-opakovač-repeater">Opakovač
-(repeater)</a></li>
-<li><a href="#not-inventor" id="toc-not-inventor">NOT
-(Inventor)</a></li>
-<li><a href="#and-konjuktor" id="toc-and-konjuktor">AND
-(Konjuktor)</a></li>
-<li><a href="#or-disjuktor" id="toc-or-disjuktor">OR
-(Disjuktor)</a></li>
-<li><a href="#nand" id="toc-nand">NAND</a></li>
-<li><a href="#nor" id="toc-nor">NOR</a></li>
-<li><a href="#xor" id="toc-xor">XOR</a></li>
-<li><a href="#xnor" id="toc-xnor">XNOR</a></li>
-<li><a href="#příklad-využití" id="toc-příklad-využití">Příklad
-využití</a></li>
-<li><a href="#zapojení-logických-hradel"
-id="toc-zapojení-logických-hradel">Zapojení logických hradel</a>
-<ul>
-<li><a href="#kombinace-hradel" id="toc-kombinace-hradel">Kombinace
-hradel</a></li>
-<li><a href="#složená-logika-hradel"
-id="toc-složená-logika-hradel">Složená logika hradel</a></li>
-<li><a href="#kombinační-logické-obvody"
-id="toc-kombinační-logické-obvody">Kombinační logické obvody</a></li>
-<li><a href="#sekvenční-logické-obvody"
-id="toc-sekvenční-logické-obvody">Sekvenční logické obvody</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#využití-v-praxi" id="toc-využití-v-praxi">Využití v
-praxi</a></li>
-</ul>
-</nav>
+<div class="custom-toc">
+</div>
+<div class="panel">
 <p>Jsou to základní stavební prvky digitálních zařízení. Tvořeny
 elektronickými součástami, které vykonávají logické operace na vstupních
 signálech podle předem definovaných pravidel. Tyto obvody jsou široce
@@ -238,6 +205,12 @@ je negací AND (výstup je 1 pouze tedhdy pokud jsou oba vstupy 0).</p>
 <img src="../resources/nand_gate.png" alt="NAND" />
 <figcaption aria-hidden="true">NAND</figcaption>
 </figure>
+<div class="question">
+<p>Základní a nejvyužívanější elektronickou součástkou je právě
+<strong>NAND</strong> pomocí něho (řetězce spojených hradel) jsme
+schopni složit jakoukoliv jinou logickou operaci. Takže teoreticky vše
+by se dalo sestavit pouze z NAND hradel.</p>
+</div>
 <h2 id="nor">NOR</h2>
 <p>Provádí funkci negovaného logického součtu (součin negací) - výstup
 je negací OR hradla (výstup je 1 pouze tehdy, pokud jsou oba vstupy
@@ -511,5 +484,6 @@ robotika</li>
 telefony</li>
 <li>digitální elektronika - LED displaye, grafické procesory…</li>
 </ul>
+</div>
 </body>
 </html>

@@ -35,22 +35,9 @@
 <header id="title-block-header">
 <h1 class="title">Bezpečnost a ochrana dat</h1>
 </header>
+<div class="custom-toc">
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#proč-chránit-data" id="toc-proč-chránit-data">Proč chránit
-data?</a></li>
-<li><a href="#uchování-dat-na-discích"
-id="toc-uchování-dat-na-discích">Uchování dat na discích</a>
-<ul>
-<li><a href="#raid" id="toc-raid">RAID</a>
-<ul>
-<li><a href="#co-raid-nedělá" id="toc-co-raid-nedělá">Co RAID
-nedělá</a></li>
-<li><a href="#rozdělení-raid-systémů-a-jak-vůbec-fungují"
-id="toc-rozdělení-raid-systémů-a-jak-vůbec-fungují">Rozdělení RAID
-systémů a jak vůbec fungují</a></li>
-</ul></li>
-</ul></li>
 <li><a href="#problematika-hesel"
 id="toc-problematika-hesel">Problematika hesel</a>
 <ul>
@@ -62,6 +49,8 @@ id="toc-základní-metody-crackování-hesel">Základní metody crackování
 hesel</a></li>
 <li><a href="#čeho-se-vyvarovat" id="toc-čeho-se-vyvarovat">Čeho se
 vyvarovat</a></li>
+<li><a href="#dostatečná-nahodilost"
+id="toc-dostatečná-nahodilost">Dostatečná nahodilost</a></li>
 <li><a href="#zapamatovatelné-heslo"
 id="toc-zapamatovatelné-heslo">Zapamatovatelné heslo</a></li>
 <li><a href="#osobní-úprava" id="toc-osobní-úprava">Osobní
@@ -75,6 +64,8 @@ authentification (dvoufázové ověření)</a></li>
 </ul></li>
 </ul>
 </nav>
+</div>
+<div class="panel">
 <h1 id="proč-chránit-data">Proč chránit data?</h1>
 <p>V dnešní době jsou naše data jednou z nejdůležitějších věcí, které
 vlastníme. S rostoucí digitalizací a přesunem online je těžší a těžší
@@ -116,7 +107,10 @@ data do menších částí na více disků. K provozu stačí 2 disky.</p>
 <p>Pokud máme soubor A, který chceme uložit, tak bude soubor rozdělen na
 různé menší části (A1, A2, A3…) a ty budou zároveň nahrávány na různé
 disky:</p>
-<p><img src="../resources/RAID_0.png" alt="RAID_0.png" width="173" height="266" class="jop-noMdConv"></p>
+<figure>
+<img src="../resources/RAID_0.png" alt="RAID 0" />
+<figcaption aria-hidden="true">RAID 0</figcaption>
+</figure>
 <p>Výhody:</p>
 <ul>
 <li>Disky si zachovají veškerou kapacitu</li>
@@ -134,8 +128,11 @@ výkon a spolehlivost není zas tak důležitým faktorem.</p>
 <p>Využívá pouze disk mirroring. Jedná se o jednoduché zrcadlení dat z
 jednoho disku na druhý. K provozu stačí také pouze dva disky.</p>
 <p>Jednoduše při nahrávání souboru A do uložiště, se automaticky vytvoří
-kopie na další disk.<br />
-<img src="../resources/RAID_1.png" alt="RAID_1.png" width="188" height="289" class="jop-noMdConv"></p>
+kopie na další disk.</p>
+<figure>
+<img src="../resources/RAID_1.png" alt="RAID 1" />
+<figcaption aria-hidden="true">RAID 1</figcaption>
+</figure>
 <p>Výhody:</p>
 <ul>
 <li>ochrana dat při ztrátě jednoho disku + můžeme data využívat i když
@@ -154,7 +151,10 @@ disků, ale potřebuje mít spolehlivý systém.</p>
 kombinuje data striping (konkrétně block-level striping, který rozdělí
 soubor rovnoměrně mezi disky do tzv. bloku) a parity data. RAID 5 už
 využívá minimálně 3 disky.</p>
-<p><img src="../resources/RAID_5.png" alt="RAID_5.png" width="326" height="242" class="jop-noMdConv"></p>
+<figure>
+<img src="../resources/RAID_5.png" alt="RAID 5" />
+<figcaption aria-hidden="true">RAID 5</figcaption>
+</figure>
 <h5 id="co-jsou-a-jak-fungují-paritní-data">Co jsou a jak fungují
 paritní data?</h5>
 <p>Zjednodušeně paritní data jsou data, která se ukládají zároveň se
@@ -224,7 +224,10 @@ kapacity všech disků</li>
 První paritní blok je obvykle značen P a vypočítá se stejně jako u RAID
 5 (XOR), ale druhý paritní block, označen Q, využívá jiných metod
 výpočtu. Je potřeba minimálně 4 disků</p>
-<p><img src="../resources/RAID_6.png" alt="RAID_6.png" width="362" height="213" class="jop-noMdConv"></p>
+<figure>
+<img src="../resources/RAID_6.png" alt="RAID 6" />
+<figcaption aria-hidden="true">RAID 6</figcaption>
+</figure>
 <p>Výhody:</p>
 <ul>
 <li>zachování dat i při ztrátě 2 disků</li>
@@ -240,7 +243,10 @@ všech disků)</li>
 <p>Stejně tak jak je kombinace RAID 5 data stripingu a paritních dat, je
 RAID 10 kombinace systémů RAID 1 a RAID 0, tudíž disk mirroringu a data
 stripingu. Je potřeba minimálně 4 disků.</p>
-<p><img src="../resources/RAID_10.png" alt="RAID_10.png" width="315" height="315"></p>
+<figure>
+<img src="../resources/RAID_10.png" alt="RAID 10" />
+<figcaption aria-hidden="true">RAID 10</figcaption>
+</figure>
 <p>Výhody:</p>
 <ul>
 <li>velká rychlost odpovídající RAID0</li>
@@ -250,7 +256,9 @@ stripingu. Je potřeba minimálně 4 disků.</p>
 <ul>
 <li>využívá 50% kapacity disků na zálohu</li>
 </ul>
-<h1 id="problematika-hesel">Problematika hesel</h1>
+</div>
+<section id="problematika-hesel" class="panel">
+<h1>Problematika hesel</h1>
 <p>Dnes málo kdo nemá velké množství dat v cloudu a na jiných online
 platformách. Většinou nás však chrání jen slabé heslo, které jsme si
 vytvořili X let zpátky a kdyby někdo doopravdy chtěl, nedělalo by mu
@@ -276,11 +284,12 @@ příjmení…)</li>
 <li>jednoduché kombinace (1234, password1234, 123456789…)</li>
 <li>krátká hesla</li>
 <li>hesla obsahující slovníkové slovo (a nic moc víc)</li>
-<li>moc obtížné heslo, které si nezapamatujeme *** ### Dostatečná
-nahodilost Silné heslo by mělo mít dostatečnou nahodilost. Tím se myslí
-jednotka nahodilosti, která počítá se v nahodilostních bitech (bites of
-entropy). Je ovlivněna délkou a obecnou uhodnotelností.</li>
+<li>moc obtížné heslo, které si nezapamatujeme</li>
 </ul>
+<h3 id="dostatečná-nahodilost">Dostatečná nahodilost</h3>
+<p>Silné heslo by mělo mít dostatečnou nahodilost. Tím se myslí jednotka
+nahodilosti, která počítá se v nahodilostních bitech (bites of entropy).
+Je ovlivněna délkou a obecnou uhodnotelností.</p>
 <p>Počet nahodilostních bitů (n) odpovídá <span
 class="math inline">\(2^n\)</span> pokusů na rozšifrování při brute
 force útoku, takže 2 n-bity odpovídá 4 pokusům, 16 n-bitů je 65 536
@@ -301,14 +310,19 @@ jednoho hesla. Tyto slova jsou jednoduše zapamatovatelná pro vás, ale
 počítači bude trvat, než je prolomí.</p>
 <h3 id="osobní-úprava">Osobní úprava</h3>
 <p>Pro maximálně silné heslo je k dřív zmíněné metodě vhodné přidat něco
-osobního. Některé úpravy, které jsou vhodné muhou být následovně: -
-použijte netradiční slova (která si pamatujete, ale nejsou naprosto
-běžná) - použijte jméno postavy z médií (samozřejmě není vhodné použít
-slovo Shrek, pokud vaše celá osobnost se točí kolem tohoto zeleného
-Chada) - vymyslete si vlastní slovo, které znáte jen vy (ale nesmíte ho
-zapomenou samozřejmě) - nepoužívejte slova, která jsou jednoduše
-přiřaditelná k vám - použijte speciální znak (stíží to crackování z
-důvodu nutnosti využití všech čísel a speciálních znaků)</p>
+osobního. Některé úpravy, které jsou vhodné muhou být následovně:</p>
+<ul>
+<li>použijte netradiční slova (která si pamatujete, ale nejsou naprosto
+běžná)</li>
+<li>použijte jméno postavy z médií (samozřejmě není vhodné použít slovo
+Shrek, pokud vaše celá osobnost se točí kolem tohoto zeleného
+Chada)</li>
+<li>vymyslete si vlastní slovo, které znáte jen vy (ale nesmíte ho
+zapomenou samozřejmě)</li>
+<li>nepoužívejte slova, která jsou jednoduše přiřaditelná k vám</li>
+<li>použijte speciální znak (stíží to crackování z důvodu nutnosti
+využití všech čísel a speciálních znaků)</li>
+</ul>
 <h2 id="password-managery">Password managery</h2>
 <p>Jedna z nejlepších cest jak uchovávat složitá hesla, která se budou
 lišit pro každý z vašich účtů je využít password manager (správce
@@ -326,10 +340,28 @@ zařízení.</p>
 je one point of failure, proto je důležité svoje master password
 vytvořit velmi silné. Dodržujte také bezpečné chování na internetu a
 uchovávejte své soubory s databázemi v bezpečí.</p>
-<h2 id="two-factor-authentification-dvoufázové-ověření">Two factor
-authentification (dvoufázové ověření)</h2>
+<section id="two-factor-authentification-dvoufázové-ověření"
+class="question">
+<h2>Two factor authentification (dvoufázové ověření)</h2>
 <p>Samozřejmě ideální je nemít heslo jako jedinnou ochranu před útokem.
 V dnešní době se často používá ověření přes mobil atd. Jedná se tak o
-docela jednoduchou a bezpečnější metodu ochrany hesla.</p>
+docela jednoduchou a bezpečnější metodu ochrany hesla. Problémem může
+být, pokud daný způsob ověření ztratíme.</p>
+<p>Dvoufázové ověření jsou tedy hlavně přes SMS kód, nebo
+specializovanou aplikaci.</p>
+</section>
+<br>
+<div class="question">
+<p>K ověřování identity se také využívá <strong>bimetrická
+autentizace</strong>. Jedná se o ověření člověka pomocí jeho jedinečných
+tělesnýčh rysů - otisk prstu, rozpoznání obličeje… Jedná se tak velmi
+přesný a pohodlný způsob přihlášení (stačí jen přiložit prst). Problém
+ale je možnost zneužití dat, protože dáváme jakékoliv společnosti
+přístup k našim jedinečným rozpoznávacím znakům (otisk prstu), není vždy
+jisté, že data nepůjde využít bez našeho svolení. Ne moc dobré také je,
+že pokud se viditelně zraníme nebo selže technika, tak se stejně musíme
+být schopni přihlásit pomocí standardních metod.</p>
+</div>
+</section>
 </body>
 </html>

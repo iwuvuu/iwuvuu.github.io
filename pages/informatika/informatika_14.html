@@ -31,23 +31,9 @@
 <header id="title-block-header">
 <h1 class="title">Programovací jazyky</h1>
 </header>
+<div class="custom-toc">
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#vznik" id="toc-vznik">Vznik</a></li>
-<li><a href="#dělení" id="toc-dělení">Dělení</a>
-<ul>
-<li><a href="#podle-úrovně-abstrakce"
-id="toc-podle-úrovně-abstrakce">Podle úrovně abstrakce</a>
-<ul>
-<li><a href="#nízkoúrovňové-jazyky"
-id="toc-nízkoúrovňové-jazyky">Nízkoúrovňové jazyky</a></li>
-<li><a href="#vysoceúrovňové-jazyky"
-id="toc-vysoceúrovňové-jazyky">Vysoceúrovňové jazyky</a></li>
-</ul></li>
-<li><a href="#podle-programovacích-paradigmat-princip-jak-funguje"
-id="toc-podle-programovacích-paradigmat-princip-jak-funguje">Podle
-programovacích paradigmat (Princip jak funguje)</a></li>
-</ul></li>
 <li><a href="#programovací-jazyky"
 id="toc-programovací-jazyky">Programovací jazyky</a>
 <ul>
@@ -69,7 +55,8 @@ id="toc-basic-beginners-all-purpose-symbolic-instruction-code">Basic
 </ul></li>
 </ul>
 </nav>
-<p>TO;DO - typizace a vysvětlení některých pojmů</p>
+</div>
+<div class="panel">
 <p>Jedná se o nástroj k vytváření algoritmů a programů, díky nimž říkáme
 počítači, jaké operace má provádět. Slouží k vytváření sofrtwaru,
 aplikací, webů nebo řízení hardwaru. Počítač sám našemu jazyku nerozumí,
@@ -141,7 +128,29 @@ Lisp)</li>
 <li>Skriptovací jazyky - pro automatizaci a práci s webem (JavaScript,
 PHP)</li>
 </ul>
-<h1 id="programovací-jazyky">Programovací jazyky</h1>
+<div class="question">
+<p><strong>Mikrokontrolery</strong> využívají různé programovací jazyky
+k jejich operaci. Například Arduino využívá standardně C/C++ a Micro:bit
+využívá programování přes vlastní blokový programnovací jazyk nebo
+pyhthon/javascript. Takto můžeme programovat přímo na mikrokontrolerech
+bez nutnosti znát hodně nízkoúrovňové jazyky.</p>
+</div>
+<br>
+<div class="question">
+<p>Důležitou roli v programovacích jazycích hraje
+<strong>syntax</strong> (sada pravidel a struktur v daném jazyce).
+Fungují podobně jako gramatika v běžném jazyce a počítač tak pochopí, co
+jaký vstup znamená. Příkladně JavaScript by měl končit ‘;’, aby bylo
+jasné, že zde končí příkaz. String se nejčastěji zapisuje do uvozovek -
+počítáč tak ví, že se opravdu jedná o zadaný text a ne o proměnnou.
+Jisté jazyky jsou striktnější (například C++) a nedovolí opomíjení
+syntaxe/vyžadují přesný syntax a deklaraci všech typů atd. a jiné (třeba
+python nebo Javascript) jsou volnější a nemají takovou nutnost psát
+složitý syntax.</p>
+</div>
+</div>
+<section id="programovací-jazyky" class="panel">
+<h1>Programovací jazyky</h1>
 <h2 id="jazyk-symbolických-adres-assembler">Jazyk symbolických adres
 (Assembler)</h2>
 <p>Jedná se o nízkoúrovňový programovací jazyk, který odpovídá
@@ -281,5 +290,13 @@ velkou jistotou správnosti kódu.</p>
 <li>zatím méně rozšíření (but the world will be rusty)</li>
 </ul></li>
 </ul>
+<div class="question">
+<p>Pro výuku algoritmů se využívá umělých jazyků. Populární je
+<strong>blokový programovací jazyk</strong> pro děti Scratch. Ten je
+postaven na propojování barevných bloků s různou funkcí, které potom
+společně umožní programu fungovat. Na podobném principu funguje třeba
+Blockly od Google.</p>
+</div>
+</section>
 </body>
 </html>

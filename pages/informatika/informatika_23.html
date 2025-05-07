@@ -31,33 +31,23 @@
 <header id="title-block-header">
 <h1 class="title">Verzování</h1>
 </header>
-<nav id="TOC" role="doc-toc">
-<ul>
-<li><a href="#verzování" id="toc-verzování">Verzování</a></li>
-<li><a href="#druhy-verzovacích-systémů"
-id="toc-druhy-verzovacích-systémů">Druhy verzovacích systémů</a>
-<ul>
-<li><a href="#lokální-verzovací-systém-lvcs"
-id="toc-lokální-verzovací-systém-lvcs">1. Lokální verzovací systém
-(LVCS)</a></li>
-<li><a href="#centralizovaný-verzovací-systém-cvcs"
-id="toc-centralizovaný-verzovací-systém-cvcs">2. Centralizovaný
-verzovací systém (CVCS)</a></li>
-<li><a href="#distribuovaný-verzovací-systém-dvcs"
-id="toc-distribuovaný-verzovací-systém-dvcs">3. Distribuovaný verzovací
-systém (DVCS)</a>
-<ul>
-<li><a href="#git" id="toc-git">Git</a></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
+<div class="custom-toc">
+</div>
+<div class="panel">
+<p>V moderním vývoji softwaru je kolaborace nesmírně důležitá. Ale je
+velmi složité pracovat na jednom projektu ve více lidech najednou, když
+každý má svoji hlavu a chce pracovat na jiné části. K tomu nám slouží
+verzování</p>
 <h1 id="verzování">Verzování</h1>
 <p>Verzování je proces uchovávání všech změn, provedených na datech.
 Může sloužit k vytvářením záloh a možnosti kolaborace s ostatními
 vývojáři. Verzovat lze jakýkoliv typ dat ovšem nejčastěji se verzuje
 zdrojový kód.</p>
-<h1 id="druhy-verzovacích-systémů">Druhy verzovacích systémů</h1>
+<p>Díky verzování jsme schopni vrátit se k starší verzi. Zjistit, kdo co
+změnil a kdy nebo jak už bylo řečeno pracovat s více lidmi na jednom
+projektu bez toho, aby si navzájem přepisovali práci.</p>
+<h1 id="verzovací-systémy">Verzovací systémy</h1>
+<p>Jedná se o nástroj, který verzování spravuje a automatizuje.</p>
 <p>= Version Control System (VCS)</p>
 <h2 id="lokální-verzovací-systém-lvcs">1. Lokální verzovací systém
 (LVCS)</h2>
@@ -89,11 +79,12 @@ kopie poškodí, ztratíme tak celou práci.</p>
 <h2 id="distribuovaný-verzovací-systém-dvcs">3. Distribuovaný verzovací
 systém (DVCS)</h2>
 <p>Na rozdíl od CVCS nemá jednu referenční kopii, ale každý vývojář
-vlastní vlastí repozitář a pracovní kopii. Pokaždé, když vývojář
-“commitne” změnu, tak se zobrazí v jeho lokálním repozitáři. Pro
-globální změnu do vzorového repozitáře je vývojář musí “pushnout” a
-pokud ostatní vývojáři chtějí převzít změnu, tak si je musí
-“pullnout”</p>
+vlastní vlastí repozitář a pracovní kopii s celou historií úprav.
+Pokaždé, když vývojář “commitne” změnu, tak se zobrazí v jeho lokálním
+repozitáři. Pro globální změnu do vzorového repozitáře je vývojář musí
+“pushnout” a pokud ostatní vývojáři chtějí převzít změnu, tak si je musí
+“pullnout”. Díky DVCS můžeme pracovat offline a připojení k internetu
+vyžadujeme jen, když chceme naše úpravy zpřístupnit ostatním.</p>
 <figure>
 <img src="../resources/dvcs.png" alt="dvcs.png" />
 <figcaption aria-hidden="true">dvcs.png</figcaption>
@@ -119,10 +110,8 @@ před commitnutím do repozitáře. Čekají na kontrolu a příkladné
 formátování a po dokončení všech plánovaných úprav, můžeme vybrané
 finální změny commitnout do repozitáře.</li>
 </ol>
-<figure>
-<img src="../resources/index.png" alt="index.png" />
-<figcaption aria-hidden="true">index.png</figcaption>
-</figure>
+<p><img src="../resources/index.png" alt="index.png" />
+class=“checked”</p>
 <ol start="3" type="1">
 <li>Git využívá “snapshot verzování”, zde každá verze vytváří kopii
 nejnovější předešlé změny v souboru a přenáší ji soubou do další
@@ -138,8 +127,15 @@ alt="snapshot_verzovani.png" />
 odděleně od hlavního projeku. Zde může provést svou vizi, která se
 nemusí slučovat s myšlenkami originálního projektu.</li>
 </ol>
-<p>V dnešní době jsou populární git webové frontendy, které zároveň
+<div class="question">
+<p>V dnešní době jsou populární git webové platformy, které zároveň
 slouží jako cloudové servery hostující data projektů. Nejpopulárnější
-jsou GitHub a GitLab.</p>
+jsou <strong>GitHub</strong> a GitLab.</p>
+<p>GitHub je klíčový nástroj pro spolupráci v programování. Je zde
+uloženo nesčetně projektů, které najdeme dnes skoro ve všech větších
+nástrojích. Veliká část všech projektů také právě přes GitHub poskytuje
+instrukce a návody jak s nimi pracovat atd..</p>
+</div>
+</div>
 </body>
 </html>

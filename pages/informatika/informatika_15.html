@@ -96,6 +96,7 @@
 <header id="title-block-header">
 <h1 class="title">Tvorba webových stránek</h1>
 </header>
+<div class="custom-toc">
 <nav id="TOC" role="doc-toc">
 <ul>
 <li><a href="#editory" id="toc-editory">Editory</a>
@@ -106,24 +107,11 @@ editory</a></li>
 <li><a href="#static-site-generator"
 id="toc-static-site-generator">Static site generator</a></li>
 </ul></li>
-<li><a href="#struktura-webových-stránek"
-id="toc-struktura-webových-stránek">Struktura webových stránek</a>
-<ul>
-<li><a href="#html" id="toc-html">HTML</a>
-<ul>
-<li><a href="#základní-tagy" id="toc-základní-tagy">Základní
-tagy</a></li>
-</ul></li>
-<li><a href="#css" id="toc-css">CSS</a></li>
-<li><a href="#javascript" id="toc-javascript">JavaScript</a></li>
-</ul></li>
-<li><a href="#validace-webových-stránek"
-id="toc-validace-webových-stránek">Validace webových stránek</a></li>
-<li><a href="#umístění-webu-na-server"
-id="toc-umístění-webu-na-server">Umístění webu na server</a></li>
 </ul>
 </nav>
-<h1 id="editory">Editory</h1>
+</div>
+<section id="editory" class="panel">
+<h1>Editory</h1>
 <p>Editor určuje způsob jakým budete muset webové stránky vytvářet. Liší
 se v uživatelském rozhraní (jejich jednoduchost, intuitivnost a potřeba
 znalostí uživatele) nebo v jejich funkcionalitě (možnost náhledu
@@ -177,6 +165,8 @@ jakmile máme vytvořenou vlastní šablonu, můžeme potom jen přidávat dalš
 stránky pomocí jenoduchých příkazů. Nejlépe se SSG dají využít k různým
 blogům a méně náročným stránkám.</p>
 <p>Mým oblíbeným příkladem generátoru statických stránek je HUGO.</p>
+</section>
+<div class="panel">
 <h1 id="struktura-webových-stránek">Struktura webových stránek</h1>
 <h2 id="html">HTML</h2>
 <p>=“Hyper Text Markup Language” Jedná se o základ webových stránek.
@@ -254,6 +244,15 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="
 <p>Javascript přidává možnost programování do jisté míry a stojí za
 pokročilými efekty a chováním stránky. Je to jediný programovací jazyk
 na webu.</p>
+<div class="question">
+<p>Moderní weby využívají tzv. <strong>responzivní web design</strong>.
+Ten zajišťuje, že web se bude sám přizpůsobovat velikosti obrazovky.
+Klíčové principy jsou flexibilní rozvržení (stránky se přizpůsobují
+šířce obrazovky) velikost prvků pomocí procent a ne fixní velikosti,
+vektorové ikony pro škálovatelnost. Pro praktický příklad je možné se
+podívat na moji <a href="https://iwuvuu.github.io/">hlavní stránku</a>
+stránku a zkusit zvětšit a zmenšit okno - bude se měnit krajní menu.</p>
+</div>
 <h1 id="validace-webových-stránek">Validace webových stránek</h1>
 <p>Validace slouží k zjistšění chyb a nesrovnalostí v kódu nebo třeba k
 zjištění špatných a rozbitých odkazů. Validace zajistí kompatibilitu
@@ -273,5 +272,13 @@ chceme a koupíme si ji. A propojit ji s naším serverem</li>
 <li>Ujistit se, že všechny odkazy a soubory jsou správně propojeny</li>
 <li>Zajistit všechny potřebné ochrané vrstvy.</li>
 </ol>
+<div class="question">
+<p>Důležitá otázka při tvorbě webové stánky je využití <strong>vlastního
+serveru nebo webhostingu</strong>. Vlastní server nám předá celkovou
+kontrolu nad celým procesem, ale webhosting (cloudová služba na cizím
+serveru) je pohodlnější. Většinou má také větší zabezpečení (ale ne
+vždy) a celkem levně můžeme provozovat větší webový server.</p>
+</div>
+</div>
 </body>
 </html>

@@ -31,6 +31,7 @@
 <header id="title-block-header">
 <h1 class="title">Záznam, kódování a přenost informací</h1>
 </header>
+<div class="custom-toc">
 <nav id="TOC" role="doc-toc">
 <ul>
 <li><a href="#záznam-informací" id="toc-záznam-informací">Záznam
@@ -72,7 +73,9 @@ rychlost</a></li>
 </ul></li>
 </ul>
 </nav>
-<h1 id="záznam-informací">Záznam informací</h1>
+</div>
+<section id="záznam-informací" class="panel">
+<h1>Záznam informací</h1>
 <p>Záznam informací je klíčovým procesem k uchovávání informací pro
 budoucí použití. Informace se uchovávali již od pradávné minulosti.
 Tehdy se uchovávali pouze analogicky - ruční psaní, malby. Později také
@@ -88,6 +91,11 @@ soustavě (tedy jen v 0 a 1), ale existuje kódování i mimo základní
 binární soustavu. Například text můžeme kódovat pomocí ASCII nebo
 UNICODE. ASCII kódování nahrazuje každý znak anglické abecedy má svůj
 dvojciferný kód…</p>
+<div class="question">
+<p>Příkladem <strong>historické formy</strong> kódování je třeba
+morseova abeceda. Ta každé písmeno nahradí kombinací teček a čárek.
+Příkladně A = • —, B = — • • • nebo SOS = • • • — — — • • •.</p>
+</div>
 <h2 id="jednotky-informace">Jednotky Informace</h2>
 <p>Digitální informace (data) se mají vlastní jednotku. Základní
 jednotkou je 1 Bit, ten může nabývat dvou hodnot a to 0 nebo 1. Bit sám
@@ -172,7 +180,9 @@ není nejhorší, minimálně co se týče lokálních možností bez nutnosti
 měsíčních plateb.</p>
 <p>Digitální záznam dat se očividně posunul velmi daleko, první pevný
 disk IBM v roce 1956 měl kapacitu jen 5 MB a vážil 100 kg.</p>
-<h1 id="komprese-dat">Komprese dat</h1>
+</section>
+<section id="komprese-dat" class="panel">
+<h1>Komprese dat</h1>
 <p>Komprese dat je proces zmenšování objemu dat nebo datového toku.
 Komprese je vhodná pro archivaci nebo přenosu přes síť, kde menší
 velikost dat je vhodná.</p>
@@ -196,6 +206,9 @@ uchování stejných dat pohromadě, které se potom zkrátí.</p>
 <p>Typy bezztrátových formátů jsou např.: Txt, Zip, PNG, GIF, FLAC</p>
 <p>Bezztrátová komprese se využívá právě tehdy, kdy potřebujeme zachovat
 maximální kvalitu a shodu s originálním vstupem.</p>
+</section>
+<div class="panel">
+
 <h1 id="přenos-dat">Přenos dat</h1>
 <p>Uložená data potřebujeme ve většině případů nějakým způsobem přenést,
 ať už na jiný disk, pokud si chceme nahrát staženou skladbu do mobilu
@@ -287,5 +300,22 @@ připojení.</p>
 </table>
 <p>Rozlišuje se také rychlost při stahování (download) a odesílaní
 (upload). V běžném životě bývá download rychlejší, než upload.</p>
+<div class="question">
+<p><strong>Jak funguje datový paket v síti?</strong> - Datový paket je
+balíček dat, který se odesílá přes síť. Obsahuje <em>header</em> (IP
+adresa, číslo paketu, typ protokolu) a <em>tělo</em> (vlastní data
+paketu). Počítač rozdělí data na pakety a odešle je do síťové
+infrastruktury (váš router, switch…) a paket potom pokračuje
+nejvýhodnější cestou k cíli (podle IP adresy). Příjemce je potom složí
+zpátky do dat a pomocí TCP zkontroluje celistvost dat.</p>
+</div>
+<p><br></p>
+<div class="question">
+<p><strong>Steganografie</strong> je technika, která umožňuje skrýt
+tajnou informaci uvnitř jiného obsahu. Lze třeba do obrázku zakódovat
+tajný text do nejméně významných bitů, obrázek tak vypadá stejně, ale
+text se dá rozširfrovat. V dnešní době se využívá jako digitální
+vodoznaky k ochraně autorských práv.</p>
+</div>
 </body>
 </html>
