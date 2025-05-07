@@ -3,7 +3,6 @@
   --bg5: #BDC3AF;
   --bg-dim: #EFEBD4;
   --blue: #3A94C5;
-  --purple: #DF69BA;
   --gray1: #A6B0A0;
   --gray3: #829181;
 	--bg: #FAFAFA;
@@ -17,6 +16,9 @@
 
 	--red: #E53935;
 	--red-trans: #E5393540;
+
+	--purple: #7C4DFF;
+	--purple-trans: #7C4DFF40;
 }
 
 html {
@@ -290,6 +292,12 @@ padding: 5px;
 .warn {
 	background-color: var(--red-trans);
 	border-left: 5px solid var(--red);
+padding: 5px;
+}
+
+.question {
+	background-color: var(--purple-trans);
+	border-left: 5px solid var(--purple);
 padding: 5px;
 }
 
