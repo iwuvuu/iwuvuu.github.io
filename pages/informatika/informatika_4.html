@@ -32,6 +32,28 @@
 <h1 class="title">Hardware počítače</h1>
 </header>
 <div class="custom-toc">
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#praktická-část---složení-počítače-výběr-komponent"
+id="toc-praktická-část---složení-počítače-výběr-komponent">Praktická
+část - Složení počítače + výběr komponent</a>
+<ul>
+<li><a href="#procesor-cpu" id="toc-procesor-cpu">1. Procesor
+(CPU)</a></li>
+<li><a href="#základní-deska-motherboard"
+id="toc-základní-deska-motherboard">2. Základní deska
+(Motherboard)</a></li>
+<li><a href="#operační-paměť-ram" id="toc-operační-paměť-ram">3.
+Operační paměť (RAM)</a></li>
+<li><a href="#grafická-karta-gpu" id="toc-grafická-karta-gpu">4.
+Grafická karta (GPU)</a></li>
+<li><a href="#úložiště-ssd-hdd" id="toc-úložiště-ssd-hdd">5. Úložiště
+(SSD / HDD)</a></li>
+<li><a href="#zdroj-psu" id="toc-zdroj-psu">6. Zdroj (PSU)</a></li>
+<li><a href="#skříň-case" id="toc-skříň-case">7. Skříň (Case)</a></li>
+</ul></li>
+</ul>
+</nav>
 </div>
 <div class="panel">
 <p>Hardware počítače představuje veškerou fyzickou (interní i externí)
@@ -209,5 +231,147 @@ základní mikrokontroler pro začátečníky, který se využívá k malým
 elektronickým projektům.</p>
 </div>
 </div>
+<section id="praktická-část---složení-počítače-výběr-komponent"
+class="panel">
+<h1>Praktická část - Složení počítače + výběr komponent</h1>
+<h2 id="procesor-cpu">1. Procesor (CPU)</h2>
+<ul>
+<li><strong>Hlavní parametr</strong>: počet jader / vlákna, frekvence,
+socket</li>
+<li><strong>Výhody</strong>:
+<ul>
+<li>Vyšší počet jader = lepší multitasking</li>
+<li>Integrovaná grafika = není potřeba dedikovaná GPU</li>
+</ul></li>
+<li><strong>Nevýhody</strong>:
+<ul>
+<li>Vyšší výkon = vyšší cena a spotřeba</li>
+</ul></li>
+<li><strong>Pozor na</strong>:
+<ul>
+<li>Kompatibilitu socketu se základní deskou (např. AM4, LGA1700)</li>
+<li>Některé modely <strong>nemají integrovanou grafiku</strong></li>
+</ul></li>
+</ul>
+<h2 id="základní-deska-motherboard">2. Základní deska (Motherboard)</h2>
+<ul>
+<li><strong>Hlavní parametr</strong>: socket, čipset, formát
+(ATX/mATX)</li>
+<li><strong>Výhody</strong>:
+<ul>
+<li>Dražší čipsety = víc funkcí (např. více slotů, PCIe 4.0)</li>
+<li>Levnější desky = vhodné pro nenáročné sestavy</li>
+</ul></li>
+<li><strong>Nevýhody</strong>:
+<ul>
+<li>Levné desky mohou mít omezené možnosti upgradu</li>
+</ul></li>
+<li><strong>Pozor na</strong>:
+<ul>
+<li>Stejný socket jako CPU</li>
+<li>Podporu RAM (DDR4 vs DDR5)</li>
+<li>Dostatek slotů pro RAM, disk, rozšiřující karty</li>
+<li>Kompatibilitu s velikostí skříně (ATX vs mATX)</li>
+</ul></li>
+</ul>
+<h2 id="operační-paměť-ram">3. Operační paměť (RAM)</h2>
+<ul>
+<li><strong>Hlavní parametr</strong>: kapacita (v GB), typ (DDR4/DDR5),
+frekvence</li>
+<li><strong>Výhody</strong>:
+<ul>
+<li>16 GB je dnes standard pro běžné použití i hraní</li>
+<li>Vyšší frekvence = vyšší výkon (ale závisí na CPU/desce)</li>
+</ul></li>
+<li><strong>Nevýhody</strong>:
+<ul>
+<li>DDR5 je dražší a má nižší poměr cena/výkon (zatím)</li>
+</ul></li>
+<li><strong>Pozor na</strong>:
+<ul>
+<li>Kompatibilitu s deskou (DDR4 ≠ DDR5)</li>
+<li>Dual channel (2 moduly) pro vyšší výkon</li>
+</ul></li>
+</ul>
+<h2 id="grafická-karta-gpu">4. Grafická karta (GPU)</h2>
+<ul>
+<li><strong>Hlavní parametr</strong>: výkon (VRAM, typ čipu), rozhraní
+(PCIe), rozměry</li>
+<li><strong>Výhody</strong>:
+<ul>
+<li>Nutná pro hraní her, 3D, práci s grafikou</li>
+<li>Dedikovaná GPU má vlastní paměť (VRAM)</li>
+</ul></li>
+<li><strong>Nevýhody</strong>:
+<ul>
+<li>Vysoká cena, vysoká spotřeba → potřeba výkonného zdroje</li>
+</ul></li>
+<li><strong>Pozor na</strong>:
+<ul>
+<li>Velikost – vejde se do skříně?</li>
+<li>Napájení – zdroj musí mít správné konektory (6/8pin)</li>
+<li>Pokud CPU nemá iGPU → GPU je nutnost</li>
+</ul></li>
+</ul>
+<h2 id="úložiště-ssd-hdd">5. Úložiště (SSD / HDD)</h2>
+<ul>
+<li><strong>Hlavní parametr</strong>: typ (SATA / NVMe), kapacita,
+rychlost</li>
+<li><strong>Výhody</strong>:
+<ul>
+<li>SSD = mnohem rychlejší než HDD</li>
+<li>NVMe SSD = ještě rychlejší než SATA SSD</li>
+</ul></li>
+<li><strong>Nevýhody</strong>:
+<ul>
+<li>SSD dražší za GB než HDD</li>
+</ul></li>
+<li><strong>Pozor na</strong>:
+<ul>
+<li>Zda deska podporuje M.2 NVMe</li>
+<li>Kombinace: SSD pro systém, HDD pro data</li>
+</ul></li>
+</ul>
+<h2 id="zdroj-psu">6. Zdroj (PSU)</h2>
+<ul>
+<li><strong>Hlavní parametr</strong>: výkon (W), účinnost (80+),
+konektory</li>
+<li><strong>Výhody</strong>:
+<ul>
+<li>Lepší zdroj = stabilita, tichý chod</li>
+<li>80+ certifikace zajišťuje účinnost a bezpečnost</li>
+</ul></li>
+<li><strong>Nevýhody</strong>:
+<ul>
+<li>Nekvalitní zdroj může poškodit komponenty</li>
+</ul></li>
+<li><strong>Pozor na</strong>:
+<ul>
+<li>Dostatečný výkon (CPU + GPU = hlavní spotřebitelé)</li>
+<li>Správné konektory (24pin, 8pin CPU, PCIe pro GPU)</li>
+<li>Kompatibilita s velikostí skříně</li>
+</ul></li>
+</ul>
+<h2 id="skříň-case">7. Skříň (Case)</h2>
+<ul>
+<li><strong>Hlavní parametr</strong>: velikost (ATX, mATX), chlazení,
+prostor</li>
+<li><strong>Výhody</strong>:
+<ul>
+<li>Dobré proudění vzduchu = nižší teploty</li>
+<li>Kabelový management usnadňuje montáž</li>
+</ul></li>
+<li><strong>Nevýhody</strong>:
+<ul>
+<li>Malé skříně = omezený prostor pro GPU a chlazení</li>
+</ul></li>
+<li><strong>Pozor na</strong>:
+<ul>
+<li>Kompatibilita s deskou (formát) a GPU (délka)</li>
+<li>Počet a umístění ventilátorů</li>
+<li>Dostatek portů (USB, audio…)</li>
+</ul></li>
+</ul>
+</section>
 </body>
 </html>

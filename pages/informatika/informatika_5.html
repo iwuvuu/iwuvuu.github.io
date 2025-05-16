@@ -67,6 +67,46 @@ id="toc-podle-způsobu-distribuce">3. Podle způsobu distribuce</a></li>
 id="toc-eula-end-user-agreement-license">EULA (End User Agreement
 License)</a></li>
 </ul></li>
+<li><a
+href="#rozpoznání-a-zapojení-součástek-na-základní-desce-motherboard"
+id="toc-rozpoznání-a-zapojení-součástek-na-základní-desce-motherboard">🧩
+Rozpoznání a zapojení součástek na základní desce (motherboard)</a>
+<ul>
+<li><a href="#základní-orientace" id="toc-základní-orientace">✅
+Základní orientace</a></li>
+<li><a href="#socket-procesoru-cpu-socket"
+id="toc-socket-procesoru-cpu-socket">🔌 1. Socket procesoru (CPU
+Socket)</a></li>
+<li><a href="#sloty-pro-ram-dimm" id="toc-sloty-pro-ram-dimm">🧠 2.
+Sloty pro RAM (DIMM)</a></li>
+<li><a href="#pci-express-sloty-pcie" id="toc-pci-express-sloty-pcie">🎮
+3. PCI Express sloty (PCIe)</a></li>
+<li><a href="#konektory-pro-disky-sata-a-m.2"
+id="toc-konektory-pro-disky-sata-a-m.2">💾 4. Konektory pro disky (SATA
+a M.2)</a>
+<ul>
+<li><a href="#sata" id="toc-sata">SATA</a></li>
+<li><a href="#m.2-slot" id="toc-m.2-slot">M.2 slot</a></li>
+</ul></li>
+<li><a href="#napájecí-konektory" id="toc-napájecí-konektory">⚡ 5.
+Napájecí konektory</a>
+<ul>
+<li><a href="#pin-atx-konektor" id="toc-pin-atx-konektor">24pin ATX
+konektor</a></li>
+<li><a href="#pin-cpu-eps" id="toc-pin-cpu-eps">8pin CPU (EPS)</a></li>
+<li><a href="#pcie-napájení-pro-gpu" id="toc-pcie-napájení-pro-gpu">PCIe
+napájení (pro GPU)</a></li>
+</ul></li>
+<li><a href="#fan-a-chladič-konektory"
+id="toc-fan-a-chladič-konektory">🌬️ 6. Fan a Chladič konektory</a></li>
+<li><a href="#interní-io-konektory-přední-panel"
+id="toc-interní-io-konektory-přední-panel">🧱 7. Interní I/O konektory
+(přední panel)</a></li>
+<li><a href="#zadní-io-panel" id="toc-zadní-io-panel">📺 8. Zadní I/O
+panel</a></li>
+<li><a href="#tipy-a-časté-chyby" id="toc-tipy-a-časté-chyby">✅ Tipy a
+časté chyby</a></li>
+</ul></li>
 </ul>
 </nav>
 </div>
@@ -199,6 +239,165 @@ software neinstaluje na počítač, ale je dostupný přes cloud. Běží tak na
 serverech poskytovatele a my k němu pouze dostáváme přístup. Příkladem
 mohou být třeba Google Docs nebo Dropbox.</p>
 </div>
+</section>
+<section
+id="rozpoznání-a-zapojení-součástek-na-základní-desce-motherboard"
+class="panel">
+<h1>🧩 Rozpoznání a zapojení součástek na základní desce
+(motherboard)</h1>
+<h2 id="základní-orientace">✅ Základní orientace</h2>
+<p>Základní deska je hlavní deska počítače – propojuje veškerý hardware.
+Obsahuje socket pro CPU, sloty pro RAM, PCIe pro grafiku, konektory pro
+disky a porty.</p>
+<h2 id="socket-procesoru-cpu-socket">🔌 1. Socket procesoru (CPU
+Socket)</h2>
+<ul>
+<li><strong>Funkce</strong>: Umožňuje osazení procesoru (CPU)</li>
+<li><strong>Typické označení</strong>: AM4, AM5 (AMD), LGA1700, LGA1200
+(Intel)</li>
+<li><strong>Jak poznat</strong>: Velké čtvercové místo s paticí a
+zajišťovací pákou</li>
+<li><strong>Na co si dát pozor</strong>:
+<ul>
+<li>Musí odpovídat typu CPU (nesprávný socket = nepasuje)</li>
+<li>Při osazování <strong>neohýbat piny</strong></li>
+</ul></li>
+</ul>
+<h2 id="sloty-pro-ram-dimm">🧠 2. Sloty pro RAM (DIMM)</h2>
+<ul>
+<li><strong>Funkce</strong>: Umožňují osazení operační paměti (RAM)</li>
+<li><strong>Jak poznat</strong>: Dlouhé úzké sloty (většinou 2 nebo 4),
+často černé a šedé</li>
+<li><strong>Značení</strong>: DDR4 / DDR5</li>
+<li><strong>Na co si dát pozor</strong>:
+<ul>
+<li>Zasunout správným směrem (zářez musí sedět)</li>
+<li>Pro dual channel RAM osazovat párové sloty (např. A2+B2)</li>
+</ul></li>
+</ul>
+<h2 id="pci-express-sloty-pcie">🎮 3. PCI Express sloty (PCIe)</h2>
+<ul>
+<li><strong>Funkce</strong>: Pro připojení rozšiřujících karet (grafická
+karta, Wi-Fi karta)</li>
+<li><strong>Typy</strong>: x1, x4, x16 (nejčastěji grafika = x16)</li>
+<li><strong>Jak poznat</strong>: Dlouhý slot (x16) většinou nejblíže
+CPU</li>
+<li><strong>Na co si dát pozor</strong>:
+<ul>
+<li>Vložit GPU do hlavního (nejrychlejšího) slotu x16</li>
+<li>Zajistit kartičku šroubkem ke skříni</li>
+</ul></li>
+</ul>
+<h2 id="konektory-pro-disky-sata-a-m.2">💾 4. Konektory pro disky (SATA
+a M.2)</h2>
+<h3 id="sata">SATA</h3>
+<ul>
+<li><strong>Funkce</strong>: Připojení klasických SSD/HDD</li>
+<li><strong>Jak poznat</strong>: L-tvarovaný plastový konektor, obvykle
+po straně desky</li>
+<li><strong>Pozor</strong>: Nutno zapojit <strong>SATA napájení ze
+zdroje + datový kabel do desky</strong></li>
+</ul>
+<h3 id="m.2-slot">M.2 slot</h3>
+<ul>
+<li><strong>Funkce</strong>: Pro připojení rychlých NVMe SSD</li>
+<li><strong>Jak poznat</strong>: Malý vodorovný konektor s šroubkem</li>
+<li><strong>Na co si dát pozor</strong>:
+<ul>
+<li>Rozlišit NVMe vs SATA M.2 disk (ne všechny M.2 sloty podporují
+obojí)</li>
+<li>Disk musí být přišroubovaný – jinak může vypadnout</li>
+</ul></li>
+</ul>
+<h2 id="napájecí-konektory">⚡ 5. Napájecí konektory</h2>
+<h3 id="pin-atx-konektor">24pin ATX konektor</h3>
+<ul>
+<li><strong>Hlavní napájení základní desky</strong></li>
+<li>Vede ze zdroje → zasunout silou až na doraz</li>
+</ul>
+<h3 id="pin-cpu-eps">8pin CPU (EPS)</h3>
+<ul>
+<li><strong>Napájení procesoru</strong></li>
+<li>Umístěn u horního okraje desky poblíž CPU socketu</li>
+</ul>
+<h3 id="pcie-napájení-pro-gpu">PCIe napájení (pro GPU)</h3>
+<ul>
+<li>Není na desce – vede ze zdroje přímo do grafické karty</li>
+</ul>
+<h2 id="fan-a-chladič-konektory">🌬️ 6. Fan a Chladič konektory</h2>
+<ul>
+<li><strong>CPU_FAN</strong>: Pro chladič procesoru – nutný pro spuštění
+systému</li>
+<li><strong>SYS_FAN / CHA_FAN</strong>: Pro systémové větráky</li>
+<li><strong>Jak poznat</strong>: 3–4 pinové konektory označené přímo na
+desce</li>
+<li><strong>Pozor</strong>: CPU_FAN <strong>musí být zapojen</strong> –
+jinak deska odmítne nabootovat</li>
+</ul>
+<h2 id="interní-io-konektory-přední-panel">🧱 7. Interní I/O konektory
+(přední panel)</h2>
+<ul>
+<li><strong>PWR_SW, RESET_SW, HDD_LED, PWR_LED</strong></li>
+<li>Slouží k připojení tlačítek a LEDek na předním panelu skříně</li>
+<li><strong>Pozor</strong>:
+<ul>
+<li>Zapojení bývá nepřehledné → používat manuál desky</li>
+<li>Špatné zapojení = nefunkční tlačítka</li>
+</ul></li>
+</ul>
+<h2 id="zadní-io-panel">📺 8. Zadní I/O panel</h2>
+<ul>
+<li><strong>Porty</strong>: USB, LAN, HDMI, DisplayPort, zvuk</li>
+<li>Většinou připájeny přímo na desku</li>
+<li><strong>Pozor</strong>:
+<ul>
+<li>Výstupy obrazu fungují <strong>jen pokud máš iGPU v
+CPU</strong></li>
+<li>Přístupné zezadu přes výřez ve skříni</li>
+</ul></li>
+</ul>
+<h2 id="tipy-a-časté-chyby">✅ Tipy a časté chyby</h2>
+<table>
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 37%" />
+<col style="width: 34%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>⚠️ Chyba</th>
+<th>❗ Problém</th>
+<th>✅ Řešení</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>RAM špatně zasunutá</td>
+<td>Počítač nenaběhne</td>
+<td>Zkontroluj, zda je správně zacvaknutá</td>
+</tr>
+<tr class="even">
+<td>CPU piny ohnuté</td>
+<td>Deska nefunguje</td>
+<td>Montovat opatrně, netlačit násilím</td>
+</tr>
+<tr class="odd">
+<td>GPU bez napájení</td>
+<td>Černá obrazovka</td>
+<td>Zkontroluj PCIe konektory ze zdroje</td>
+</tr>
+<tr class="even">
+<td>Chybí CPU_FAN</td>
+<td>Deska se nespustí</td>
+<td>Vždy zapojit chladič do správného konektoru</td>
+</tr>
+<tr class="odd">
+<td>Špatné zapojení panelu</td>
+<td>Nereaguje tlačítko</td>
+<td>Použít schéma v manuálu desky</td>
+</tr>
+</tbody>
+</table>
 </section>
 </body>
 </html>
